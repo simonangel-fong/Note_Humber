@@ -1,4 +1,4 @@
-[back](/ITC-5101_Operating_Systems/index.md)
+[back](/ITC_5101_Operating_Systems/index.md)
 
 [TOC]
 
@@ -140,7 +140,7 @@ command line. Do not separate the hyphen and the option.
 
 - The command argument is the last item in the command line.如果参数适用，则参数是命令行的最后组成部分。
 
-![form of command line](/ITC-5101_Operating_Systems/pic/introduction/linux_linux_cli_formofcommandline.png)
+![form of command line](/ITC_5101_Operating_Systems/pic/introduction/linux_linux_cli_formofcommandline.png)
 
 
 

@@ -1,4 +1,4 @@
-[Back](/ITC-5101_Operating_Systems/index.md)
+[Back](/ITC_5101_Operating_Systems/index.md)
 
 [TOC]
 
@@ -8,7 +8,7 @@
 
 ## Layers of Linux 三层(重点)
 
-连接OS[Components of OS](/ITC-5101_Operating_Systems/introduction/OS.md#components-of-an-operating-system-组成-重点)
+连接OS[Components of OS](/ITC_5101_Operating_Systems/introduction/OS.md#components-of-an-operating-system-组成-重点)
 
 1. kernel
     - invisible to the user
@@ -68,6 +68,6 @@ e) CentOS
 f) Kali: Widely used in security applications, for ex: Ethical hacking, penetration testing, forensic analysis etc.
 g) Oracle Linux: Highly compatible with Oracle applications.
 
-![Linux distro](/ITC-5101_Operating_Systems/pic/introduction/linux_linux_distribution.png)
+![Linux distro](/ITC_5101_Operating_Systems/pic/introduction/linux_linux_distribution.png)
 
 [Top](#linux-os)
