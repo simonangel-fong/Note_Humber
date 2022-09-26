@@ -12,11 +12,11 @@
 ## Catalog
 
 - Introduction
-    - [Operating System](/ITC_5101_Operating_Systems/introduction/OS.md)
-    - [Linux OS](/ITC_5101_Operating_Systems/introduction/linux.md)
-    - [VMWare & Ubuntu Install(略)](/ITC_5101_Operating_Systems/introduction/VM_install.md)
-    - [Linux Accounts](/ITC_5101_Operating_Systems/introduction/linux_account.md)
-    - [Linux CLI Terminal](/ITC_5101_Operating_Systems/introduction/linux_cli.md)
+    - [Operating System](./introduction/OS.md)
+    - [Linux OS](./introduction/linux.md)
+    - [VMWare & Ubuntu Install(略)](./introduction/VM_install.md)
+    - [Linux Accounts](./introduction/linux_account.md)
+    - [Linux CLI Terminal](./introduction/linux_cli.md)
 
 - Linux Commands
     - Disk management
