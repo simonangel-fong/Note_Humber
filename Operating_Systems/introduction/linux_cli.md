@@ -1,6 +1,15 @@
-[back](/ITC_5101_Operating_Systems/index.md)
+[back](../index.md)
 
-[TOC]
+- [Linux CLI](#linux-cli)
+    - [Shell Prompt提示符](#shell-prompt提示符)
+    - [Components of Linux command](#commands-of-linux)
+        - [Syntax语法](#syntax语法)
+        - [Semantics意义](#semantics意义)
+    - [Commands of Linux](#commands-of-linux)
+        - [Categories:分类](#categories分类)
+    - [Command Line Interface (CLI)](#command-line-interface-cli)
+        - [Rules for Command-line Syntax](#rules-for-command-line-syntax)
+        - [Form of Command Line](#form-of-command-line)
 
 ***
 

@@ -1,6 +1,27 @@
-[Back](/ITC_5101_Operating_Systems/index.md)
+[Back](../index.md)
 
-[TOC]
+- [Linux Account 账户](#linux-account-账户)
+    - [User Name, Password, and Successful Login](#user-name-password-and-successful-login)
+        - [User Name](#user-name)
+            - [Properties of the Users in Linux OS 用户名特性](#properties-of-the-users-in-linux-os-用户名特性)
+            - [Rule for user name 用户名规则](#rule-for-user-name-用户名规则)
+        - [Password](#password)
+            - [Rules for password](#rules-for-password)
+        - [Successful login 成功的登入](#successful-login-成功的登入)
+            - [1. Authentication验证](#1-authentication验证)
+            - [2. Authorization授权](#2-authorization授权)
+
+    - [Different levels of users 用户等级(重点)](#different-levels-of-users-用户等级重点)
+        - [SA account in Linux管理员账户](#sa-account-in-linux管理员账户)
+            - [Capability of SA了解](#capability-of-sa了解)
+        - [Normal User用户](#normal-user用户)
+
+    - [Privilege 权限](#privilege-权限)
+        - [Three types of permissions/priviliges (重点)](#three-types-of-permissionspriviliges-重点)
+        - [Installation：SA exclusive 安装软件的权限:SA专属](#installationsa-exclusive-安装软件的权限sa专属)
+        - [Directory 文件夹权限](#directory-文件夹权限)
+            - [Root directory/](#root-directory)
+            - [Home directory~](#home-directory)
 
 ***
 

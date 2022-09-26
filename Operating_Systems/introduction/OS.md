@@ -1,6 +1,33 @@
-[Back](/ITC_5101_Operating_Systems/index.md)
+[Back](../index.md)
 
-[TOC]
+- [Introduction - OS](#introduction---os)
+    - [Operation Software 操作系统](#operation-software-操作系统)
+        - [Definition 定义](#definition-定义)
+        - [Types of OS 分类](#types-of-os-分类)
+        - [Functions of an Operating System 功能](#functions-of-an-operating-system-功能)
+
+    - [Components of an Operating System 组成 (重点)](#components-of-an-operating-system-组成-重点)
+        - [Kernel](#kernel)
+        - [Shell - Middle layer](#shell---middle-layer)
+        - [User](#user)
+
+    - [OS Startup (Bootstrapping) / Booting (PPT)](#os-startup-bootstrapping--booting-ppt)
+        - [Shared Computing 共享计算 (PPT)](#shared-computing-共享计算-ppt)
+
+    - [Software](#software)
+        - [Types of software](#types-of-software)
+        - [Application Software](#application-software)
+        - [System Software](#system-software)
+
+    - [Types of Server in IT industry](#types-of-server-in-it-industry)
+
+    - [2 types of memory](#2-types-of-memory)
+        - [Primary Memory](#primary-memory)
+        - [Secondary Memory](#secondary-memory)
+
+
+
+
 
 ***
 
@@ -218,7 +245,7 @@ OS的核心
 
 ***
 
-## Shared Computing 共享计算 (PPT)
+### Shared Computing 共享计算 (PPT)
 
 - It leads to the creation of different types of operating systems:
     将会有多种OS(了解)
@@ -230,18 +257,18 @@ OS的核心
 
 ***
 
-# Software
+## Software
 
 **Software** is a general term used to describe a collection of **computer programs** that perform some task on a computer system.
 软件=有目的的计算机程序
 
-# Types of software
+### Types of software
 
 注意OS的所在
 
 ![Types of software](/ITC_5101_Operating_Systems/pic/introduction/OS_software.png)
 
-## Application Software
+### Application Software
 
 - Direct Interaction with User.与用户互动
 
@@ -269,11 +296,7 @@ software.
         - Compiler编译器: Converts a high-level language into binary code高级语言，运行前全部翻译
         - Interpreter解释器: Converts and executes one instruction at a time运行时逐个指令翻译
 
-
-
 ***
-
-# About Industry 背景知识归纳
 
 ## Types of Server in IT industry
 

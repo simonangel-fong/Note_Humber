@@ -1,6 +1,12 @@
-[Back](/ITC_5101_Operating_Systems/index.md)
+[Back](../index.md)
 
-[TOC]
+- [Linux OS](#linux-os)
+    - [Layers of Linux 三层(重点)](#layers-of-linux-三层重点)
+    - [Why LINUX is a preferred OS?](#why-linux-is-a-preferred-os)
+        - [Open Source](#open-source)
+        - [Linux is very secure (重点)](#linux-is-very-secure-重点)
+    - [Characteristics of Linux 特点](#characteristics-of-linux-特点)
+    - [Linux distributions 版本(了解)](#linux-distributions-版本了解)
 
 ***
 
