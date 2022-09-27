@@ -12,7 +12,7 @@
 ## Catalog
 
 - Introduction
-    - [Operating System](./introduction/os.md)
+    - [Operating System](./introduction/intro_os.md)
     - [Linux OS](./introduction/linux_os.md)
     - [VMWare & Ubuntu Install(略)](./introduction/VM_install.md)
     - [Linux Accounts](./introduction/linux_account.md)
@@ -67,8 +67,8 @@
 |Command|Description|
 |--|--|
 |[$head](./linux_command/file_management.md#head)| To output the first part of files|
-|[$tail](./linux_command/file_management.md#head)| To output the last part of files|
-|[$cat](./linux_command/file_management.md#head)| To output all part of files|
+|[$tail](./linux_command/file_management.md#tail)| To output the last part of files|
+|[$cat](./linux_command/file_management.md#cat)| To output all part of files|
 |[$tac](./linux_command/file_management.md#tac)| To output all part of files backwards|
 
 - Important command

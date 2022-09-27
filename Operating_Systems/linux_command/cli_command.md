@@ -1,4 +1,4 @@
-[back](/ITC_5101_Operating_Systems/index.md)
+[back to OS](../index.md)
 
 # CLI Command
 

@@ -266,7 +266,7 @@ OS的核心
 
 注意OS的所在
 
-![Types of software](/ITC_5101_Operating_Systems/pic/introduction/OS_software.png)
+![Types of software](../pic/introduction/OS_software.png)
 
 ### Application Software
 

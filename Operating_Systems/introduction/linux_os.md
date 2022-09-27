@@ -74,6 +74,6 @@ e) CentOS
 f) Kali: Widely used in security applications, for ex: Ethical hacking, penetration testing, forensic analysis etc.
 g) Oracle Linux: Highly compatible with Oracle applications.
 
-![Linux distro](/ITC_5101_Operating_Systems/pic/introduction/linux_linux_distribution.png)
+![Linux distro](../pic/introduction/linux_linux_distribution.png)
 
 [Top](#linux-os)

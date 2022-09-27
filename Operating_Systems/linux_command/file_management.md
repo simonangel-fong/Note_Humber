@@ -1,4 +1,4 @@
-[back](../index.md)
+[back to OS](../index.md)
 
 # File Management
 
@@ -186,3 +186,6 @@ To copy files
 
 display: cat backwards
 
+***
+
+[TOP](#file-management)
