@@ -4,7 +4,9 @@
 
 ***
 
-# Output
+# System Class
+
+## System.out
 
 - The console window that starts a Java application is typically known as the **standard output device**.
     console window = standard output device

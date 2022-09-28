@@ -92,7 +92,7 @@ Primitive data types are built into the Java language and are not derived from c
     
 ---
 
-## Conversion between Primitive Data Types 类型转换
+### Conversion between Primitive Data Types 类型转换
 
 - Java is a **strongly typed** language. 
     - Before a value is assigned to a variable, Java **checks the data types** of the variable and **the value being assigned** to it to determine if they are compatible.

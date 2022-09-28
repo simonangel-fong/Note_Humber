@@ -39,4 +39,38 @@
 
 ![combined assignment operator](../pic/fundamental/operator/combined_assignment_operator.png)
 
+---
+
+## `+`Operator
+
+- The + operator can be used in two ways.
+  - as a concatenation operator 字符串连接符
+  - as an addition operator 加法计算符
+
+A string literal value cannot span lines in a Java source code file. The String concatenation operator can be used to fix this problem.
+字符串不能跨行，因此加号能解决该问题。
+
+e.g.:
+
+```java
+
+System.out.println("These lines are " +
+                    "now ok and will not " +
+                    "cause the error as before."
+                    );
+
+// The Concatenation operator can be used to format complex String objects.
+// 用于处理复杂格式输出
+
+System.out.println("The following will be printed " +
+                    "in a tabbed format: " +
+                    "\n\tFirst = " + 5 * 6 + ", " +
+                    "\n\tSecond = " + (6 + 4) + "," +
+                    "\n\tThird = " + 16.7 + "."
+                    ); 
+
+```
+
+
+
 
