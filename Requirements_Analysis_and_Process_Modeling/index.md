@@ -1,4 +1,4 @@
-[Back to Course List](/index.md)
+[Back to Course List](../index.md)
 
 [TOC]
 
