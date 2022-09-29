@@ -80,6 +80,8 @@ To list files and directories in a more human readable format for given director
 |ls|-|-|To list directory contents(files and subdirectory)<br>列出目前工作目录所含之文件及子目录|
 |ls|-|`[pathname]`|To list contents of given pathnames<br>列出指定若干路径|
 |ls|-a|`[pathname]`|List all files, including hidden files.|
+|ls|-l|`[pathname]`|List all files in a long listing format of given directories|
+|ls|-h|`[pathname]`|List all files in a human readable format of given directories|
 
 ***
 

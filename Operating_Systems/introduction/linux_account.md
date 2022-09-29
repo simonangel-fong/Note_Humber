@@ -41,10 +41,10 @@ Because you use your account name when logging in, it is often referred to as yo
 
 #### Properties of the Users in Linux OS 用户名特性
 
-- **Unique username**: no two accounts with the same name用户名唯一
-    Every user/user account in a Linux Env is having a **unique** username.
-    In production environments/real time environments we may have thousands of user accounts.
-    We cannot have two user accounts with the same name.
+- **Unique username**: no two accounts with the same name用户名唯一<br>
+    Every user/user account in a Linux Env is having a **unique** username.<br>
+    In production environments/real time environments we may have thousands of user accounts.<br>
+    We cannot have two user accounts with the same name.<br>
 &emsp;
 - **Case sensitive**大小写敏感
     e.g.:
@@ -130,7 +130,7 @@ Because you use your account name when logging in, it is often referred to as yo
 
 ### SA account in Linux管理员账户
 
-- SA: System Administrator
+- SA: System Administrator<br>
     **Most LINUX installations have a system administrator (SA)**, who sees that the system runs smoothly.
 - By default we have **one** <u>SA account</u> which is the <u>default user account</u>. It is like a <u>super user</u> of Linux OS.
 
@@ -187,16 +187,18 @@ A large installation may serve hundreds or thousands of **users**, each having t
 
 ### Directory 文件夹权限
 
-#### `Root directory/`
-    - represented with a special symbol **/(root directory)**
-    - `Root user` have complete permission(**Read, Write, Execute**)
-    - `Normal users` can **read** in the `root directory` but **not allowed to write and execute**.
+#### Root directory/
+
+- represented with a special symbol **/(root directory)**
+- `Root user` have complete permission(**Read, Write, Execute**)
+- `Normal users` can **read** in the `root directory` but **not allowed to write and execute**.
 &emsp;
 
-#### `Home directory~`
-    - a <u>directory</u> for the **normal users**
-    - represented with a special symbol known as **tilde ~**
-    - <u>working space</u> for the **normal users** where they can **create, modify and delete the files and directories**.注意与管理员权限对比
+#### Home directory~
+    
+- a <u>directory</u> for the **normal users**
+- represented with a special symbol known as **tilde ~**
+- <u>working space</u> for the **normal users** where they can **create, modify and delete the files and directories**.注意与管理员权限对比
 
 
 <font color="blue">

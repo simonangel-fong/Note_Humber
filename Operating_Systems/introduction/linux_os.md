@@ -47,20 +47,20 @@
 
 ## Characteristics of Linux 特点
 
-a) Open Source
-b) It is very secure
-c) Free under GNU licence.
-d) It is scalable(the resources can be extended based on the user req’s
-e) It is very efficient
-f) It is widely used in production systems
-g) It is very light weight compared to other OS.
-h) Portable
-i) Used for networking
-j) Highly available
-k) It is multiuser
-l) It supports multitasking
-m) It is stable
-n) It is regularly updated.(Patching): It is regularly patched.
+- a)Open Source
+- b) It is very secure
+- c) Free under GNU licence.
+- d) It is scalable(the resources can be extended based on the user req’s
+- e) It is very efficient
+- f) It is widely used in production systems
+- g) It is very light weight compared to other OS.
+- h) Portable
+- i) Used for networking
+- j) Highly available
+- k) It is multiuser
+- l) It supports multitasking
+- m) It is stable
+- n) It is regularly updated.(Patching): It is regularly patched.
 
 ***
 

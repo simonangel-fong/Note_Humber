@@ -62,7 +62,8 @@ $tch demo   // It will fail because the syntax is wrong
 results
 - The command should produce meaningful results.
     例如如果要运行一个不存在的文件，是无意义的，所以语义上有问题，会返回错误，即使命令在语法上正确。
-    e.g.:
+    e.g.:<br>
+
 ```java
 
 //This command will be semantically wrong if the file demo1 is not present or exists in our computer.
@@ -78,23 +79,23 @@ $cat demo1
 
 ### Categories:分类
 
-- File Processing Commands
+- File Processing Commands<br>
     They are used to work on the files.
 &emsp;
-- Programming Commands
+- Programming Commands<br>
     These commands are mostly used for programming based activities like writing shell scripts.
     基于shell脚本的编程;
 &emsp;
-- Network Commands
+- Network Commands<br>
     They are used to setup and manage the network configurations in Linux.
 &emsp;
-- Communication
+- Communication<br>
     They are used as an interface between different servers. i.e.: Bingo
 &emsp;
-- System Configuration: 
+- System Configuration: <br>
     They are used to set up the system config and manage the system config etc.
 &emsp;
-- Miscellaneous: others
+- Miscellaneous: others<br>
     Any command which does not fit in the above categories are considered as miscellaneous.
 
 ***

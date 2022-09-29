@@ -45,6 +45,7 @@ To determine file type for given files and directories.
 	- 空文件: `empty`
 	- 特定类型: `ASCII text`
 	- 文件夹: `directory`
+	- 不存在的文件: `No such file or directory`
 
 #### file -s
 
@@ -58,10 +59,14 @@ To determine file type for special files.
 To copy files and directories.
 
 - `$cp source target`
-	- `soucrce`: 源文件名; 当忽略路径时， 默认为当前路径。
+	- `source`: 源文件名; 当忽略路径时， 默认为当前路径。
 	- `target`： 目标文件名；当忽略路径时， 默认为当前路径。
 
-- 在没有给定option参数选项时， 只会复制文件；如果是文件夹将`omitting directory`。
+- 在没有给定option参数选项时， 只会复制文件；
+	- 如果`source`是文件夹将`omitting directory`
+	- 如果`source`是多个，则最后一个参数默认是`target`，且只能是文件夹；否则报错`is not directory`.
+	- 如果`target`的文件已经存在则其内容被source文件覆盖。
+	- 如果`target`是新文件名，则会在目标路径创建新文件名的文件。即复制+改名。
 
 - 当source=target时， 报错`are the same file`
 
@@ -117,7 +122,7 @@ To remove files permanently from the OS.
 To output the first part of files
 - 默认显示10行
 
-- `head file`
+- `head [file]`
 
 - 参数`file`:
 	- 可以是多个，将会分别显示
@@ -129,7 +134,7 @@ To output the first part of files
 To output the first specilized lines of files.
 返回指定行
 
-- `head -NUM path/filename`
+- `head -NUM [file]`
 
 - 选项`NUM`: 
 	- number, the specilized number of lines
@@ -151,7 +156,7 @@ To output the last part of files
 
 To print all content of files on the standard output
 
-`cat file`
+`cat [file]`
 
 - If the file is longer than the screen, it will scroll to the end.
 	如果文件的内容太大，则会快速滚到末尾.
@@ -159,7 +164,8 @@ To print all content of files on the standard output
 
 - `file`
 	- 如果省略file，则只会读取input，不会生成任何文件。
-	- 
+	- 可以是多个文件名, 但其内容会糅合在一起输出。
+
 #### 2. copy
 
 To copy files
@@ -167,7 +173,9 @@ To copy files
 `cat source > target`
 
 - `source == target`: content will be overwrite and lost.
+- 如果`source`是复数，`target`是单数， 则是将多个source文件的内容聚合到target
 - `target`的文件名可以不同于source的文件名,即可以复制并改名。
+- 如果`target`是文件夹，则是复制文件。
 
 #### 3.create a new file with the inputing content
 

@@ -149,7 +149,7 @@ OS.
 With the help of virtualization softwares, we can create virtual machines, these machines are capable of running different types of Operating systems with the help of one physical OS. 
 关于虚拟化，不是指VM，而是与硬件的机器相区别的结合OS而形成新机器。
 
-![ox-vm](/ITC_5101_Operating_Systems/pic/introduction/OS_virtual_machine.png)
+![ox-vm](../pic/introduction/OS_virtual_machine.png)
 
 - 有关虚拟化的实现，即使用虚拟机
 
