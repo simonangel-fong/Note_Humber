@@ -66,13 +66,13 @@
 
 ## Linux distributions 版本(了解)
 Linux distributions/variants available in the market:
-a) Red Hat
-b) Ubuntu: training课程用
-c) Debian
-d) Fedora
-e) CentOS
-f) Kali: Widely used in security applications, for ex: Ethical hacking, penetration testing, forensic analysis etc.
-g) Oracle Linux: Highly compatible with Oracle applications.
+- a) Red Hat
+- b) Ubuntu: training课程用
+- c) Debian
+- d) Fedora
+- e) CentOS
+- f) Kali: Widely used in security applications, for ex: Ethical hacking, penetration testing, forensic analysis etc.
+- g) Oracle Linux: Highly compatible with Oracle applications.
 
 ![Linux distro](../pic/introduction/linux_linux_distribution.png)
 

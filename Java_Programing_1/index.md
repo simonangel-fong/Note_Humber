@@ -9,12 +9,13 @@
 
 ## Catalog
 
-- [Java Fundamental](./fundamental/fundamental.md)
+- Java Fundamental
+    - [About Java](./fundamental/about_java.md)
     - [Data Type](./fundamental/data_type.md)
-    - [String](./fundamental/string.md)
-    - [Variable](./fundamental/variable.md)
     - [Operator](./fundamental/operator.md)
+    - [String](./fundamental/string.md)
+    - [Variable and Constant](./fundamental/variable_and_constant.md)
+    - [I/O](./fundamental/io.md)
 
 - [Class](./class/class.md)
     - [Math Class](./class/class_math.md)
-    - [System.out Class](./class/class_system_out.md)

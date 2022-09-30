@@ -158,22 +158,3 @@ a = (short)(b + c);     //cast operator to convert int into short, which the typ
 ---
 
 
-## Constants 常量
-
-- can hold only a **single value**
-
-- declared using the **keyword** `final`
-
-- By convention, constants are all upper case and words are separated by the underscore character.
-    常量名：大写+下横线
-
-- Constants need not be initialized when declared; however, they must be initialized
-before they are used or a compiler error will be generated.
-    声明无需赋值,但使用之前赋值
-
-- Once initialized with a value, constants cannot be changed programmatically.
-    一旦赋值无法修改
-
-```java
-final double CAL_SALES_TAX = 0.0725;
-```

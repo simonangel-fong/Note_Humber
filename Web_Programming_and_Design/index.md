@@ -1,14 +1,20 @@
-[Back to Course List](../index.md)
+[All Notes](/index.md)
 
-[TOC]
+## Operating Systems
 
-***
+- College: Humber college
+- Semester: Fall 2022
+- Course ID: ITC_5101-0GC
+- Instructor: Professor Gill
+
+**!Important**: This note is for personal use. Copy right reserved.
 
 # Web Programming and Design
 
 ## Quick Links
 
-- [html](/ITC-5103_Web_Programming_and_Design/html/html_index.md)
+- HTML
+    - [Text Formating](..)
 
 ## Course Outline
 
