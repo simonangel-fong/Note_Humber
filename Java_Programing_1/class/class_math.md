@@ -11,7 +11,7 @@
 
 ```java
 
-double result = math.pow(4.0, 2.0);
+double result = Math.pow(4.0, 2.0);
 
 ```
 
@@ -20,7 +20,7 @@ double result = math.pow(4.0, 2.0);
 ## `Math.sqrt`: 平方根
 
 ```java
-double result = math.sqrt(9.0);
+double result = Math.sqrt(9.0);
 ```
 
 - 由于平方根会是小数;

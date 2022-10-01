@@ -18,6 +18,8 @@
 - Comments are ignored by the compiler. 忽略注释。
 - A `.java` file may contain many classes but may **only have one public class**.
   一个`.java`文件可以定义多个类，但只能有一个 public 类。
+  即每个public类需要在其自身的.java文件中定义
+  
 - If a .java file has a public class, the class must have the same name as the file.
   public 类名=文件名
 - Java applications must have a main method.

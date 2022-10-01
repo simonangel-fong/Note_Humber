@@ -1,10 +1,10 @@
 [Back to Java](../index.md)
 
+# Class
+
 [TOC]
 
 ***
-
-# Class
 
 ## Class Name
 
@@ -32,5 +32,4 @@ int number = 25     //The value 25 will be stored in the memory location associa
 ```java
 String name = "Joe Mahoney"     // The variable name holds the address of a String object.
 ```
-
-    - 
+[TOP](#class)

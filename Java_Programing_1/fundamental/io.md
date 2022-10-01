@@ -6,12 +6,13 @@
 
 ***
 
-## System.out
-
 - The console window that starts a Java application is typically known as the **standard output device**.
-    console window = standard output device
+  console window = standard output device
+
 - The **standard input device** is typically the keyboard.
     keyboard = standard input device
+
+## System.out
 - The **standard Java library**, which a Java class is used to send information to the standard output device, is commonly referred to as the **Java API**
     std Java library = Java API = 用于输入输出
 &emsp;
