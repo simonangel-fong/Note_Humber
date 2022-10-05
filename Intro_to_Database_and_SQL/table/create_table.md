@@ -11,6 +11,7 @@
 ## CREATE TABLE
 
 - Syntax
+
 ```sql
 
 CREATE TABLE [schema] tablename

@@ -23,6 +23,7 @@ Get table name from table`user_tables`
     &emsp;
 
 - Syntax:
+
 ```sql
 
 -- using user_table
@@ -41,6 +42,7 @@ Get data from pseudo table `tab`
     &emsp;
 
 - Syntax:
+
 ```sql
 
 -- using tab
@@ -88,6 +90,7 @@ DESCRIBE tablename;
 To change the name of given table.
 
 - Syntax:
+
 ```sql
 
 RENAME oldtablename TO newtablename;
@@ -105,6 +108,7 @@ RENAME oldtablename TO newtablename;
 ### Query Recyclebin Info
 
 - Syntax:
+
 ```sql
 
 -- query all data in recylebin
@@ -128,6 +132,7 @@ To remove all tables in recyclebin so that they cannot be recovered.
 相当于删除回收站，回收站内的所有数据将被清空，不能再被恢复。
 
 - Syntax:
+
 ```sql
 
 -- clear recyclebin

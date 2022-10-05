@@ -13,6 +13,7 @@
 To remove a table from database.
 
 - Syntax:
+
 ```sql
 
 -- remove a given table to recyclebin
@@ -34,6 +35,7 @@ DROP TABLE tablename;
 直接删除某个表，不能再被恢复。
 
 - Syntax:
+
 ```sql
 
 -- remove a table permanently

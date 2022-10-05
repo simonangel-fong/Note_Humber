@@ -18,6 +18,7 @@ To make structural changes to an existing table.<br>To add, delete, or resize a 
 To add new columns into a given table.
 
 - Syntax:
+
 ```sql
 -- add a single column
 ALTER TABLE tablename
@@ -47,6 +48,7 @@ ADD
 To change the definition of an existing column.
 
 - Syntax:
+
 ```sql
 -- modify a single column
 ALTER TABLE tablename
@@ -81,6 +83,7 @@ MODIFY
 To delete an existing column and its contents from a table.
 
 - Syntax:
+
 ```sql
 
 -- delete a single column
@@ -107,6 +110,7 @@ To mark the column for deletion at a later time
 
 
 - Syntax:
+
 ```sql
 
 ALTER TABLE tablename
