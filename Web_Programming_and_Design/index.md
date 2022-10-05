@@ -9,12 +9,18 @@
 
 **!Important**: This note is for personal use. Copy right reserved.
 
+---
+
 # Web Programming and Design
 
 ## Quick Links
 
-- HTML
-    - [Text Formating](..)
+- [HTML](./html/html_index.md)
+    - [Basic Elements](./html/html_basic.md)
+    - [Comment](./html/html_comment.md)
+    - [Text Formating](./html/html_text_formating.md)
+    - [List](./html/html_list.md)
+    - [Media](./html/html_media.md)(待续)
 
 ## Course Outline
 
