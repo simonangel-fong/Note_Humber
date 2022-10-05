@@ -2,7 +2,7 @@
 
 [TOC]
 
-# Select Distinc Statement
+# Select Distinct Statement
 
 Remove duplicate items
 

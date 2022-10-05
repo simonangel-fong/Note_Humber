@@ -1,17 +1,24 @@
 [Back](../index.md)
 
-[TOC]
+# Design A Table
+
+- [Design A Table](#design-a-table)
+    - [Column](#column)
+        - [Column Name](#column-name)
+    - [Naming Conventions for Columns and Tables](#naming-conventions-for-columns-and-tables)
 
 ---
 
-# Column
+## Column
 
 You must define each of the columns for a table
 - Choose a **name** for each column
 - Determine the **type** of data to store in each column
 - Determine in some case the **maximum width** of a column
 
-## Column Name
+---
+
+### Column Name
 
 - Rules
     - Names of tables and columns can be **up to 30 characters in length**
@@ -23,19 +30,7 @@ You must define each of the columns for a table
 
 ---
 
-## Data Type
-
-![data type](../pic/DDL/column/data_type.jpg)
-
-
-## Design A Table
-
-- 3 things related to columns for a table:
-    - name
-    - data type
-    - width
-
-### Naming Conventions for Columns and Tables
+## Naming Conventions for Columns and Tables
 
 - **Length**: Name of tables and columns can be up to 30 characters in length.
 
@@ -53,9 +48,4 @@ You must define each of the columns for a table
 
 ---
 
-
-### Datatypes
-
-![datatypes](../_pic/table/create_table/datatypes.jpg)
-
----
+[TOP](#design-a-table)
