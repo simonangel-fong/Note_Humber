@@ -18,11 +18,13 @@
     - [Linux Accounts](./introduction/linux_account.md)
     - [Linux CLI Terminal](./introduction/linux_cli.md)
     - [Linux Files](./introduction/linux_file.md)
+    - [Linux I/O Redirection](./introduction/linux_io_redirection.md)
 
 - Linux Commands
     - [CLI Command](./linux_command/cli_command.md)
     - [Disk Management](./linux_command/disk_management.md)
     - [File management](./linux_command/file_management.md)
+    - [File Editing (Filters)](./linux_command/filter.md)
 
 ***
 
@@ -33,7 +35,7 @@
 |Command|Description|
 |--|--|---|
 |<kbd>Ctrl</kbd>+<kbd>C</kbd>|To cancel a login attempt.|
-|`clear`|To clear Screen|
+|`$clear`|To clear Screen|
 |[$man](./linux_command/cli_command.md#man)|To read the manual of given command or utilities|
 |[$date](./linux_command/cli_command.md#date)|To display or set the system date and time.|
 |[$cal](./linux_command/cli_command.md#cal)|To display the calendar.|
