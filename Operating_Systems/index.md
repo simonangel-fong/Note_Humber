@@ -19,9 +19,11 @@
     - [Linux CLI Terminal](./introduction/linux_cli.md)
     - [Linux Files](./introduction/linux_file.md)
     - [Linux I/O Redirection](./introduction/linux_io_redirection.md)
+    - [Linux Regular Expression](./introduction/linux_regex.md)
 
 - Linux Commands
     - [CLI Command](./linux_command/cli_command.md)
+    - [System Management](./linux_command/system_management.md)
     - [Disk Management](./linux_command/disk_management.md)
     - [File management](./linux_command/file_management.md)
     - [File Editing (Filters)](./linux_command/filter.md)

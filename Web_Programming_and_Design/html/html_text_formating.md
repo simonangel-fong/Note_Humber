@@ -28,7 +28,7 @@ HTML contains several elements for defining text with a special meaning.
 |`<sub>`|Defines subscripted text|<sub>Subscript text</sub>|
 |`<sup>`|Defines superscripted text|25<sup>th</sup> Sept|
 |`<q>`|Defines a short quotation|<q>Quotation text</q>|
-|`<kbd>`|Defines keyboard input|<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>|
 |`<code>`|Defines a piece of computer code|<code>Class Java(){}</code>|
+|`<kbd>`|Defines keyboard input|<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>|
 
 	
