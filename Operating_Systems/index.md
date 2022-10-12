@@ -1,4 +1,4 @@
-[All Notes](/index.md)
+[All Notes](../index.md)
 
 ## Operating Systems
 
