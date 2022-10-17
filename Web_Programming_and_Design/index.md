@@ -1,6 +1,6 @@
 [All Notes](../index.md)
 
-## Operating Systems
+# Web Programming and Design
 
 - College: Humber college
 - Semester: Fall 2022
@@ -10,8 +10,6 @@
 **!Important**: This note is for personal use. Copy right reserved.
 
 ---
-
-# Web Programming and Design
 
 ## Quick Links
 

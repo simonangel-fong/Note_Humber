@@ -1,6 +1,6 @@
 [All Notes](../index.md)
 
-## Operating Systems
+# Operating Systems
 
 - College: Humber college
 - Semester: Fall 2022
