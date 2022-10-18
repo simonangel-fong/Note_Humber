@@ -65,9 +65,9 @@ Acceptance Criteria identify the **features that must be present** at the comple
 
 - Types of Events
 
-  - External Event: an event that occurs **outside the system**, usually _initiated by an external agent or actor_ 外部,一般是用户触发
-  - Temporal(时间的) Event: an event that occurs as a result of _reaching a point in time_
-  - State Event: an event that occurs when something happens **inside the system** that triggers some process 内部触发
+  - **External Event**: an event that occurs **outside the system**, usually _initiated by an external agent or actor_ 外部,一般是用户触发
+  - **Temporal(时间的) Event**: an event that occurs as a result of _reaching a point in time_
+  - **State Event**: an event that occurs when something happens **inside the system** that triggers some process 内部触发
 
 - Steps:
 
@@ -128,7 +128,8 @@ Don’t worry about functions built into system because of limits in technology 
 ## Use case diagram
 
 - **Use case diagram**: a UML model used to graphically show uses cases and their relationships to actors<br>
-  Recall UML is Unified Modeling Language, the standard for diagrams and terminology for developing information systems
+  Recall UML is Unified Modeling Language, the standard for diagrams and terminology for developing information systems<br>
+  help to capture the requirements of the system. These diagrams also identify the interactions between the system and its actors. 
 
 - **Actor** is the UML name for a **end user**
 
@@ -137,6 +138,17 @@ Don’t worry about functions built into system because of limits in technology 
 ![symbol](../pic/uml/use_case_diagram_symbols.png)
 
 - A relationship between use cases where one use case is stereotypically **included within** the other use case— like a called subroutine(子程序). Arrow points to subroutine <br>不建议使用
+
+- Usefult link:
+  - [use case diagram(visual-paradigm)](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-use-case-diagram/)
+  - [Use-case diagrams - IBM Documentation](https://www.ibm.com/docs/en/rsar/9.5?topic=diagrams-use-case)
+
+- Benefits: Use-case diagrams are helpful in the following situations:
+  - Before <u>starting a project</u>, you can create use-case diagrams to model a business so that all participants in the project **share an understanding** of the workers, customers, and activities of the business.
+  - While <u>gathering requirements</u>, you can create use-case diagrams to **capture the system requirements** and to present to others **what the system should do**.
+  - During the <u>analysis and design phases</u>, you can use the use cases and actors from your use-case diagrams to **identify the classes** that the system requires.
+  - During the <u>testing phase</u>, you can use use-case diagrams to **identify tests** for the system.
+
 
 - Steps:
     1. Identify all the <u>stakeholders and users</u> who would benefit by seeing a use case diagram

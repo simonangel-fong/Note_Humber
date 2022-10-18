@@ -8,7 +8,8 @@
 
 ## Purpose of Use Case Diagrams
 
-- document the functionality of the system **from the users' perspective**
+- document the **functionality of the system** <u>from the users' perspective</u> <br>
+    Use cases represent only the **functional requirements of a system**.
 - document the scope of the system
 - document the **interaction** between the users and the system using supporting use case descriptions (behaviour specifications) 
 
