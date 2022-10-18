@@ -28,7 +28,9 @@
 
   - [Model](./uml/model.md)
   - [Activity Diagram](./uml/activity_diagram.md)
+  - [Use Stories and Use cases](./uml/use_case.md)
   - [Use Case Diagram](./uml/use_case_diagram.md)
 
 - Assignment & Lab
   - [Assignment #01(Group Discussion)](./ass%26lab/ass01.md)
+  - [Lab #03 - Use Case](./ass%26lab/lab03.md)
