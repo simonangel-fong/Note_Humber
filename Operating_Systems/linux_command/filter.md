@@ -64,9 +64,8 @@ text.<br>查找特定字符串
 |`grep -vi string [file]`|Invert match in a **case insensitive** way <br> 取反不匹配大小写|
 |`grep -c string [file]`|To count matching **lines** for each file. <br>返回匹配行数,即使一行有多个匹配也算一行|
 |`grep -ANUM string [file]`|To return NUM lines of trailing context after matching line.<br> 匹配行及之后的+NUM行|
-|`grep -BNUM string [file]`|To return NUM lines of leading context before matching line.<br> 匹配行及之前的+NUM行
-matching line.<br> 匹配行及之后的+NUM行|
-|`grep -ANUM1 -BNUM2 string [file]`|To return NUM1 lines of trailing context after matching line, and NUM2 lines of leading context before matching line.<br> 匹配行及之前的+NUM行|
+|`grep -BNUM string [file]`|To return NUM lines of leading context before matching line.<br> 匹配行及之前的+NUM行|
+|`grep -ANUM1 -BNUM2 string [file]`|To return NUM1 lines of trailing context after matching line, and NUM2 lines of leading context before matching line.<br> 匹配行及之前的+NUM2, 之后的+NUM1行|
 |`grep -CNUM string [file]`|To return NUM lines of context before and after matching line.<br> 匹配行及之前的+NUM行|
 |`grep -E pattern [file]`|To return the result of pattern matching with regular expression.<br>使用正则进行匹配|
 |`grep -w word [file]`|To return the lines containing matches that form whole words.<br>只匹配整词不匹配字符串|

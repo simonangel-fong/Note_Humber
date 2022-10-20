@@ -1,4 +1,4 @@
-[Back](/index.md)
+[Back](../../index.md)
 
 # 目录
 [TOC]
