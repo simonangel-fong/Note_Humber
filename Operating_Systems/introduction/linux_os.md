@@ -39,7 +39,15 @@
 
 ### Linux is very secure (重点)
 
-- Only the admin user which is also known as a root user can install the applications in a Linux environment.
+Only the admin user which is also known as a root user can install the applications in a Linux environment.
+
+- Separation of duties 权限分离
+    - sa: install software.
+    - normal user: create, modify, delete files.
+
+- Separation of directory：文件夹分离<br>
+    - Root:By default, linux protect the root. Normal user can access but have not permission to modfify.
+    - home
 
 和用户权限结合
 
@@ -47,10 +55,10 @@
 
 ## Characteristics of Linux 特点
 
-- a)Open Source
+- a) Open Source: access and modify source code.
 - b) It is very secure
 - c) Free under GNU licence.
-- d) It is scalable(the resources can be extended based on the user req’s
+- d) It is scalable(the resources can be <u>extended</u> based on the user req’s
 - e) It is very efficient
 - f) It is widely used in production systems
 - g) It is very light weight compared to other OS.

@@ -1,3 +1,7 @@
+# Introduction:OS
+
+OS的概念是在software的大概念之下，是系统软件的之一。
+
 [Back](../index.md)
 
 - [Introduction - OS](#introduction---os)
@@ -25,15 +29,9 @@
         - [Primary Memory](#primary-memory)
         - [Secondary Memory](#secondary-memory)
 
-
-
-
-
 ***
 
-# Introduction - OS
 
-OS的概念是在software的大概念之下，是系统软件的之一。
 
 ## Operation Software 操作系统
 
@@ -69,7 +67,7 @@ OS的概念是在software的大概念之下，是系统软件的之一。
 
 ### Functions of an Operating System 功能
 
-速记: app, anti, file, |vm|cpu, 内存，网卡,  打印机 (app, 安全, 文件,|虚拟|处理器，内存，上网，设备)
+速记: app, anti, file, vm, cpu, 内存，网卡,  打印机 <br>(app, 安全, 文件,虚拟, 处理器，内存，上网，设备)
 
 - OS is used as a **predefined library** for hardwaresoftware interaction. 为硬件间的互动提供预设的包。
 This is why, system programs apply to the installed OS since they cannot reach hardware directly. 
@@ -114,7 +112,12 @@ It helps us in <u>CPU scheduling</u>(assigning the priority to jobs which are wa
 
 **5. File Management 文件管理**
 
+File management: allocate space to store data.文件管理即分配空间用于储存数据.其概念与secondary memory对应.<br>
+区分: memory management是primary memory; file management是secondary memory.<br>
+
 Role – coordinate the use of machine’s mass storage facilities
+
+
 
 - Hierarchical organization 阶层式组织
     - Directory (or Folder)文件夹: A user-created bundle of files and other directories (subdirectories)
@@ -142,12 +145,18 @@ OS.
 
 - e.g.:Firewalls, Windows defender, Forensic Analysis, Auditing, Antiviruses, Internet Security, 
 
+- Protect IT infrastructure<br>
+    - **IT infrastructure**: 一个广泛的概念和术语, a collection of resouces, including hardware, software, network, database, user, cloud, etc.<br>
+        e.g.: Authentication Test 认证测试, Kaly(security tool一个linux版本,用于测试)
+
 *MFA(Multi factor authentication) (not possible to bypass if the code is with users)
 
 **8. Virtualization 虚拟化**
 
-With the help of virtualization softwares, we can create virtual machines, these machines are capable of running different types of Operating systems with the help of one physical OS. 
+With the help of virtualization softwares, we can create virtual machines, these machines are capable of **running different types of Operating systems with the help of one physical OS**. 
 关于虚拟化，不是指VM，而是与硬件的机器相区别的结合OS而形成新机器。
+
+- Advantage: Provide a **sandbox environment for testing** (Dev, QA/UAT server)为测试提供沙箱环境
 
 ![ox-vm](../pic/introduction/OS_virtual_machine.png)
 
@@ -196,7 +205,6 @@ OS的核心
 - It only understands **machine language(0’s and 1’s)**
 &emsp;
 
-
 ***
 
 ### Shell - Middle layer 
@@ -207,11 +215,12 @@ OS的核心
 - It is an **intermediary/interface/channel** between <u>the user</u> and <u>the kernel</u>. 
 
 - It is also known as a **command interpreter**. 
-    It **translates** the <u>user instructions</u> into <u>machine language</u> and **sends** them to the kernel for execution. <font color="red">重点：课堂有提问</font>
+    - It **translates** the <u>user instructions (input command)</u> into <u>machine language</u> and **sends** them to the kernel for execution. <font color="red">重点：课堂有提问</font>
+    - It **interpreters** the <u>outcome</u> carried out by kernel and **displays the output** for user. 同时也翻译结果并输出.
 
 <font color="red">了解即可</font>
 *In Linux there are different types of shells 
--Bourne shell: Bsh
+-Bourne shell: Bash
 -Ksh(Korn Shell)
 -Tcsh(c shell)
 -Jcsh(job shell)
@@ -278,8 +287,7 @@ Indirect Interaction with Hardware. 不与硬件互动
     e.g.: Word processing softwares, Spreadsheet packages, Photoshop, Web browsers, LMS(Learning Management Systems): Blackboard, D2L, Antiviruses etc.
 
 ## System Software
-- These are used to run and control the <u>computer hardware</u> to provide a platform for running application
-software.
+- These are used to run and control the <u>computer hardware</u> to **provide a platform** for running application software.
     用于运行硬件, 包括作为用户媒介user interface的OS,也包括设备驱动软件。
     e.g.: Operating systems, Device drivers
 
@@ -357,4 +365,4 @@ On the <u>Production Servers</u>, **Linux is used as an OS**.
 
 ***
 
-[Top](#introduction---os)
+[Top](#introductionos)
