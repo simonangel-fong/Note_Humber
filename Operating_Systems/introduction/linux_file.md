@@ -70,6 +70,13 @@
 
 ---
 
+## File Path
+
+- Absolute path: start with `/` 以根目录root directory开头
+
+- Relative path: Start with current direcotry 以当前文件夹开头
+---
+
 ## Column In A File
 
 A column is also known as a field in Linux.

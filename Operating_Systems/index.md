@@ -11,6 +11,8 @@
 
 ## Catalog
 
+[Cheapsheet](./cheapsheet.md)
+
 - Introduction
     - [Operating System](./introduction/intro_os.md)
     - [Linux OS](./introduction/linux_os.md)

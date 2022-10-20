@@ -7,11 +7,11 @@
 ## Filter
 
 - They are **small programs** like building blocks which are used with commands to produce
-efficient and elegant solutions.
+efficient and elegant solutions. <font color="red">Week07总结有提及</font>
 
 - Mostly the filters are used in combination with Linux commands.
 
-- Funtionalities: <br>e.g.
+- Funtionalities/Puropse: <font color="red">Week07总结有提及</font><br>e.g.
     - A filter can be used to *search for a specific string* in a big file.
     - It can be used for *sorting the data* in a big file.
     - They are used for *pattern matching* within the files.
@@ -22,7 +22,7 @@ efficient and elegant solutions.
 
 ## tee
 
-It is used to capture the output at the intermediate level in a file. 
+It is used to capture the output **at the intermediate level** in a file. 
 It uses both stdin and stdout streams. It sends the output on the terminal as well as in a file.
 
 - To read standard input, then write to standard output and files.
@@ -211,6 +211,11 @@ $ echo Sunday | sed 's|Sun|Mon|'    //Monday
 |`cut -fN-M [file] `|To display section of each line from **N'th column** to the **M'th column**|
 |`cut -d'char' -fN-M [file] `|To display section of each line from **N'th column** to the **M'th column**, using given character instead of TAB for field delimiter|
 |`cut -cN-M [file] `|To display section of each line from **N'th character** to the **M'th character**|
+
+<font color="red">Week07例子:
+Cut -d, -f3,5 file: 只返回3和5列, 以','分列
+Cut -c3-5: 以字符计算
+</font>
 
 ---
 
