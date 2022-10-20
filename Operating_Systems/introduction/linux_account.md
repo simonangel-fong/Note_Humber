@@ -1,3 +1,11 @@
+
+# Linux Account 账户
+
+本页介绍与账号相关的topic，包括
+1. 用户名和密码，登入
+2. 用户分类：SA和normal
+3. 权限
+
 [Back](../index.md)
 
 - [Linux Account 账户](#linux-account-账户)
@@ -25,13 +33,6 @@
 
 ***
 
-# Linux Account 账户
-
-本页介绍与账号相关的topic，包括
-1. 用户名和密码，登入
-2. 用户分类：SA和normal
-3. 权限
-
 ## User Name, Password, and Successful Login
 
 ### User Name
@@ -46,7 +47,8 @@ Because you use your account name when logging in, it is often referred to as yo
     In production environments/real time environments we may have thousands of user accounts.<br>
     We cannot have two user accounts with the same name.<br>
 &emsp;
-- **Case sensitive**大小写敏感
+
+- **Case sensitive**大小写敏感<font color="red">(多次强调)</font>
     e.g.:
     ```java
         JOHN user is created
@@ -62,6 +64,8 @@ Because you use your account name when logging in, it is often referred to as yo
 
 #### Rule for user name 用户名规则
 
+<font color="red">Week07总结课:只是建议</font>
+
 - Every user name for a user account must be **unique**.唯一性
 - User names should be **meaningful**.(relevant to the context)有意义
 - The user name should be between **3 to 8 characters**. 长度
@@ -75,6 +79,8 @@ Because you use your account name when logging in, it is often referred to as yo
 ***
 
 ### Password
+
+<font color="red">Week07总结课:强调复杂</font>
 
 - Every user account is having a password. 
     账号对应密码
@@ -100,6 +106,10 @@ Because you use your account name when logging in, it is often referred to as yo
 *** 
 
 ### Successful login 成功的登入
+
+- Mfa/2fa: Multi-factor authentication多重因子认证
+    1. Authentication: verify/valuate the identity by checking username and pwd 
+	2. Authorization: grant user permission/access to the resource
 
 - First: the OS authenticates the user
 - Then: if it is successful then it moves to the next step. i.e. Authorization.
@@ -135,6 +145,8 @@ Because you use your account name when logging in, it is often referred to as yo
 - By default we have **one** <u>SA account</u> which is the <u>default user account</u>. It is like a <u>super user</u> of Linux OS.
 
 - **SA** = **default user account** = **super user** of Linux OS
+
+- **Root user** is name of <u>super user linux</u>
 
 - Every OS like Linux, Windows, Solaris, MacOS etc has a SA account.
 
@@ -206,7 +218,7 @@ A large installation may serve hundreds or thousands of **users**, each having t
 
 ||Install App|Privilige in Root`/`|Prvilige in Home`~`|
 |---|---|---|---|
-|SA|Yes|r,w,e|???|
+|SA|Yes|r,w,e|r,w,e|
 |Normal User|No|r|cmd files&dir|
 
 
