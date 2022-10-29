@@ -9,17 +9,19 @@
 
 **!Important**: This note is for personal use. Copy right reserved.
 
+[SQL Language Reference](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/Types-of-SQL-Statements.html)
+
+---
+
 ## Catalog
 
 - Introduction
-
   - [Oracle SQL Developer](./introduction/oracle_sql_developer.md)
   - [Syntax](./introduction/syntax.md)
   - [Datatype](./introduction/datatype.md)
   - [Null](./introduction/null.md)
 
 - Data Query Language
-
   - [SELECT FROM](./DQL/select_from.md)
   - [SELECT Alias](./DQL/select_alias.md)
   - [SELECT Concatenation](./DQL/select_concatenation.md)
@@ -34,7 +36,6 @@
     - [SELECT WHERE ORDER BY](./DQL/select_where/select_where_order_by.md)
 
 - Data Definition Language
-
   - Table
     - [Design a Table](./table/table_design.md)
     - [Table Management](./table/table_mgnt.md)
@@ -44,13 +45,11 @@
     - [Recover Table](./table/recover_table.md)
 
 - Data Manipulation Language
-
   - [Insert rows](./DML/insert_row.md)
   - [Modify rows](./DML/modify_row.md)
   - [Delete rows](./DML/delete_row.md)
 
 - [Constraint](./constraint/constriant.md)
-
   - [Constraint Info](./constraint/constraint_info.md)
   - [PRIMARY KEY](./constraint/constraint_primary_key.md)
   - [FOREIGN KEY](./constraint/constraint_foreign_key.md)
