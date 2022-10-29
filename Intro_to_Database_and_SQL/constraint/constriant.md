@@ -24,7 +24,7 @@ The following constraints are commonly used in SQL:
 - `DEFAULT` - Sets a default value for a column if no value is specified
 - `CREATE INDEX` - Used to create and retrieve data from the database very quickly
 
-![types_of_constraint](../_pic/constraint/types_of_contraint.JPG)
+![types_of_constraint](../pic/constraint/types_of_contraint.JPG)
 
 ## Nane of cosntraint
 

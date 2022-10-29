@@ -10,7 +10,7 @@
 
 ## Data Type 数据类型
 
-![data type](../_pic/table/datatypes.jpg)
+![data type](../pic/table/datatypes.jpg)
 
 ---
 

@@ -33,7 +33,7 @@ WHERE condition;
 ### Built-in Function
 
 使用内置函数更新值.
-![update function](../_pic/data/update_function.png)
+![update function](../pic/data/update_function.png)
 
 ### Substitution Variables
 
@@ -44,7 +44,7 @@ WHERE condition;
 
 - 相当于命令行是脚本,并以对话框输入的值作为参数执行具体命令.
 
-![substitution variable](../_pic/data/update_substitution_variable.png)
+![substitution variable](../pic/data/update_substitution_variable.png)
 
 ---
 

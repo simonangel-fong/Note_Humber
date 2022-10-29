@@ -57,7 +57,7 @@ You must define each of the columns for a table
 
 - Add Virtual Columns 添加虚拟列
 
-![add_virtual_columns](../_pic/table/virtual_column_add.png)
+![add_virtual_columns](../pic/table/virtual_column_add.png)
 
 - amearn 列是基于 amsal 和 amcomm 的和.
 - 添加后,amearn 的值会自动根据 amsal 和 amcomm 的值计算.

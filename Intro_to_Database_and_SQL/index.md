@@ -45,9 +45,9 @@
     - [Recover Table](./table/recover_table.md)
 
 - Data Manipulation Language
-  - [Insert rows](./DML/insert_row.md)
-  - [Modify rows](./DML/modify_row.md)
-  - [Delete rows](./DML/delete_row.md)
+  - [Insert Data](./DML/insert_row.md)
+  - [Modify Data](./DML/modify_row.md)
+  - [Delete Data](./DML/delete_row.md)
 
 - [Constraint](./constraint/constriant.md)
   - [Constraint Info](./constraint/constraint_info.md)

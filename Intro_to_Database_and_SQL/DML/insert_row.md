@@ -53,12 +53,12 @@ VALUES (value1, value2, value3, ...);
 - 特定字段有 default 约束. 当插入数据且忽略列名时,会自动在该字段适用默认值.
 
 - 也可以在插入时,使用关键字`DEFAULT`关键字作为该字段的值 value.
-  ![insert_value_default](../_pic/data/insert_value_default.png)
+  ![insert_value_default](../pic/data/insert_value_default.png)
 
 ### Built-in Function
 
 - 可以使用内建函数作为插入的值.
-  ![insert_value_default](../_pic/data/insert_value_function.png)
+  ![insert_value_default](../pic/data/insert_value_function.png)
 
 ### Single Quotes 插入单引号
 
@@ -71,10 +71,10 @@ VALUES (value1, value2, value3, ...);
 - If a virtual column is included in a table in will affect how the INSERT command can be used. The virtual column **must be ignored** in an INSERT command. 插入数据时,必须忽略虚拟列,否则会报错.
 
 例子: 尝试向虚拟列插入值.报错.
-![insert virtual column](../_pic/data/insert_virtual_column01.png)
+![insert virtual column](../pic/data/insert_virtual_column01.png)
 
 应该去除虚拟列.
-![insert virtual column](../_pic/data/insert_virtual_column02.png)
+![insert virtual column](../pic/data/insert_virtual_column02.png)
 
 ---
 

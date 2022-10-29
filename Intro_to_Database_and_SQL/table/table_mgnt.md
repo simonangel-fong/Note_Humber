@@ -59,7 +59,7 @@ Connection Panel -> click a table -> a output tab will be created on the right.
 
 More detail information: click tab above the output
 
-![tab_above](../_pic/table/tab_above.png)
+![tab_above](../pic/table/tab_above.png)
 
 ---
 
@@ -81,7 +81,7 @@ DESCRIBE tablename;
 - The structure is the names of the columns and their data types with sizes显示列名,数据类型, 大小
 - The NULL column shows any columns that have been defined as NOT NULL
 
-![desc_table](../_pic/table/desc_table.png)
+![desc_table](../pic/table/desc_table.png)
 
 ---
 
