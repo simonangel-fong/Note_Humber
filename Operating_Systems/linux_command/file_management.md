@@ -118,6 +118,85 @@ To remove files permanently from the OS.
 
 ---
 
+### chmod
+
+- (change mode) To change the file access mode of given file. 是控制用户对文件的权限的命令
+
+#### File Permission 文件权限
+
+- 使用`ls -l`显示文件的权限:
+  - 第一列: `File Type`
+    - `-`: File 文件
+    - `d`: Directory 文件夹
+    - `l`: Link file 超链接
+  - 文件调用权限分为三级 :
+    - 文件所有者（`Owner`）
+    - 用户组（`Group`）
+    - 其它用户（`Other Users`）.
+  - Default permission when created: 默认权限
+    - file: `-rwxrwxr-x`
+    - directory: `drwxrwxr-x`
+
+![permission_listing](../pic/linux_command/file-permissions.jpg)
+
+![chmod](../pic/linux_command/chmod.png)
+
+#### Octal Numeric Method 八进制模式
+
+| Octal Number | Permission               | Permission Listing |
+| ------------ | ------------------------ | ------------------ |
+| `0`          | `None`                   | `---`              |
+| `1`          | `Execute`                | `--x`              |
+| `2`          | `Write`                  | `-w-`              |
+| `3`          | `Execute`,`Write`        | `-wx`              |
+| `4`          | `Read`                   | `r--`              |
+| `5`          | `Execute`,`Read`         | `r-x`              |
+| `6`          | `Write`,`Read`           | `rw-`              |
+| `7`          | `Execute`,`Write`,`Read` | `rwx`              |
+
+| Command           | Description                                                                                                             |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `chmode 777 file` | To grant **super permission** to all users. <br>赋予全部权限 |
+
+#### Symbolic method 符号模式
+
+- **who (用户类型)**
+
+| Who | User Type | Description           |
+| --- | --------- | --------------------- |
+| `u` | `user`    | 文件所有者            |
+| `g` | `group`   | 文件所有者所在组      |
+| `o` | `others`  | 所有其他用户          |
+| `a` | `all`     | 所有用户, 相当于`ugo` |
+
+- **Permission Symbol**
+
+| Symbol | Permission | Description          |
+| ------ | ---------- | -------------------- |
+| `r`    | `Read`     | 设置为可**读**权限   |
+| `w`    | `Write`    | 设置为可**写**权限   |
+| `x`    | `Execute`  | 设置为可**执行**权限 |
+
+- **Operator**
+
+| User Type | Description                                |
+| --------- | ------------------------------------------ |
+| `+`       | grant permission, 增加权限                 |
+| `-`       | revoke permission, 去除权限                |
+| `=`       | override the existing permission, 重置权限 |
+
+- **Syntax**:
+  - `$chmod [user][operator][right] [filename]`
+
+| Command                 | Description                                                                                         |
+| ----------------------- | --------------------------------------------------------------------------------------------------- |
+| `chmode a=rwx file`     | To grant a **super permission** of a given file to all users. |
+| `chmode ug+wx file`     | To grant permission: user and group: write and execute                                              |
+| `chmode a= file`        | To grant no permission                                                                              |
+| `chmode u+rw, g=x file` | To grant owner the right to read and write, and the group the permission to execute                 |
+
+---
+
 ## Read File
 
 ### head

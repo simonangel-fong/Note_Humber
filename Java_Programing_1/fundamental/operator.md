@@ -1,10 +1,17 @@
+# Operator
+
 [Back to Java](../index.md)
 
 [TOC]
 
 ---
 
-# Operator
+- Java divides the operators into the following groups:
+    - Arithmetic operators
+    - Assignment operators
+    - Comparison operators
+    - Logical operators
+    - Bitwise operators
 
 ## Arithmetic Operators 算术运算符
 
@@ -41,7 +48,7 @@
 
 ---
 
-## `+`Operator
+### Operator: `+`
 
 - The + operator can be used in two ways.
   - as a concatenation operator 字符串连接符
@@ -71,6 +78,37 @@ System.out.println("The following will be printed " +
 
 ```
 
+---
+
+## Relational Operators/Comparison Operators 关系运算符
+
+- **Comparison operators** are used to compare two values. 用于比较
+
+- A **boolean expression** is any variable or
+calculation that results in a `true` or `false`
+condition. 关系运算符一般用于布尔表达式. 该表达式的结果是true或false.
+
+
+|Relational Operator|Description|
+|---|---|
+|`>`|is greater than|
+|`<`|is less than|
+|`>=`|is greater than or equal to|
+|`<=`|is less than or equal to|
+|`==`|is equal|
+|`!>`|is not equal to|
+
+---
+
+## Logical Operators
+
+Logical operators are used to **determine the logic** between variables or values.
+
+|Logical Operator|Description|
+|---|---|
+|`&&`|is greater than|
 
 
 
+
+[TOP](#operator)

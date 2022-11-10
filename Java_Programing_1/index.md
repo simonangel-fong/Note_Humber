@@ -17,8 +17,15 @@
     - [Variable and Constant](./fundamental/variable_and_constant.md)
     - [I/O](./fundamental/io.md)
 
+- If Statement
+    - [if](./if_statement/if.md)
+
+
+
 - [Class](./class/class.md)
     - [Math Class](./class/class_math.md)
+
+
 
 
 - Assignment
