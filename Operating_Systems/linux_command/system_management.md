@@ -1,6 +1,6 @@
-[back to OS](../index.md)
-
 # System Management 系统管理
+
+[back to OS](../index.md)
 
 [TOC]
 
@@ -27,6 +27,8 @@ To displays detailed information about the system users who are logged on the sy
 
 - 需要安装: `$sudo apt install finger`
 
+![install_finger](../pic/linux_command/install_finger.JPG)
+
 - `Return`: multicolumn 多列
     - `Login`: shows the **login name** of the users.
     - `Name`: shows the **full name** of the users.
@@ -37,8 +39,6 @@ To displays detailed information about the system users who are logged on the sy
     - `Where`: shows the addresses of the user' terminals.
 
 - `Argument`: username
-
-
 
 |Command & Option|Description|
 |--|--|
