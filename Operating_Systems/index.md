@@ -24,6 +24,7 @@
   - [Linux Files Security](./introduction/linux_file_security.md)
   - [Linux I/O Redirection](./introduction/linux_io_redirection.md)
   - [Linux Regular Expression](./introduction/linux_regex.md)
+  - [Linux Process](./introduction/linux_process.md)
 
 - Linux Commands
   - [CLI Command](./linux_command/cli_command.md)
@@ -31,6 +32,7 @@
   - [Disk Management](./linux_command/disk_management.md)
   - [File Management](./linux_command/file_management.md)
   - [File Editing (Filters)](./linux_command/filter.md)
+  - [Compression Utilities](./linux_command/compression_utilities.md)
 
 ---
 

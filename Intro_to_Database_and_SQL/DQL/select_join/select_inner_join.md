@@ -151,7 +151,7 @@ ON A.common_col BETWEEN B.max_col AND B.min_col;
   - **Join Method**:
     - `JOIN ON`using table aliases
 
-### Traditional Method: `SELECT FROM WHERE =`
+### Traditional Method: `SELECT FROM WHERE`
 
 - Syntax:
 
@@ -165,7 +165,7 @@ WHERE A.common_ref = B.common_id;
 
 ---
 
-### JOIN Method: `JOIN ON BETWEEN`
+### JOIN Method: `JOIN ON`
 
 ```SQL
 
