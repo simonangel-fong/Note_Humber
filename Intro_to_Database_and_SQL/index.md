@@ -70,7 +70,16 @@
   - [NOT NULL](./constraint/constraint_not_null.md)
 
 - Transaction Control Statements
+
   - [Transaction](./TCS/transaction.md)
+
+- [Function](./function/function.md)
+
+  - [Case conversion functions](./function/case_conversion_function.md)
+  - [Character manipulation functions](./function/character_manipulation_function.md)
+  - [Numeric functions](./function/numeric_function.md)
+  - [Date functions](./function/date_function.md)
+  - [Other functions](./function/other_function.md)
 
 ---
 
