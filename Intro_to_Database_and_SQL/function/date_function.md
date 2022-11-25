@@ -123,10 +123,23 @@ WHERE colnam = TO_DATE('date','format')
 
 ---
 
+## `CURRENT_TIMESTAMP`
+
+- 返回时间戳
+
+---
+
 ## `CURRENT_DATE`
 
 - The `CURRENT_DATE` function returns the current date and time from the **user session**
 
 ---
+
+## `SYSTIMESTAMP`
+
+- 返回系统时间戳
+
+---
+
 
 [TOP](#date-functions)

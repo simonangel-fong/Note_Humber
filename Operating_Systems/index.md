@@ -34,6 +34,9 @@
   - [File Editing (Filters)](./linux_command/filter.md)
   - [Compression Utilities](./linux_command/compression_utilities.md)
 
+- Shell Script
+  - [Shell Environment](./shell_script/shell_environment.md)
+
 ---
 
 ## Command List
