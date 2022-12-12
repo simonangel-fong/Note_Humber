@@ -93,6 +93,10 @@
     - [Group By Clause](./function/multiple-row_function/group_by.md)
     - [HAVING Clause](./function/multiple-row_function/group_by.md)
 
+- Database Design
+  - [Database Design](./Database_Design/database_design.md)
+  - [Normalization](./Database_Design/normalization.md)
+
 ---
 
 [Top](#catalog)
