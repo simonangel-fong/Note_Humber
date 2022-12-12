@@ -43,4 +43,71 @@ FROM dual;
 
 ---
 
+## Function List
+
+- Single-Row Function
+
+  - [Case conversion functions](../function/single-row_function/case_conversion_function.md)
+
+    - [`LOWER`](../function/single-row_function/case_conversion_function.md#lower)
+    - [`UPPER`](../function/single-row_function/case_conversion_function.md#upper)
+    - [`INITCAP`](../function/single-row_function/case_conversion_function.md#initcap)
+
+  - [Character manipulation functions](../function/single-row_function/character_manipulation_function.md)
+
+    - [`SUBSTR`](../function/single-row_function/character_manipulation_function.md#substr)
+    - [`INSTR`](../function/single-row_function/character_manipulation_function.md#instr)
+    - [`LENGTH`](../function/single-row_function/character_manipulation_function.md#length)
+    - [`LPAD & RPAD`](../function/single-row_function/character_manipulation_function.md#lpad--rpad)
+    - [`LTRIM & RTRIM`](../function/single-row_function/character_manipulation_function.md#ltrim--rtrim)
+    - [`REPLACE`](../function/single-row_function/character_manipulation_function.md#replace)
+    - [`CONCAT`](../function/single-row_function/character_manipulation_function.md#concat)
+
+  - [Numeric functions](../function/single-row_function/numeric_function.md)
+
+    - [`ROUND`](../function/single-row_function/numeric_function.md#round-四舍五入)
+    - [`TRUNC`](../function/single-row_function/numeric_function.md#trunc-取整)
+    - [`MOD`](../function/single-row_function/numeric_function.md#mod-取余)
+    - [`ABS`](../function/single-row_function/numeric_function.md#abs)
+    - [`POWER`](../function/single-row_function/numeric_function.md#power)
+
+  - [Date functions](../function/single-row_function/date_function.md)
+
+    - [`MONTHS_BETWEEN`](../function/single-row_function/date_function.md#months_between)
+    - [`ADD_MONTHS`](../function/single-row_function/date_function.md#add_months)
+    - [`NEXT_DAY`](../function/single-row_function/date_function.md#next_day)
+    - [`LAST_DAY`](../function/single-row_function/date_function.md#last_day)
+    - [`TO_DATE`](../function/single-row_function/date_function.md#to_date)
+    - [`ROUND`](../function/single-row_function/date_function.md#round-四舍五入日期)
+    - [`TRUNC`](../function/single-row_function/date_function.md#truncating-date-日期取整)
+    - [`SYSDATE`](../function/single-row_function/date_function.md#sysdate)
+    - [`CURRENT_TIMESTAMP`](../function/single-row_function/date_function.md#current_timestamp)
+    - [`CURRENT_DATE`](../function/single-row_function/date_function.md#current_date)
+    - [`SYSTIMESTAMP`](../function/single-row_function/date_function.md#systimestamp)
+
+  - [Other functions](../function/single-row_function/other_function.md)
+
+    - [`NVL`](../function/single-row_function/other_function.md#nvl)
+    - [`NVL2`](../function/single-row_function/other_function.md#nvl2)
+    - [`TO_CHAR`](../function/single-row_function/other_function.md#to_char)
+    - [`DECODE`](../function/single-row_function/other_function.md#decode)
+    - [`CASE`](../function/single-row_function/other_function.md#case)
+    - [`TO_NUMBER`](../function/single-row_function/other_function.md#to_number)
+
+- Multiple-Row Function
+
+  - [Group Function](../function/multiple-row_function/group_function.md)
+
+    - [SUM](../function/multiple-row_function/group_function.md#sum)
+    - [AVG](../function/multiple-row_function/group_function.md#avg)
+    - [COUNT](../function/multiple-row_function/group_function.md#count)
+    - [MAX](../function/multiple-row_function/group_function.md#max)
+    - [MIN](../function/multiple-row_function/group_function.md#min)
+    - [Nesting Group Functions](../function/multiple-row_function/group_function.md#nesting-group-functions)
+
+  - [Group By Clause](../function/multiple-row_function/group_by.md)
+  - [HAVING Clause](../function/multiple-row_function/group_by.md)
+
+---
+
 [TOP](#function)

@@ -1,8 +1,12 @@
 # Case conversion functions
 
-[Back](../index.md)
+[Back](../../index.md)
 
-[TOC]
+- [Case conversion functions](#case-conversion-functions)
+  - [Case conversion functions 大小写转换](#case-conversion-functions-大小写转换)
+  - [`LOWER`](#lower)
+  - [`UPPER`](#upper)
+  - [`INITCAP`](#initcap)
 
 ---
 

@@ -1,8 +1,14 @@
 # Other Functions
 
-[Back](../index.md)
+[Back](../../index.md)
 
-[TOC]
+- [Other Functions](#other-functions)
+  - [`NVL`](#nvl)
+  - [`NVL2`](#nvl2)
+  - [`TO_CHAR`](#to_char)
+  - [`DECODE`](#decode)
+  - [`CASE`](#case)
+  - [`TO_NUMBER`](#to_number)
 
 ---
 

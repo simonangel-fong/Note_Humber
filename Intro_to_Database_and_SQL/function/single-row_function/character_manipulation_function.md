@@ -1,8 +1,15 @@
 # Character Manipulation Functions
 
-[Back](../index.md)
+[Back](../../index.md)
 
-[TOC]
+- [Character Manipulation Functions](#character-manipulation-functions)
+  - [`SUBSTR`](#substr)
+  - [`INSTR`](#instr)
+  - [`LENGTH`](#length)
+  - [`LPAD & RPAD`](#lpad--rpad)
+  - [`LTRIM & RTRIM`](#ltrim--rtrim)
+  - [`REPLACE`](#replace)
+  - [`CONCAT`](#concat)
 
 ---
 

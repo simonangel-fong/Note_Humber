@@ -1,8 +1,13 @@
 # Number Functions
 
-[Back](../index.md)
+[Back](../../index.md)
 
-[TOC]
+- [Number Functions](#number-functions)
+  - [`ROUND`: 四舍五入](#round-四舍五入)
+  - [`TRUNC`: 取整](#trunc-取整)
+  - [`MOD`: 取余](#mod-取余)
+  - [`ABS`](#abs)
+  - [`POWER`](#power)
 
 ---
 

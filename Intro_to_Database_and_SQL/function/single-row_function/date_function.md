@@ -1,8 +1,20 @@
 # Date Functions
 
-[Back](../index.md)
+[Back](../../index.md)
 
-[TOC]
+- [Date Functions](#date-functions)
+  - [Data Function](#data-function)
+  - [`MONTHS_BETWEEN`](#months_between)
+  - [`ADD_MONTHS`](#add_months)
+  - [`NEXT_DAY`](#next_day)
+  - [`LAST_DAY`](#last_day)
+  - [`TO_DATE`](#to_date)
+  - [`ROUND`: 四舍五入日期`](#round-四舍五入日期)
+  - [Truncating date: 日期取整](#truncating-date-日期取整)
+  - [`SYSDATE`](#sysdate)
+  - [`CURRENT_TIMESTAMP`](#current_timestamp)
+  - [`CURRENT_DATE`](#current_date)
+  - [`SYSTIMESTAMP`](#systimestamp)
 
 ---
 
@@ -71,7 +83,7 @@
 
 ## `TO_DATE`
 
-- To convert a specific date with a given format to a Oracle format. 将一个特定的日期转变为系统的格式以便识别. 一般用于where.
+- To convert a specific date with a given format to a Oracle format. 将一个特定的日期转变为系统的格式以便识别. 一般用于 where.
 
 - Syntax:
   - `TO_DATE('date', 'format')`
@@ -97,23 +109,23 @@ WHERE colnam = TO_DATE('date','format')
 与小数的四舍五入类似.
 
 - Syntax:
-    - `ROUND(date, 'unit')`
-    - Argument:
-        - `date`: the date data.
-        - `'unit'`: date can be rounded by the unit month and year. 日期可以精确到月或年
-            - month: `MONTH`/`MM`精确到月
-                - 日期1-15,当月1号
-                - 日期>16, 下个月1号 
-            - year: `YEAR` / `YYYY`,以七月16日为界
+  - `ROUND(date, 'unit')`
+  - Argument:
+    - `date`: the date data.
+    - `'unit'`: date can be rounded by the unit month and year. 日期可以精确到月或年
+      - month: `MONTH`/`MM`精确到月
+        - 日期 1-15,当月 1 号
+        - 日期>16, 下个月 1 号
+      - year: `YEAR` / `YYYY`,以七月 16 日为界
 
 ---
 
 ## Truncating date: 日期取整
 
-使用嵌套nested function
+使用嵌套 nested function
 
 - Syntax:
- - `TRUNC(MONTHS_BETWEEN(date1, date2), 0)`
+- `TRUNC(MONTHS_BETWEEN(date1, date2), 0)`
 
 ---
 
@@ -140,6 +152,5 @@ WHERE colnam = TO_DATE('date','format')
 - 返回系统时间戳
 
 ---
-
 
 [TOP](#date-functions)

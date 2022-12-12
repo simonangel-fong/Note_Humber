@@ -75,11 +75,23 @@
 
 - [Function](./function/function.md)
 
-  - [Case conversion functions](./function/case_conversion_function.md)
-  - [Character manipulation functions](./function/character_manipulation_function.md)
-  - [Numeric functions](./function/numeric_function.md)
-  - [Date functions](./function/date_function.md)
-  - [Other functions](./function/other_function.md)
+  - Single-Row Function
+
+    - [Case conversion functions](./function/single-row_function/case_conversion_function.md)
+
+    - [Character manipulation functions](./function/single-row_function/character_manipulation_function.md)
+
+    - [Numeric functions](./function/single-row_function/numeric_function.md)
+
+    - [Date functions](./function/single-row_function/date_function.md)
+
+    - [Other functions](./function/single-row_function/other_function.md)
+
+  - Multiple-Row Function
+
+    - [Group Function](./function/multiple-row_function/group_function.md)
+    - [Group By Clause](./function/multiple-row_function/group_by.md)
+    - [HAVING Clause](./function/multiple-row_function/group_by.md)
 
 ---
 
