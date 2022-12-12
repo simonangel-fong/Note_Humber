@@ -2,7 +2,13 @@
 
 [Back](../index.md)
 
-[TOC]
+- [Normalization](#normalization)
+  - [Normalization 规范化](#normalization-规范化)
+  - [Conversion to First Normal Form](#conversion-to-first-normal-form)
+    - [Dependency Diagram](#dependency-diagram)
+  - [Conversion to Second Normal Form](#conversion-to-second-normal-form)
+  - [Conversion to Third Normal Form](#conversion-to-third-normal-form)
+  - [Improve the Design(略)](#improve-the-design略)
 
 ---
 
@@ -62,7 +68,7 @@
   - It is in 1NF and
   - It includes no partial dependencies:
     - No attribute is dependent on only portion of primary key 没有依靠部分主键, 但非主键的列之间可能存在依靠(3nf 解决).
-    - 在2nf中消除partial functional dependencies. 实现所有列对主键都是fully functional dependencies.
+    - 在 2nf 中消除 partial functional dependencies. 实现所有列对主键都是 fully functional dependencies.
 
 1. Step 1: Make New Tables to **Eliminate Partial Dependencies**
    - Write each key component on separate line, then write original (composite) key on last line
