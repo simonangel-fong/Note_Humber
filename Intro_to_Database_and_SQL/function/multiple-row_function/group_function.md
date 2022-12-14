@@ -235,4 +235,4 @@ GROUP BY o.order#; --该处分组依据是order#, 则AVG是以order#的个数为
 
 ---
 
-[TOP](#multiple-row-function)
+[TOP](#group-function)
