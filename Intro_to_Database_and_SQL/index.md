@@ -76,7 +76,7 @@
   - Multiple-Row Function
     - [Group Function](./function/multiple-row_function/group_function.md)
     - [Group By Clause](./function/multiple-row_function/group_by.md)
-    - [HAVING Clause](./function/multiple-row_function/group_by.md)
+    - [HAVING Clause](./function/multiple-row_function/having.md)
 
 - Database Design
   - [Database Design](./Database_Design/database_design.md)

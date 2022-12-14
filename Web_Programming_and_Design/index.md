@@ -14,20 +14,22 @@
 ## Quick Links
 
 - [HTML](./html/html_index.md)
-    - [Basic Elements](./html/html_basic.md)
-    - [Comment](./html/html_comment.md)
-    - [Text Formating](./html/html_text_formating.md)
-    - [List](./html/html_list.md)
-    - [Media](./html/html_media.md)(待续)
+  - [Basic Elements](./html/html_basic.md)
+  - [Comment](./html/html_comment.md)
+  - [Text Formating](./html/html_text_formating.md)
+  - [List](./html/html_list.md)
+  - [Media](./html/html_media.md)(待续)
 
 ## Course Outline
 
 - 学习对象: client side
-    Send request -> applicationt -> Response -> <u>client</u>
+  Send request -> applicationt -> Response -> <u>client</u>
 
 &emsp;
 
-- Language学习语言
-    Sripting language, not programming language
+- Language 学习语言
+  Sripting language, not programming language
 
-- 推荐IDE: VS Code
+- 推荐 IDE: VS Code
+
+Courseworks: [Showcase](https://simonangel-fong.github.io/Humber01_Web_Programming_and_Design/)
