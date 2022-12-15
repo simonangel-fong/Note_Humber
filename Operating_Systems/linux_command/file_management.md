@@ -134,8 +134,8 @@ To remove files permanently from the OS.
     - 用户组（`Group`）
     - 其它用户（`Other Users`）.
   - Default permission when created: 默认权限
-    - file: `-rwxrwxr-x`
-    - directory: `drwxrwxr-x`
+    - 文件的默认权限：-rw-rw-rw-
+    - 目录的默认权限：drwxrwxrwx
 
 ![permission_listing](../pic/linux_command/file-permissions.jpg)
 
@@ -154,8 +154,8 @@ To remove files permanently from the OS.
 | `6`          | `Write`,`Read`           | `rw-`              |
 | `7`          | `Execute`,`Write`,`Read` | `rwx`              |
 
-| Command           | Description                                                                                                             |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Command           | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
 | `chmode 777 file` | To grant **super permission** to all users. <br>赋予全部权限 |
 
 #### Symbolic method 符号模式
@@ -188,12 +188,12 @@ To remove files permanently from the OS.
 - **Syntax**:
   - `$chmod [user][operator][right] [filename]`
 
-| Command                 | Description                                                                                         |
-| ----------------------- | --------------------------------------------------------------------------------------------------- |
-| `chmode a=rwx file`     | To grant a **super permission** of a given file to all users. |
-| `chmode ug+wx file`     | To grant permission: user and group: write and execute                                              |
-| `chmode a= file`        | To grant no permission                                                                              |
-| `chmode u+rw, g=x file` | To grant owner the right to read and write, and the group the permission to execute                 |
+| Command                 | Description                                                                         |
+| ----------------------- | ----------------------------------------------------------------------------------- |
+| `chmode a=rwx file`     | To grant a **super permission** of a given file to all users.                       |
+| `chmode ug+wx file`     | To grant permission: user and group: write and execute                              |
+| `chmode a= file`        | To grant no permission                                                              |
+| `chmode u+rw, g=x file` | To grant owner the right to read and write, and the group the permission to execute |
 
 ---
 
