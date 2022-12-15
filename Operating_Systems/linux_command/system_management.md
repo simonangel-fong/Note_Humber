@@ -52,6 +52,10 @@ To displays detailed information about the system users who are logged on the sy
 | `finger -l`       | To return a **multi-line** format displaying all of the information <br>以多行显示用户信息                                |
 | `finger -s`       | To return a **single-line** format of information <br>以多行显示用户信息                                                  |
 
+## `whoami`
+
+- print effective current user id 返回当前用户名
+
 ---
 
 ## Process Management
@@ -145,6 +149,14 @@ To look through the currently running processes and list the process IDs, based 
 | `ps -C command`    | To display information about a given command name.                                                                           |
 | `ps fx`            | To display the tree like structure of all processes, including hierarchy of parent and related child processes. 显示层级关系 |
 
+`ps p PID`:To select information by process ID.
+
+---
+
+### `w`
+
+- `$w`: To display the information about the users and their processes.
+
 ---
 
 ### `kill`
@@ -208,10 +220,10 @@ To send a signal to each process by name.
 
 - **Option**:
 
-| Command & Option | Description                                              |
-| ---------------- | -------------------------------------------------------- |
+| Command & Option | Description                                                                   |
+| ---------------- | ----------------------------------------------------------------------------- |
 | `top`            | To list resource consumption of all processes and an overview of information. |
-| `top -p [PID]`   | To monitor the resouce consumption of processes with specified process IDs.         |
+| `top -p [PID]`   | To monitor the resouce consumption of processes with specified process IDs.   |
 
 ---
 

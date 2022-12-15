@@ -27,6 +27,7 @@
   - [Linux Process](./introduction/linux_process.md)
 
 - Linux Commands
+
   - [CLI Command](./linux_command/cli_command.md)
   - [System Management](./linux_command/system_management.md)
   - [Disk Management](./linux_command/disk_management.md)
@@ -36,6 +37,7 @@
 
 - Shell Script
   - [Shell Environment](./shell_script/shell_environment.md)
+  - [Shell Script](./shell_script/shell_script.md)
 
 ---
 
