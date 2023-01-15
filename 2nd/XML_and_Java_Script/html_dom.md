@@ -1,8 +1,8 @@
-## HTHML DOM
+## HTML DOM
 
 [Back](./index.md)
 
-## HTML DOM
+## DOM
 
 - `DOM (Document Object Model)` 译为文档对象模型，是 `HTML` 和 `XML` 文档的编程接口。
 
@@ -14,4 +14,4 @@
 
 ---
 
-[Top](#HTHML DOM)
+[Top](#html-dom)

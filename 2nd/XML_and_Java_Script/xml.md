@@ -84,9 +84,9 @@ Elements are the backbone of an XML document.
   - The name of the element is the prominent feature of the markup that defines an element.
 
 - XML element names have simple rules: 命名规则
-  - The name must start with a letter or the underscore character (\_).字母或下滑线
+  - The name must start with a letter or the underscore character (\_).以字母或下滑线开始
   - The end tag must contain exactly the same name as the start tag. This includes case; XML is case sensitive. 起止标签名称完全一致，包括大小写。
-  - Names should not contain colons. Officially, they’re allowed, but as you’ll see when we get to namespaces later in the chapter, the colon has a special meaning and should not be used under other circumstances. 不包含分号。
+  - Names should not contain colons. Officially, they’re allowed, but as you’ll see when we get to namespaces later in the chapter, the colon has a special meaning and should not be used under other circumstances. 不包含冒号。
   - Names must not contain spaces. 不包括空格符。
 
 ---
