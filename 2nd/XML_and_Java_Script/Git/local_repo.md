@@ -97,10 +97,11 @@
 - 注意该处时 staged file, 即已经被 add 但没有 commit 的文件。
 - reset 后在 stage 的修改将会撤销，但修改依然会存在 unstage，即相关修改依然保留在文件。
 
-| Git Command          | Description               |
-| -------------------- | ------------------------- |
-| `git reset`          | Unstates all staged files |
-| `git reset filename` | Unstates the staged file  |
+| Git Command                | Description               |
+| -------------------------- | ------------------------- |
+| `git reset`                | Unstates all staged files |
+| `git reset filename`       | Unstates the staged file  |
+| `git rm --cached filename` | Unstates the staged file  |
 
 ---
 

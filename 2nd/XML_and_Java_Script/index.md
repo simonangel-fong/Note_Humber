@@ -16,7 +16,7 @@ Github： https://github.com/OleksiiKachan/xml-and-js
 ## Catalog
 
 - [Git](./Git/index.md)
-- [HTML DOM](./dom.md)
+- [HTML DOM](./html_dom.md)
 - [XML](./xml.md)
 
 ---
