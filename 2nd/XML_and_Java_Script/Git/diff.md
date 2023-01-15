@@ -1,8 +1,10 @@
 # Git diff
 
-[Back](../index.md)
+[Back](./index.md)
 
-[TOC]
+- [Git diff](#git-diff)
+  - [Displays changes since last commit 查看自上次提交后的修改](#displays-changes-since-last-commit-查看自上次提交后的修改)
+  - [Compares Between Branches](#compares-between-branches)
 
 ---
 
@@ -26,6 +28,6 @@
 
 ---
 
-[TOP](#local-repository)
+[TOP](#git-diff)
 
 **!Important**: This note is for personal use. Copy right reserved.

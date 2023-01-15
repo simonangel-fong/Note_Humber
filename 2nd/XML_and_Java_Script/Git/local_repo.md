@@ -1,12 +1,20 @@
 # Local Repository
 
-[Back](../index.md)
+[Back](./index.md)
 
-[TOC]
+- [Local Repository](#local-repository)
+
+  - [git init: 创建空的 - git 或重新初始化一个存在的 - git](#git-init-创建空的-git-或重新初始化一个存在的-git)
+  - [git status: 显示当前文件夹中文件状态](#git-status-显示当前文件夹中文件状态)
+  - [git add: 将文件添加到暂存区](#git-add-将文件添加到暂存区)
+  - [git commit: 提交](#git-commit-提交)
+  - [git log: 查看提交记录](#git-log-查看提交记录)
+  - [Undo a staged file 撤销缓存](#undo-a-staged-file-撤销缓存)
+  - [Undo a Commit 撤销提交](#undos-a-commit-撤销提交)
 
 ---
 
-## `git-init`: 创建空的 git 或重新初始化一个存在的 git
+## `git init`: 创建空的 git 或重新初始化一个存在的 git
 
 - Create an empty Git repository or reinitialize an existing one
 
@@ -45,7 +53,7 @@
 
 ---
 
-## `git add`: 将文件添加到暂存区。
+## `git add`: 将文件添加到暂存区
 
 - Add file contents to the index
 
@@ -60,7 +68,7 @@
 
 ---
 
-## `git commit`: 将文件添加到暂存区。
+## `git commit`: 提交
 
 - Record changes to the repository
 
@@ -74,11 +82,42 @@
 
 ---
 
-## Undo a staged file
+## `git log`: 查看提交记录
 
-| Git Command | Description |
-| ----------- | ----------- |
-| ``          |             |
+| Git Command                | Description                                    |
+| -------------------------- | ---------------------------------------------- |
+| `git log`                  | Show commit history                            |
+| `git log -<NUM>`           | Show the last `<NUM>` history                  |
+| `git log --oneline -<NUM>` | Show the last `<NUM>` history in a short form. |
+
+---
+
+## Undo a staged file 撤销缓存
+
+- 注意该处时 staged file, 即已经被 add 但没有 commit 的文件。
+- reset 后在 stage 的修改将会撤销，但修改依然会存在 unstage，即相关修改依然保留在文件。
+
+| Git Command          | Description               |
+| -------------------- | ------------------------- |
+| `git reset`          | Unstates all staged files |
+| `git reset filename` | Unstates the staged file  |
+
+---
+
+## Undos a Commit 撤销提交
+
+| Git Command             | Description                                                             |
+| ----------------------- | ----------------------------------------------------------------------- |
+| `git reset HEAD`        | Undo all commits after the specific commit                              |
+| `git reset --hard HEAD` | Undo all commits after the specific commit and remove all modification. |
+| `git reset HEAD~1`      | Undo the last commit                                                    |
+| `git reset HEAD~2`      | Undo the last two commit                                                |
+
+- `HEAD~1`: the pointer of the last commit 上一个.
+- `HEAD~2`: the pointer of the last two commit 上上一个.
+
+- 默认撤销后，自指定提交之后的所有修改会被 unstage。即新的修改会保留在文件，但会从提交历史中撤销。
+- 使用参数`--hard`,则所有新的修改会被移除。
 
 ---
 

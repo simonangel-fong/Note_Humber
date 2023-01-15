@@ -1,8 +1,12 @@
 # Remote Repository
 
-[Back](../index.md)
+[Back](./index.md)
 
-[TOC]
+- [Remote Repository](#remote-repository)
+  - [git remote: 远端仓库设置](#git-remote-远端仓库设置)
+  - [git clone: 克隆远端代码仓库到本地](#git-clone-克隆远端代码仓库到本地)
+  - [git push:推送到远端仓库](#git-push推送到远端仓库)
+  - [git pull: 从远程获取代码并合并本地的版本](#git-pull-从远程获取代码并合并本地的版本)
 
 ---
 

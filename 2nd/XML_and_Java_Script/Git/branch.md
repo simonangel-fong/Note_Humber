@@ -4,7 +4,15 @@
 
 ---
 
-[TOC]
+- [Git Branch](#git-branch)
+  - [Git Branching](#git-branching)
+  - [List Branches 查看分支](#list-branches-查看分支)
+  - [Create a new Branch 创建新分支](#create-a-new-branch-创建新分支)
+  - [Switch between branches 切换分支](#switch-between-branches-切换分支)
+  - [Rename a local branch 重命名](#rename-a-local-branch-重命名)
+  - [Merge Branches 合并分支](#merge-branches-合并分支)
+  - [Push the branch to the remote Repository 推送分支到远端](#push-the-branch-to-the-remote-repository-推送分支到远端)
+  - [Delete the branch 删除分支](#delete-the-branch-删除分支)
 
 ---
 

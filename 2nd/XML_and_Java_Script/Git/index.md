@@ -4,7 +4,7 @@
 
 ---
 
-Video presented by instructor:
+Videos are given by instructor:
 [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)
 
 ---
@@ -13,6 +13,7 @@ Video presented by instructor:
   - [Local Repository](./local_repo.md)
   - [Remote Repository](./remote_repo.md)
   - [Branch](./branch.md)
+  - [Diff](./diff.md)
 
 ---
 
