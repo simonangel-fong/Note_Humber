@@ -49,10 +49,11 @@ git clone url
 
 - Syntax:
 
-| Git Command                    | Description                                                 |
-| ------------------------------ | ----------------------------------------------------------- |
-| `git push <alias> <branch>`    | `<alias>`:远端仓库别名; `<branch>`:分支                     |
-| `git push -u <alias> <branch>` | set upstream:设置 push 的默认参数，此后只需要`git push`即可 |
+| Git Command                                        | Description                                                 |
+| -------------------------------------------------- | ----------------------------------------------------------- |
+| `git push <remote> <local_branch>`                 | 如果远端的分支相同                                          |
+| `git push <remote> <local_branch>:<remote_branch>` | 如果远端的分支不同，则需要明示                              |
+| `git push -u <remote> <branch>`                    | set upstream:设置 push 的默认参数，此后只需要`git push`即可 |
 
 ---
 

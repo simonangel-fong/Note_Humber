@@ -70,6 +70,15 @@
 | ----------------------------------- | ---------------------------------------------------- |
 | `git commit -m '<msg>' `            | Use the given `<msg>` as the commit message.         |
 | `git commit -m '<msg>' -m '<desc>'` | `<msg>`: the title of a commit, `<desc>`:description |
+| `git commit -am '<msg>'`            | Commits the modified files that have been committed. |
+
+---
+
+## Undo a staged file
+
+| Git Command | Description |
+| ----------- | ----------- |
+| ``          |             |
 
 ---
 
