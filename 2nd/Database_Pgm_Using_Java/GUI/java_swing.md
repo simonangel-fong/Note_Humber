@@ -20,7 +20,11 @@
   - [JTextField](./component/jtextfield.md)
 
 - [LayoutManager](./layout/layoutmanagers.md)
-  - [JBorderLayout](./layout/jborderlayout.md)
+  - [JFlowLayout](./layout/flowlayout.md)
+  - [JBorderLayout](./layout/borderlayout.md)
+  - [JBoxLayout](./layout/boxlayout.md)
+  - [JCardLayout](./layout/cardlayout.md)
+  - [JGridLayout](./layout/gridlayout.md)
 
 ---
 
