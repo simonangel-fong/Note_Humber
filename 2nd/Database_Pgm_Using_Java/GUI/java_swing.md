@@ -10,12 +10,17 @@
 
 - Container
 
-  - [JFrame](./jframe.md)
-  - [JPanel](./jpanel.md)
+  - [JFrame](./container/jframe.md)
+  - [JPanel](./container/jpanel.md)
 
 - Component
-  - [JButton](./jbutton.md)
-  - [JLabel](./jlabel.md)
+
+  - [JButton](./component/jbutton.md)
+  - [JLabel](./component/jlabel.md)
+  - [JTextField](./component/jtextfield.md)
+
+- [LayoutManager](./layout/layoutmanagers.md)
+  - [JBorderLayout](./layout/jborderlayout.md)
 
 ---
 

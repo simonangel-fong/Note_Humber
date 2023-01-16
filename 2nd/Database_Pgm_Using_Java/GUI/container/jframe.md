@@ -1,6 +1,6 @@
 ## JFrame
 
-[Back](./java_swing.md)
+[Back](../java_swing.md)
 
 [TOC]
 
