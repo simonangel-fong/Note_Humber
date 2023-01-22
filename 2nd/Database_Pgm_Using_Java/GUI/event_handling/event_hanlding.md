@@ -104,6 +104,38 @@ public class DemoInnerClass extends JFrame {
 
 ### Example：Anonymous Class
 
+- 匿名类：匿名类是不能有名字的类，它们不能被引用，只能在创建时用 new 语句来声明它们。
+  - 通常需要创建一个子类来继承一个父类或实现一个接口。但匿名类的方法是不创建这个子类，而是通过`new`语句直接创建一个匿名类的对象。
+
+- 方法：
+    - 1. 创建匿名类, 添加
+    ```java
+        // Step 1: creates an Event Listener Object
+        ActionListener al = new ActionListener(){
+            // Step 2: Overrides action method
+            public void actionPerformed(ActionEvent e) {/
+                //override code
+            };
+        };
+
+        btn.addActionListener(al); // Step 3: registers Listener Object to component
+    ```
+
+    - 2. 在添加方法中创建
+    ```java
+        // Step 1: Add an Anonymous Class
+        btn.addActionListener(new ActionListener() {
+
+            // Step 2: Overrides action method
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lb.setText("OK");
+            }
+
+        });
+
+    ```
+
 ```java
 
 import java.awt.*;
@@ -134,6 +166,14 @@ public class DemoAnonymousClass extends JFrame {
             }
 
         });
+
+        // ActionListener al = new ActionListener(){// Step 1: creates an Event Listener Object
+        //     public void actionPerformed(ActionEvent e) {// Step 2: Overrides action method
+        //         btn.setText("OK");
+        //     };
+        // };
+
+        // btn.addActionListener(al); // Step 3: registers Listener Object to component
 
         lb = new JLabel("Label");
 

@@ -14,20 +14,46 @@
 
 ---
 
-## Constructors
+## Practical: Single Selection
 
-| Constructor                                   | Description                                                                |
-| --------------------------------------------- | -------------------------------------------------------------------------- |
-| `JRadioButton()`                              | Creates an initially unselected radio button with no set text.             |
-| `JRadioButton(Action a)`                      | Creates a radiobutton where properties are taken from the Action supplied. |
-| `JRadioButton(String text)`                   | Creates an unselected radio button with the specified text.                |
-| `JRadioButton(String text, boolean selected)` | Creates a radio button with the specified text and selection state.        |
+- It should be added in `ButtonGroup` to select one radio button only. 放在一个`ButtonGroup`中以实现单选
+
+```java
+        JRadioButton radioBtn01=new JRadioButton("Small");
+        JRadioButton radioBtn02=new JRadioButton("Large");
+
+        ButtonGroup btnGroup = new ButtonGroup(); // 使用ButtonGroup将radioButton作为一个组，实现单选的效果。
+        btnGroup.add(radioBtn01);
+        btnGroup.add(radioBtn02);
+```
 
 ---
 
-## Useful Methods
+## Constructors
+
+| Constructor                                   | Description                                                         |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| `JRadioButton()`                              | Creates an initially unselected radio button with no set text.      |
+| `JRadioButton(String text)`                   | Creates an unselected radio button with the specified text.         |
+| `JRadioButton(String text, boolean selected)` | Creates a radio button with the specified text and selection state. |
+
+---
+
+## Methods
 
 - Methods
+
+| Methods                       | Description                                                                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------ |
+| `void setText(String s)`      | It is used to set specified text on button.                                                |
+| `String getText()`            | It is used to return the text of the button.                                               |
+| `void setEnabled(boolean b)`  | It is used to enable or disable the button.                                                |
+| `boolean isSelected()`        | Returns the state of the button. True if the toggle button is selected, false if it's not. |
+| `void setSelected(boolean b)` | Sets the state of the button. Note that this method does not trigger an actionEvent.       |
+
+---
+
+## Event Listener
 
 | Methods                                  | Description                                                                                                                            |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +62,9 @@
 
 ---
 
-## Exmaple: Creates a group of radio buttons
+## Example
+
+### Example: Creates a group of radio buttons
 
 ```java
 
@@ -81,7 +109,9 @@ public class DemoJRadioButton01 {
 
 ---
 
-## Example: `.isSelected()`
+### Example: Event Listener
+
+- 注意本例因为要使用`JOptionPane.showMessageDialog`，所以只能直接实现`ActionListener`， 不能使用其他方法。
 
 ```java
 import java.awt.*;

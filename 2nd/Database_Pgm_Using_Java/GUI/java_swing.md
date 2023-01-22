@@ -18,6 +18,7 @@
     - [JButton](./component/jbutton.md)
     - [JLabel](./component/jlabel.md)
     - [JTextField](./component/jtextfield.md)
+    - [JRadioButton](./component/jradiobutton.md)
 
   - [LayoutManager](./layout/layoutmanagers.md)
     - [JFlowLayout](./layout/flowlayout.md)
