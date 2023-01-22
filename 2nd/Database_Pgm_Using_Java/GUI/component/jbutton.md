@@ -26,7 +26,7 @@
 
 ---
 
-## Useful Methods
+## Methods
 
 - Methods
 
@@ -42,7 +42,17 @@
 
 ---
 
-## Example 1
+## Event Handler
+
+| Method                                | Description              |
+| ------------------------------------- | ------------------------ |
+| `addActionListener(ActionListener a)` | Register Action Listener |
+
+---
+
+## Example
+
+### Example: Creats a Button
 
 - A Frame without title
 - sets frame and button size
@@ -74,6 +84,12 @@ public class Demo01 {
 ```
 
 ![output](https://static.javatpoint.com/java/swing/images/java-jbutton1.png)
+
+---
+
+### Example: Add Event Listener()
+
+[Inner class method](../event_handling/event_hanlding.md#exampleinner-class)
 
 ---
 
