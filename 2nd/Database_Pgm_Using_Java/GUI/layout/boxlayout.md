@@ -62,7 +62,7 @@ public class JBoxLayout {
 
 ```
 
-![output](https://static.javatpoint.com/core/images/java-gridlayout3.png)
+![output](https://static.javatpoint.com/images/BoxLayout1.jpg)
 
 ---
 

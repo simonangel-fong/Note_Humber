@@ -34,10 +34,6 @@
 
 ---
 
-## Method
-
----
-
 ## Exmaple
 
 ```java

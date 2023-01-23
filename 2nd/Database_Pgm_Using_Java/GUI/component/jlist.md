@@ -8,7 +8,9 @@
 
 ## JList Class
 
-The object of `JList` class represents a list of text items. The list of text items can be set up so that the user can choose either one item or multiple items. It inherits JComponent class.It inherits JComponent class.
+- The object of `JList` class represents a list of text items. The list of text items can be set up so that the user can choose either one item or multiple items. It inherits JComponent class.It inherits JComponent class.
+
+- API: https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html
 
 ---
 
@@ -24,12 +26,15 @@ The object of `JList` class represents a list of text items. The list of text it
 
 ## Methods
 
-| Methods                               | Description                                                                                                                 |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `int getSelectedIndex()`              | It is used to return the smallest selected cell index.                                                                      |
-| `E	getSelectedValue()`                 | Returns the value for the smallest selected cell index; the selected value when only a single item is selected in the list. |
-| `ListModel getModel()`                | It is used to return the data model that holds a list of items displayed by the JList component.                            |
-| `void setListData(Object[] listData)` | It is used to create a read-only ListModel from an array of objects.                                                        |
+| Methods                                        | Description                                                                                                                                                                                                                                                                      |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `int getSelectedIndex()`                       | It is used to return the smallest selected cell index.                                                                                                                                                                                                                           |
+| `E	getSelectedValue()`                          | Returns the value for the smallest selected cell index; the selected value when only a single item is selected in the list.                                                                                                                                                      |
+| `ListModel getModel()`                         | It is used to return the data model that holds a list of items displayed by the JList component.                                                                                                                                                                                 |
+| `void setListData(Object[] listData)`          | It is used to create a read-only ListModel from an array of objects.                                                                                                                                                                                                             |
+| `void setVisibleRowCount(int visibleRowCount)` | Sets the visibleRowCount property, which has different meanings depending on the layout orientation: For a VERTICAL layout orientation, this sets the preferred number of rows to display without requiring scrolling; for other orientations, it affects the wrapping of cells. |
+|`void	setFixedCellWidth(int width)`|Sets a fixed value to be used for the width of every cell in the list.|
+|`void	setLayoutOrientation(int layoutOrientation)`|Defines the way list cells are layed out.|
 
 ---
 
@@ -43,7 +48,7 @@ The object of `JList` class represents a list of text items. The list of text it
 
 ## Example
 
-### Example: Creates a List
+### Example: Creates a List with scroll bar
 
 ```java
 
@@ -53,25 +58,21 @@ import javax.swing.*;
 public class DemoJList01 {
 
     DemoJList01() {
-        JFrame frame = new JFrame("Demo - List");
+        JFrame frame = new JFrame();
 
-        DefaultListModel<String> l1 = new DefaultListModel<>();
-        l1.addElement("Item1");
-        l1.addElement("Item2");
-        l1.addElement("Item3");
-        l1.addElement("Item4");
+        String[] str_list = { "A", "B", "C", "D", "E", "F", "G", "H", "I" };
+        JList list = new JList();
+        list.setListData(str_list);// Adds String[] to list
+        list.setVisibleRowCount(5);// sets number of visible 设置可见行数
+        list.setFixedCellWidth(100);// 设置固定宽度
 
-        JList<String> list = new JList<>(l1);
+        JScrollPane listScroller = new JScrollPane(list);// 创建一个可滚动的面板，当list中的元素大于设置的可见行数时，滚动条可见。
 
-        JPanel pl =new JPanel();
-        pl.setSize(200, 200);
-        pl.add(list);
+        frame.add(listScroller);
 
-        frame.add(pl);
-
-        frame.setSize(300, 300);
-        frame.setLayout(new FlowLayout());
         frame.setDefaultCloseOperation(3);
+        frame.setLayout(new FlowLayout());
+        frame.setSize(300, 300);
         frame.setVisible(true);
     }
 
@@ -81,6 +82,8 @@ public class DemoJList01 {
 }
 
 ```
+
+---
 
 ### Example: Get select value
 

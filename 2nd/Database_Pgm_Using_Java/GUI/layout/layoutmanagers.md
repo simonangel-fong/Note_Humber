@@ -25,4 +25,17 @@
 
 ---
 
+## Guide
+
+- Guide: https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html
+
+| Layout Type  | Setting                                                         |
+| ------------ | --------------------------------------------------------------- |
+| BorderLayout | `frame.add(item, BorderLayout.CENTER);`                         |
+| FlowLayout   | `frame.setLayout(new FlowLayout(FlowLayout.CENTER));`                  |
+| BoxLayout    | `frame.setLayout(new BoxLayout (container, BoxLayout.Y_Axis));` |
+| CardLayout   | `frame.setLayout(new CardLayout (int, int));`                    |
+
+---
+
 [TOP](#layoutmanagers)

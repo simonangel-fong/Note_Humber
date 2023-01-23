@@ -26,11 +26,12 @@
     - [JList](./component/jlist.md)
 
   - [LayoutManager](./layout/layoutmanagers.md)
-    - [JFlowLayout](./layout/flowlayout.md)
-    - [JBorderLayout](./layout/borderlayout.md)
-    - [JBoxLayout](./layout/boxlayout.md)
-    - [JCardLayout](./layout/cardlayout.md)
-    - [JGridLayout](./layout/gridlayout.md)
+
+    - [FlowLayout](./layout/flowlayout.md)
+    - [BorderLayout](./layout/borderlayout.md)
+    - [BoxLayout](./layout/boxlayout.md)
+    - [CardLayout](./layout/cardlayout.md)
+    - [GridLayout](./layout/gridlayout.md)
 
 - ## [Event Handling](./event_handling/event_hanlding.md)
 

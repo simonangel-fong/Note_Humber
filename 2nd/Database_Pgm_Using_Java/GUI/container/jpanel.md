@@ -22,11 +22,17 @@
 
 ---
 
-## Useful Methods
+## Methods
+
+|Method|Description|
+|---|---|
+|`void setBorder(Border border)`|Sets the border of this component.|
 
 ---
 
 ## Example
+
+### Example: Creates a Panel with Color
 
 1. creates a frame
 2. creates 2 buttons
@@ -74,6 +80,52 @@ public class Demo03 {
 ```
 
 ![panel](https://static.javatpoint.com/java/swing/images/java-jpanel1.png)
+
+---
+
+### Example: Creates a Panel with Border
+
+```java
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+
+public class DemoPanel03 {
+
+    public static void main(String[] args) {
+
+        // Creates a Frame
+        JFrame frame = new JFrame("Demo - Panel with Border ");
+
+        // Creates a Panel and sets attributes
+        JPanel panel = new JPanel();
+        panel.setBounds(40, 80, 200, 200);
+        panel.setBackground(Color.gray);//
+        panel.setBorder(new TitledBorder(new EtchedBorder(),"Title"));//设置边线
+
+        // Creates 2 buttons
+        JButton btn01 = new JButton("Button 1");
+        btn01.setBounds(50, 100, 80, 30);
+        btn01.setBackground(Color.yellow);
+
+        JButton btn02 = new JButton("Button 2");
+        btn02.setBounds(100, 100, 80, 30);
+        btn02.setBackground(Color.green);
+
+        // Add components to container
+        panel.add(btn01);
+        panel.add(btn02);
+        frame.add(panel);
+
+        // Sets attributes of the Frame
+        frame.setSize(400, 400);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
+
+```
 
 
 ---
