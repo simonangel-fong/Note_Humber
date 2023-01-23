@@ -22,6 +22,7 @@
     - [JButton](./component/jbutton.md)
     - [JRadioButton](./component/jradiobutton.md)
     - [JCheckBox](./component/jcheckbox.md)
+    - [JComboBox](./component/jcombobox.md)
 
   - [LayoutManager](./layout/layoutmanagers.md)
     - [JFlowLayout](./layout/flowlayout.md)
@@ -30,8 +31,7 @@
     - [JCardLayout](./layout/cardlayout.md)
     - [JGridLayout](./layout/gridlayout.md)
 
-- [Event Handling](./event_handling/event_hanlding.md)
-  -
+- ## [Event Handling](./event_handling/event_hanlding.md)
 
 ---
 
