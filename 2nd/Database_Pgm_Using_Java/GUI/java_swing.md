@@ -23,6 +23,7 @@
     - [JRadioButton](./component/jradiobutton.md)
     - [JCheckBox](./component/jcheckbox.md)
     - [JComboBox](./component/jcombobox.md)
+    - [JList](./component/jlist.md)
 
   - [LayoutManager](./layout/layoutmanagers.md)
     - [JFlowLayout](./layout/flowlayout.md)
