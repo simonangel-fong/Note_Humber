@@ -25,11 +25,18 @@ The object of a `JTextField class` is a text component that **allows the editing
 
 ## Methods
 
+| Methods                | Description                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------------- |
+| `Action getAction()`   | It returns the currently set Action for this ActionEvent source, or null if no Action is set. |
+| `void setFont(Font f)` | It is used to set the current font.                                                           |
+
+---
+
+## Event Listener
+
 | Methods                                       | Description                                                                                                         |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `void addActionListener(ActionListener l)`    | It is used to add the specified action listener to receive action events from this textfield.                       |
-| `Action getAction()`                          | It returns the currently set Action for this ActionEvent source, or null if no Action is set.                       |
-| `void setFont(Font f)`                        | It is used to set the current font.                                                                                 |
 | `void removeActionListener(ActionListener l)` | It is used to remove the specified action listener so that it no longer receives action events from this textfield. |
 
 ---

@@ -14,12 +14,10 @@
 
 ## Constructors
 
-| Constructor                                         | Description                                                                         |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `JLabel()`                                          | Creates a JLabel instance with no image and with an empty string for the title.     |
-| `JLabel(String s)`                                  | Creates a JLabel instance with the specified text.                                  |
-| `JLabel(Icon i)`                                    | Creates a JLabel instance with the specified image.                                 |
-| `JLabel(String s, Icon i, int horizontalAlignment)` | Creates a JLabel instance with the specified text, image, and horizontal alignment. |
+| Constructor        | Description                                                                     |
+| ------------------ | ------------------------------------------------------------------------------- |
+| `JLabel()`         | Creates a JLabel instance with no image and with an empty string for the title. |
+| `JLabel(String s)` | Creates a JLabel instance with the specified text.                              |
 
 ---
 
@@ -35,7 +33,9 @@
 
 ---
 
-## Example 1
+## Example
+
+### Example: Creates a Label
 
 ```java
 import javax.swing.*;

@@ -10,6 +10,8 @@
 
 - The `JCheckBox` class is used to create a checkbox. It is used to turn an option on (true) or off (false). Clicking on a CheckBox changes its state from "on" to "off" or from "off" to "on ".It inherits JToggleButton class.
 
+- Because check box settings do not exclude each other, you do  not need to place a set of check boxes inside a button group. 无需使用`ButtonGroup`.
+
 - API: https://docs.oracle.com/javase/8/docs/api/javax/swing/JCheckBox.html
 
 ---
@@ -21,21 +23,28 @@
 | `JCheckBox()`                              | Creates an initially unselected check box button with no text, no icon.              |
 | `JChechBox(String s)`                      | Creates an initially unselected check box with text.                                 |
 | `JCheckBox(String text, boolean selected)` | Creates a check box with text and specifies whether or not it is initially selected. |
-| `JCheckBox(Action a)`                      | Creates a check box where properties are taken from the Action supplied.             |
 
 ---
 
-## Useful Methods
+## Methods
 
-- Methods
-
-| Methods                          | Description                                           |
-| -------------------------------- | ----------------------------------------------------- |
-| `protected String paramString()` | It returns a string representation of this JCheckBox. |
+| Methods                 | Description                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| `boolean isSelected() ` | Returns the state of the button. True if the toggle button is selected, false if it's not. |
 
 ---
 
-## Exmaple: Creates a group of CheckBox
+## Event Listener
+
+| Methods                                  | Description                           |
+| ---------------------------------------- | ------------------------------------- |
+| `void addItemListener(ItemListener il) ` | Adds an ItemListener to the checkbox. |
+
+---
+
+## Exmaple
+
+### Exmaple: Creates a group of CheckBox
 
 ```java
 
@@ -78,7 +87,7 @@ public class DemoJCheckBox {
 
 ---
 
-## Example: `.addItemListener()`
+### Example: Add Event Listener
 
 ```java
 

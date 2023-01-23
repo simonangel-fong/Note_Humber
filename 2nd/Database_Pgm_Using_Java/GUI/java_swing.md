@@ -7,7 +7,9 @@
 [TOC]
 
 ---
+
 - Design
+
   - Container
 
     - [JFrame](./container/jframe.md)
@@ -15,10 +17,11 @@
 
   - Component
 
-    - [JButton](./component/jbutton.md)
     - [JLabel](./component/jlabel.md)
     - [JTextField](./component/jtextfield.md)
+    - [JButton](./component/jbutton.md)
     - [JRadioButton](./component/jradiobutton.md)
+    - [JCheckBox](./component/jcheckbox.md)
 
   - [LayoutManager](./layout/layoutmanagers.md)
     - [JFlowLayout](./layout/flowlayout.md)
@@ -28,7 +31,7 @@
     - [JGridLayout](./layout/gridlayout.md)
 
 - [Event Handling](./event_handling/event_hanlding.md)
-  - 
+  -
 
 ---
 
