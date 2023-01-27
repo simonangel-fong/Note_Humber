@@ -48,16 +48,16 @@
 ```sql
 
 DECLARE
-    V_FIRST_NAME VARCHAR2(20);#Global
+    V_FIRST_NAME VARCHAR2(20);--Global
 BEGIN
     DECLARE
-        V_LAST_NAME VARCHAR2(20);#Local
+        V_LAST_NAME VARCHAR2(20);--Local
     BEGIN
         V_FIRST_NAME := 'Carmen';
         V_LAST_NAME := 'Miranda';
         DBMS_OUTPUT.PUT_LINE (V_FIRST_NAME || ' ' || V_LAST_NAME);
     END;
-    DBMS_OUTPUT.PUT_LINE (V_FIRST_NAME || ' ' || V_LAST_NAME); #Error, V_LAST_NAME is a local variable which is not accessible in the outer block.
+    DBMS_OUTPUT.PUT_LINE (V_FIRST_NAME || ' ' || V_LAST_NAME); --Error, V_LAST_NAME is a local variable which is not accessible in the outer block.
 END;
 
 ```

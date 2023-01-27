@@ -21,14 +21,14 @@
 
 ```sql
 DECLARE
-    #optional
-    #declarations section
+    --optional
+    --declarations section
 BEGIN
-    #mandatory, Must contain at least one statement.
-    #executable command(s)
+    --mandatory, Must contain at least one statement.
+    --executable command(s)
 EXCEPTION
-    #optional
-    #exception handling
+    --optional
+    --exception handling
 END;
 
 ```
@@ -49,10 +49,10 @@ END;
 - Basic structure of an anonymous block:
 
 ```sql
-#DECLARE#
+--DECLARE
 BEGIN
---statements
-#EXCEPTION#
+  --statements
+--EXCEPTION
 END;
 
 ```
@@ -75,10 +75,10 @@ END;
 
 PROCEDURE procedure_name
 IS
--- variable declarations
+  --variable declarations
 BEGIN
--- statements
-#EXCEPTION
+  -- statements
+--EXCEPTION
 END;
 
 ```
@@ -88,12 +88,12 @@ END;
 ```sql
 FUNCTION function_name
 RETURN datatype
--- variable declaration(s)
+    -- variable declaration(s)
 IS
 BEGIN
--- statements
+    -- statements
 RETURN value;
-#EXCEPTION
+--EXCEPTION
 END;
 ```
 
@@ -101,12 +101,12 @@ END;
 
 ```sql
 BEGIN
-    procedure_name; #invokes a procedure
-    function_name; #invokes a function
+    procedure_name; --invokes a procedure
+    function_name; --nvokes a function
 END;
 
 ```
 
 ---
 
-[TOP](#PLSQL)
+[TOP](#plsql-block)

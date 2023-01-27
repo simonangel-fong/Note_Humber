@@ -50,14 +50,14 @@
 ## Assigning New Values to Variables(Executable Statements)
 
 ```sql
-v_name := 'Henderson'; # Character literals
-v_start_date := '12-Dec-2005'; # date literals
-v_quote := 'The only thing that we can know is that we know nothing and that is the highest flight of human reason.'; ##Statements can continue over several lines.
+v_name := 'Henderson'; --Character literals
+v_start_date := '12-Dec-2005'; --date literals
+v_quote := 'The only thing that we can know is that we know nothing and that is the highest flight of human reason.'; --Statements can continue over several lines.
 
-v_my_integer := 100; # numberic values
-v_my_sci_not := 2E5; # scientific notation
+v_my_integer := 100; --numberic values
+v_my_sci_not := 2E5; --scientific notation
 
-v_last_day := LAST_DAY(SYSDATE); # LAST_DAY is a function
+v_last_day := LAST_DAY(SYSDATE); --LAST_DAY is a function
 
 ```
 

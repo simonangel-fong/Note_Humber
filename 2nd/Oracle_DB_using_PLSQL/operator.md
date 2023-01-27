@@ -28,9 +28,9 @@
 ## Example
 
 ```sql
-v_loop_count := v_loop_count + 1; #Increment
-v_good_sal := v_sal BETWEEN 50000 AND 150000; # Boolean
-v_valid := (v_empno IS NOT NULL); #whether an employee number contains a value.
+v_loop_count := v_loop_count + 1; --Increment
+v_good_sal := v_sal BETWEEN 50000 AND 150000; -- Boolean
+v_valid := (v_empno IS NOT NULL); --whether an employee number contains a value.
 ```
 
 ---

@@ -55,7 +55,12 @@
 
 - Hold a **single value**
 - Have **no internal components**
-- Can be classified into four categories: - Character - Number - Date - Boolean
+- Can be classified into four categories:
+
+  - Character
+  - Number
+  - Date
+  - Boolean
 
   > Note : The `BOOLEAN` data type may be new to you, as it is not a column data type used in table definitions.
 
@@ -67,9 +72,9 @@
 
 - Categories:
 
-  - `Character data` types also are known as **strings** and allow storage of **alphanumeric data (letters, numbers, and symbols)**.
-  - `Number data` types allow storage of **integers**, **decimals**, and a **positive or negative indicator**.
-  - `Date data` types provide storage of **dates and times**.
+  - `Character` data types also are known as **strings** and allow storage of **alphanumeric data (letters, numbers, and symbols)**.
+  - `Number` data types allow storage of **integers**, **decimals**, and a **positive or negative indicator**.
+  - `Date` data types provide storage of **dates and times**.
   - `BOOLEAN` data type to store the **logical values** `TRUE`, `FALSE`, and `NULL`.
 
     - **Only logic operations** are allowed on `BOOLEAN` variables.

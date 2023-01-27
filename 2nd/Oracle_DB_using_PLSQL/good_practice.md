@@ -63,11 +63,9 @@
 
 - The naming of identifiers should be <u>clear, consistent,and unambiguous</u>.
 
-      - Variables starting with v_
-      - Constants starting with c_
-      - Parameters starting with p_ (for passing to procedures and
-
-  functions)
+  - Variables starting with v\_
+  - Constants starting with c\_
+  - Parameters starting with p\_ (for passing to procedures and functions)
 
 ---
 
