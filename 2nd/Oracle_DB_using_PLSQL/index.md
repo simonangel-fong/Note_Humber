@@ -22,6 +22,23 @@
 - [Good Practice](./good_practice.md)
 - [Function](./function.md)
 
+- SQL
+
+  - Data Manipulation Language (DML)
+
+    - [Insert Data](./DML/insert_row.md)
+    - [Modify Data](./DML/modify_row.md)
+    - [Delete Data](./DML/delete_row.md)
+    - [Merge Data](./DML/merge_row.md)
+
+  - Data Query Language (DQL)
+
+    - [SELECT INTO](./DQL/select_into.md)
+
+  - [Transaction Control](./TCS/transaction.md)
+
+- [Cursor](./cursor.md)
+
 ---
 
 [Top](#oracle-db-using-plsql)
