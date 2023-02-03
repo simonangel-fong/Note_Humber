@@ -9,6 +9,8 @@
     - [Built-in Function](#built-in-function)
     - [Single Quotes 插入单引号](#single-quotes-插入单引号)
     - [Virtual Column 虚拟列](#virtual-column-虚拟列)
+    - [INSERT Explicit Syntax](#insert-explicit-syntax)
+    - [INSERT Implicit Syntax](#insert-implicit-syntax)
   - [INSERT INTO SELECT](#insert-into-select---copy-data-from-a-query)
 
 ---
@@ -88,11 +90,10 @@ VALUES (value01,value02,NULL);
 ```sql
 
 -- INSERT Implicit
-INSERT INTO table_name 
+INSERT INTO table_name
 VALUES (value01,value02,NULL);
 
 ```
-
 
 ---
 

@@ -1,10 +1,12 @@
 # Select Into
 
+[Back](../index.md)
+
 [TOC]
 
 ---
 
-## `SELECT INTO`
+## `SELECT INTO` And Good Practice
 
 - Syntax
 

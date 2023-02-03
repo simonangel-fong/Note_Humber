@@ -77,6 +77,12 @@ ROLLBACK;
   - An abnormal termination of SQL Developer 非正常终止客户端
   - A system failure 系统失败
 
+### APEX SQL
+
+- In **online/hosted versions** of Application Express at iAcademy, the **default** setting for the APEX SQL command processor is that `AUTOCOMMIT` is turned on. This means each statement executed will be automatically committed as it is executed. There is **no user control** to disable AUTOCOMMIT.
+
+- If you have a **locally installed version** of APEX, there is an `AUTOCOMMIT` checkbox that can be unchecked to disable AUTOCOMMIT. When AUTOCOMMIT is disabled, DML commands produce permanent changes only when the COMMIT command is issued **either within a PL/SQL block or by itself**. If the user logs off normally or closes the browser window before executing a COMMIT command, the changes will be **rolled back**.
+
 ---
 
 ## SAVEPOINT

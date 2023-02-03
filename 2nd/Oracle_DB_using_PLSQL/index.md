@@ -24,6 +24,8 @@
 
 - SQL
 
+  - [DDL/DCL](./DDL%26DCL/limitation.md)
+
   - Data Manipulation Language (DML)
 
     - [Insert Data](./DML/insert_row.md)

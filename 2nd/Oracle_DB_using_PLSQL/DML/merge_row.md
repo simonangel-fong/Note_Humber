@@ -10,11 +10,9 @@
 
 ## MERGE
 
-- The `MERGE` statement will `INSERT` a new row into a
-  target table or `UPDATE` existing data in a target table,
-  based on a comparison of the data in the two tables.
+- The `MERGE` statement will `INSERT` a new row into a target table or `UPDATE` existing data in a target table, based on a comparison of the data in the two tables.
 
-- The `WHEN` cIause determines the action to be taken.
+- The `WHEN` clause determines the action to be taken.
 
 - Syntax:
 
