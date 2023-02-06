@@ -1,6 +1,6 @@
 # PL/SQL Operator
 
-[Back](./index.md)
+[back](../index.md)
 
 - [PL/SQL Operator](#plsql-operator)
   - [Priority](#priority)

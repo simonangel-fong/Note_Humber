@@ -13,14 +13,16 @@
 
 ## Catalog
 
-- [PLSQL Block](./block.md)
-- [Lexical Unit](./lexical_unit.md)
-- [Variable](./variable.md)
-- [Variable Scrope](./variable_scope.md)
-- [Data Type](./data_type.md)
-- [Operator](./operator.md)
-- [Good Practice](./good_practice.md)
-- [Function](./function.md)
+- Fundamental
+
+  - [PLSQL Block](./fundamental/block.md)
+  - [Lexical Unit](./fundamental/lexical_unit.md)
+  - [Variable](./fundamental/variable.md)
+  - [Variable Scrope](./fundamental/variable_scope.md)
+  - [Data Type](./fundamental/data_type.md)
+  - [Operator](./fundamental/operator.md)
+  - [Good Practice](./fundamental/good_practice.md)
+  - [Function](./fundamental/function.md)
 
 - SQL
 
@@ -38,6 +40,18 @@
     - [SELECT INTO](./DQL/select_into.md)
 
   - [Transaction Control](./TCS/transaction.md)
+
+- Conditional Statement
+
+  - [IF statement](./conditaional_statement/if_statement.md)
+  - [Case statement](./conditaional_statement/case_statement.md)
+
+- Loop Statement
+
+  - [LOOP (Loop at least once)](./loop_statement/basic_loop.md)
+  - [WHILE LOOP (Evaluate condition before loop)](./loop_statement/while_loop.md)
+  - [FOR LOOP (number of iterations is known)](./loop_statement/for_loop.md)
+  - [Nested Loop](./loop_statement/nested_loop.md)
 
 - [Cursor](./cursor.md)
 

@@ -1,6 +1,6 @@
 # PL/SQL Lexical Unit
 
-[back](./index.md)
+[back](../index.md)
 
 - [PL/SQL Lexical Unit](#plsql-lexical-unit)
   - [Lexical Units](#lexical-units)

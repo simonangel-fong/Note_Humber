@@ -1,6 +1,6 @@
 # PLSQL Variable
 
-[back](./index.md)
+[back](../index.md)
 
 - [PLSQL Variable](#plsql-variable)
   - [Variable](#variable)

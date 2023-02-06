@@ -1,6 +1,6 @@
 # PL/SQL Variable Scope
 
-[back](./index.md)
+[back](../index.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # PLSQL Block
 
-[back](./index.md)
+[back](../index.md)
 
 - [PLSQL Block](#plsql-block)
   - [PL/SQL Block Structure](#plsql-block-structure)

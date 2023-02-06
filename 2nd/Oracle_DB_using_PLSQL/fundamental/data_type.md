@@ -1,6 +1,6 @@
 # PL/SQL Data Types
 
-[back](./index.md)
+[back](../index.md)
 
 - [PL/SQL Data Types](#plsql-data-types)
   - [Data Type](#data-type)

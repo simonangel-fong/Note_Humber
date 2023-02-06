@@ -1,6 +1,6 @@
 # PL/SQL Good Practise
 
-[back](./index.md)
+[back](../index.md)
 
 - [PL/SQL Good Practise](#plsql-good-practise)
   - [Good Practise](#good-practise)
