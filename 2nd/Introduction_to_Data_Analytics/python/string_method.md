@@ -1,5 +1,7 @@
 # String Methods
 
+[back](../index.md)
+
 [TOC]
 
 ---

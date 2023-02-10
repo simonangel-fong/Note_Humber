@@ -1,5 +1,7 @@
 # String
 
+[back](../index.md)
+
 [TOC]
 
 ---

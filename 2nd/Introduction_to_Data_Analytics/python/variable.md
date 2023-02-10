@@ -1,5 +1,7 @@
 # Variable
 
+[back](../index.md)
+
 [TOC]
 
 ---

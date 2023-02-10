@@ -1,9 +1,10 @@
 # Data Type
 
+[back](../index.md)
+
 [TOC]
 
 ---
-
 
 ---
 

@@ -1,5 +1,7 @@
 # method
 
+[back](../index.md)
+
 [TOC]
 
 ---

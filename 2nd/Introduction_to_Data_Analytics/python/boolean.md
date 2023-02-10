@@ -1,5 +1,7 @@
 # Boolean
 
+[back](../index.md)
+
 [TOC]
 
 ---

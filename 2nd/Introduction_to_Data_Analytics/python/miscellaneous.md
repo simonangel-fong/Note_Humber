@@ -1,12 +1,14 @@
 # Miscellaneous
 
+[back](../index.md)
+
 [TOC]
 
 ---
 
 ## Syntax
 
-- `Backslash`: lets you continue your block of code on the next line. 
+- `Backslash`: lets you continue your block of code on the next line.
 
 ```py
 
@@ -22,7 +24,6 @@ print(total_cost)
 
 
 ```
-
 
 ---
 

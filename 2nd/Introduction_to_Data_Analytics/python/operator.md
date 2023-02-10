@@ -1,5 +1,7 @@
 # Operator
 
+[back](../index.md)
+
 [TOC]
 
 ---
