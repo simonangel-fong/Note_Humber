@@ -40,8 +40,7 @@
 
   - [Method](./python/method.md)
 
-- Pandas
-
+- [Pandas](./pandas/index.md)
 ---
 
 [Top](#introduction_to_data_analytics)
