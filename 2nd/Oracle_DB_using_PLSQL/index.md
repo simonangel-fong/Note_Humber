@@ -53,7 +53,9 @@
   - [FOR LOOP (number of iterations is known)](./loop_statement/for_loop.md)
   - [Nested Loop](./loop_statement/nested_loop.md)
 
-- [Cursor](./cursor.md)
+- [Cursor](./cursor/cursor.md)
+  - [Explicit Cursor](./cursor/explicit_cursor.md)
+  - [Cursor For Update](./cursor/cursors_for_update.md)
 
 ---
 
