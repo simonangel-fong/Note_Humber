@@ -1,6 +1,14 @@
 # If Statement
 
-[TOC]
+[Back](../index.md)
+
+- [If Statement](#if-statement)
+  - [`IF` Statements Structure](#if-statements-structure)
+    - [Example](#example)
+  - [Multiple Conditional Expression 多重条件](#multiple-conditional-expression-多重条件)
+    - [Example](#example-1)
+  - [`Null`](#null)
+    - [Exmaple](#exmaple)
 
 ---
 
@@ -110,8 +118,8 @@ END;
   - Simple comparisons involving nulls always yield `NULL`. 简单比较如等于，大小于，一律按照 null 条件处理
   - Applying the logical operator `NOT` to a null yields `NULL`. 与 not 逻辑运算符计算的，一律返回 null
   - In conditional control statements, if a condition yields `NULL`, it behaves just like a `FALSE`, and the associated sequence of statements is **not executed**. null 条件视作 false。
-  - Null的算数式的结果是Null。
-    - `V_COUNT NUMBER;V_COUNT:=V_COUNT+1;`:V_COUNT依然是空。
+  - Null 的算数式的结果是 Null。
+    - `V_COUNT NUMBER;V_COUNT:=V_COUNT+1;`:V_COUNT 依然是空。
 
 ### Exmaple
 

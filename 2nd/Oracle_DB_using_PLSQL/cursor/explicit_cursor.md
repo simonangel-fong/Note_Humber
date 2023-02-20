@@ -112,28 +112,24 @@ END;
 ### Example: Basic Syntax
 
 ```sql
-
 DECLARE
-    CURSOR CUR_DEPTS_EMPS IS
+    CURSOR cur_depts_emps IS
         SELECT
-            FIRST_NAME
+            first_name
         FROM
-            EMPLOYEES;
-    V_FNAME EMPLOYEES.FIRST_NAME%TYPE;    --use %type to ensure data type
-    V_ATTR  NUMBER;
+            employees;
+    v_fname employees.first_name%type; --use %type to ensure data type
+    v_attr  NUMBER;
 BEGIN
-    OPEN CUR_DEPTS_EMPS;
+    OPEN cur_depts_emps;
     LOOP
-        FETCH CUR_DEPTS_EMPS INTO V_FNAME;
-        V_ATTR := CUR_DEPTS_EMPS%ROWCOUNT;
-        EXIT WHEN CUR_DEPTS_EMPS%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(TO_CHAR(V_ATTR)
-            ||'-'
-            ||V_FNAME);
+        FETCH cur_depts_emps INTO v_fname;
+        v_attr := cur_depts_emps%rowcount;
+        EXIT WHEN cur_depts_emps%notfound;
+        dbms_output.put_line(to_char(v_attr) ||'-' ||v_fname);
     END LOOP;
-    CLOSE CUR_DEPTS_EMPS;
+    CLOSE cur_depts_emps;
 END;
-
 ```
 
 ---
@@ -175,22 +171,20 @@ END;
 ```sql
 
 DECLARE
-    CURSOR CUR_EMP IS
+    CURSOR cur_emp IS
         SELECT
             *
         FROM
-            EMPLOYEES;
-    V_EMP_RECORD CUR_EMP%ROWTYPE; --declare a record
+            employees;
+    v_emp_record cur_emp%rowtype; --declare a record
 BEGIN
-    OPEN CUR_EMP; -- Open cursor
+    OPEN cur_emp; -- Open cursor
     LOOP
-        FETCH CUR_EMP INTO V_EMP_RECORD; -- load data from the cursor
-        EXIT WHEN CUR_EMP%NOTFOUND; -- condition to exit loop
-        DBMS_OUTPUT.PUT_LINE(V_EMP_RECORD.FIRST_NAME
-            || ' '
-            ||V_EMP_RECORD.LAST_NAME ); -- use the dot notation to show field's value
+        FETCH cur_emp INTO v_emp_record; -- load data from the cursor
+        EXIT WHEN cur_emp%notfound; -- condition to exit loop
+        dbms_output.put_line(v_emp_record.first_name || ' ' ||v_emp_record.last_name ); -- use the dot notation to show field's value
     END LOOP;
-    CLOSE CUR_EMP; -- Close cursor
+    CLOSE cur_emp; -- Close cursor
 END;
 
 ```
@@ -242,16 +236,14 @@ END;
 ```sql
 -- Example: Explicit cursor for
 DECLARE
-    CURSOR CUR_EMP IS
+    CURSOR cur_emp IS
         SELECT
             *
         FROM
-            EMPLOYEES;
+            employees;
 BEGIN
-    FOR V_EMP_RECORD IN CUR_EMP LOOP
-        DBMS_OUTPUT.PUT_LINE(V_EMP_RECORD.FIRST_NAME
-            ||' '
-            ||V_EMP_RECORD.LAST_NAME);
+    FOR v_emp_record IN cur_emp LOOP
+        dbms_output.put_line(v_emp_record.first_name ||' ' ||v_emp_record.last_name);
     END LOOP;
 END;
 ```
@@ -289,15 +281,13 @@ END;
 -- Example: Explicit cursor for - Subquery
 DECLARE
 BEGIN
-    FOR REC_EMP IN (
+    FOR rec_emp IN (
         SELECT
             *
         FROM
-            EMPLOYEES
+            employees
     ) LOOP
-        DBMS_OUTPUT.PUT_LINE(REC_EMP.FIRST_NAME
-            ||' '
-            ||REC_EMP.LAST_NAME);
+        dbms_output.put_line(rec_emp.first_name ||' ' ||rec_emp.last_name);
     END LOOP;
 END;
 
@@ -346,33 +336,30 @@ END;
 ### Example: Cursors with Parameters
 
 ```sql
-
 DECLARE
-    CURSOR C_NAME(V_ID EMPLOYEES.EMPLOYEE_ID%TYPE) IS
+    CURSOR c_name(v_id employees.employee_id%type) IS
         SELECT
-            FIRST_NAME,
-            LAST_NAME
+            first_name
+          , last_name
         FROM
-            EMPLOYEES
+            employees
         WHERE
-            EMPLOYEE_ID=V_ID;
-    V_MAX_ID EMPLOYEES.EMPLOYEE_ID%TYPE;
-    V_FNAME  EMPLOYEES.FIRST_NAME%TYPE;
-    V_LNAME  EMPLOYEES.LAST_NAME%TYPE;
+            employee_id=v_id;
+    v_max_id employees.employee_id%type;
+    v_fname  employees.first_name%type;
+    v_lname  employees.last_name%type;
 BEGIN
     SELECT
-        MAX(EMPLOYEE_ID) INTO V_MAX_ID
+        MAX(employee_id) INTO v_max_id
     FROM
-        EMPLOYEES;
-    OPEN C_NAME(V_MAX_ID);
+        employees;
+    OPEN c_name(v_max_id);
     LOOP
-        FETCH C_NAME INTO V_FNAME, V_LNAME;
-        EXIT WHEN C_NAME%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(V_FNAME
-            ||' '
-            ||V_LNAME);
+        FETCH c_name INTO v_fname, v_lname;
+        EXIT WHEN c_name%notfound;
+        dbms_output.put_line(v_fname ||' ' ||v_lname);
     END LOOP;
-    CLOSE C_NAME;
+    CLOSE c_name;
 END;
 
 ```
@@ -402,24 +389,22 @@ END;
 
 -- Exameple: cursor for with parameter
 DECLARE
-    CURSOR C_NAME (V_ID EMPLOYEES.EMPLOYEE_ID%TYPE) IS
+    CURSOR c_name (v_id employees.employee_id%type) IS
         SELECT
-            FIRST_NAME,
-            LAST_NAME
+            first_name
+          , last_name
         FROM
-            EMPLOYEES
+            employees
         WHERE
-            EMPLOYEE_ID=V_ID;
-    V_MAX_ID EMPLOYEES.EMPLOYEE_ID%TYPE;
+            employee_id=v_id;
+    v_max_id employees.employee_id%type;
 BEGIN
     SELECT
-        MAX (EMPLOYEE_ID) INTO V_MAX_IDs
+        MAX (employee_id) INTO v_max_ids
     FROM
-        EMPLOYEES;
-    FOR REC_NAME IN C_NAME(V_MAX_ID) LOOP
-        DBMS_OUTPUT.PUT_LINE(REC_NAME.FIRST_NAME
-            || ' '
-            || REC_NAME.LAST_NAME);
+        employees;
+    FOR rec_name IN c_name(v_max_id) LOOP
+        dbms_output.put_line(rec_name.first_name || ' ' || rec_name.last_name);
     END LOOP;
 END;
 
@@ -481,7 +466,6 @@ DECLARE
             locations
         ORDER BY
             city;
-
     CURSOR cur_dep(v_loc_id locations.location_id%type) IS
         SELECT
             department_name

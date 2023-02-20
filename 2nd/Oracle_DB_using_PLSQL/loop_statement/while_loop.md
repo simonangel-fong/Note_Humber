@@ -1,6 +1,10 @@
 # While Loop
 
-[TOC]
+[Back](../index.md)
+
+- [While Loop](#while-loop)
+  - [`WHILE`](#while)
+    - [EXAMPLE](#example)
 
 ---
 

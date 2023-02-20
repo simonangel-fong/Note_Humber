@@ -2,7 +2,9 @@
 
 [Back](../index.md)
 
-[TOC]
+- [Basic Loops](#basic-loops)
+  - [Structure](#structure)
+    - [Example](#example)
 
 ---
 
@@ -32,8 +34,7 @@ END LOOP;
 
 - 执行：
   - allows the execution of its statements at least once, even if the `EXIT` condition is already met upon entering the loop. 至少执行一次
-  - 效果相当于 do...while
-  -
+  - 效果相当于 do...while.
 
 ---
 

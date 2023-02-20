@@ -1,6 +1,16 @@
 # Case Statement
 
-[TOC]
+[Back](../index.md)
+
+- [Case Statement](#case-statement)
+  - [`CASE` Statement Structure](#case-statement-structure)
+    - [Example](#example)
+  - [Searched `CASE` Statements](#searched-case-statements)
+  - [`CASE` Expression](#case-expression)
+    - [Example](#example-1)
+  - [Searched CASE Expression](#searched-case-expression)
+  - [Example](#example-2)
+  - [Difference: Case statement \& Case expression](#difference-case-statement--case-expression)
 
 ---
 
@@ -58,7 +68,7 @@ END;
 
 ## Searched `CASE` Statements
 
-- For **Equality** conditions: `>`,`<`,`!=`.
+- For **Non-Equality** conditions: `>`,`<`,`!=`.
 - The syntax is virtually identical to an equivalent `IF` statement. 语法上与 if 类似，效果等效。
 
 ```sql

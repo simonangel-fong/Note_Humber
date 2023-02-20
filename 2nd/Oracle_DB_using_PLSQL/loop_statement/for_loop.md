@@ -1,6 +1,10 @@
 # For Loop
 
-[TOC]
+[Back](../index.md)
+
+- [For Loop](#for-loop)
+  - [`FOR`](#for)
+    - [Example](#example)
 
 ---
 
@@ -28,7 +32,7 @@ END LOOP;
   - bound：
     - lower_bound .. upper_bound is the required syntax.Neither loop bound (lower or upper) should be NULL.上下标必须且不能是空
     - lower bound is referenced first. 下标先行
-    - the lower and upper bounds of a LOOP statement **do not need to be numeric literals**.可以是变量 
+    - the lower and upper bounds of a LOOP statement **do not need to be numeric literals**.可以是变量
     - lower_buond specifies the **lower bound** for the range of counter values.
     - upper_bound specifies the **upper bound** for the range of counter values.
     - 一定是较小的值放在左边，较大值放在右边，否则不会迭代。
