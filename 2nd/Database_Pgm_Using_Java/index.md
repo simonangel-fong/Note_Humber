@@ -16,6 +16,8 @@
 ## Catalog
 
 - [GUI(Java Swing)](./GUI/java_swing.md)
+- [Exception](./exception/exception.md)
+  - [Exception Handling Model](./exception/exception_handling_model.md)
 
 ---
 
