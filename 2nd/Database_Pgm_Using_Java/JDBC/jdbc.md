@@ -25,6 +25,8 @@
 
 - Application programs may allow users to access a database <u>without directly using SQL</u>, but these applications themselves must **use SQL** to access the database
 
+---
+
 ## JDBC
 
 - `JDBC` is the **Java API** for accessing **relational database**, supporting Java programs that access relational databases. `JDBC` is not an acronym, but it is often thought to stand for Java Database Connectivity.
@@ -36,11 +38,14 @@
   - Using the `JDBC` API, applications written in the Java programming language can **execute** SQL statements, **retrieve** results, **present** data in a user-friendly interface, and **propagate changes** back to the database.
   - The `JDBC` API can also be used to interact with **multiple** data sources.
 
+![JDBC01](./pic/jdbc01.png)
+
 - `JDBC` drivers are database specific and are normally provided by the database vendors.
 
   - MySQL database: `MySQL JDBC`
   - databases on the Windows platform: `JDBC-ODBC bridge driver`
-  -
+
+![JDBC02](./pic/jdbc02.png)
 
 - Four key interfaces are needed to develop any database application using Java: `Driver`, `Connection`, `Statement`, and `ResultSet`.
 
