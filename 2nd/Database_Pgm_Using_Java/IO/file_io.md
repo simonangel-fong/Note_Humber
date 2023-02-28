@@ -87,6 +87,7 @@ public class ReadWriteTextFile {
     - Byte [FileOutputStream/FileInputStream](./FileOutputStream_FileOutputStream.md)
     - Primitive-type [DataInputStream/DataOutputStream](./DataInputStream_DataOutputStream.md)
     - Object [ObjectInputStream/ObjectOutputStream](./ObjectInputStream_ObjectOutputStream.md)
+    - RandomAccessFile [RandomAccessFile](./RandomAccessFile.md)
 
 ---
 

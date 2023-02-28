@@ -16,6 +16,40 @@
 
 ### Example: Write a binary file
 
+- Person object:
+
+```java
+
+import java.io.Serializable;
+
+public class Person implements Serializable {
+    private String firstName;
+    private String lastName;
+
+    Person() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+}
+
+```
+
+- Main:
+
 ```java
 
 import java.io.*;
@@ -55,8 +89,41 @@ public class ObjectOutputStreamDemo {
 
 ### Example: Read a binary file
 
+- Person object:
+
 ```java
 
+import java.io.Serializable;
+
+public class Person implements Serializable {
+    private String firstName;
+    private String lastName;
+
+    Person() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+}
+
+```
+
+- Main:
+
+```java
 
 import java.io.*;
 
