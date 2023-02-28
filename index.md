@@ -24,4 +24,6 @@
 |ITE-5220|[Oracle DB using PLSQL](./2nd/Oracle_DB_using_PLSQL/index.md)||
 |ITE-5221|[Oracle Database Development](./2nd/Oracle_Database%20Development/index.md)||
 
+- Progamming Language
 
+ - [Javascript](./JavaScript/index.md)
