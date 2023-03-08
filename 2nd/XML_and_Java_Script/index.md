@@ -18,6 +18,9 @@ Github： https://github.com/OleksiiKachan/xml-and-js
 - [Git](./Git/index.md)
 - [HTML DOM](./html_dom.md)
 - [XML](./xml.md)
+- JavaScript
+  - [JSON](./js/json.md)
+  - [Array Function](./js/array_function.md)
 
 ---
 
