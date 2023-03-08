@@ -14,6 +14,17 @@
   - [Prepared Statement](#prepared-statement)
   - [Example: MySQL](#example-mysql)
   - [Example: Oracle](#example-oracle)
+  - [Example: PreparedStatement](#example-preparedstatement)
+
+---
+
+- 速查:
+
+|            | oracle                                    | mysql                                                                   | ODBC                   |
+| ---------- | ----------------------------------------- | ----------------------------------------------------------------------- | ---------------------- |
+| port 端口  | 1521                                      | 3306                                                                    |                        |
+| 驱动名     | `oracle.jdbc.driver.OracleDriver`         | `com.mysql.cj.jdbc.Driver`                                              |                        |
+| 连接字符串 | `jdbc:oracle:thin:@host_url:port:grokSID` | `jdbc:mysql://host_name/database_name?user=user_name&password=password` | `jdbc:odbc:dataSource` |
 
 ---
 
@@ -100,7 +111,8 @@ Class.forName("com.mysql.cj.jdbc.Driver");
   - MySQL: `jdbc:mysql://host_name/database_name?user=user_name&password=password`
   - Oracle: `jdbc:oracle:thin:@host_url:port:grokSID`
   - ODBC: `jdbc:odbc:dataSource`
-    `
+
+---
 
 ### Step 3 Create the Statement object
 
@@ -248,6 +260,86 @@ public class OracleDemo {
         }
     }
 }
+
+```
+
+---
+
+## Example: PreparedStatement
+
+```java
+
+
+import java.sql.*;
+
+public class MysqlPreparedStatementDemo {
+
+    public static void main(String[] args) {
+        String className = "com.mysql.cj.jdbc.Driver";
+        String hostName = "localhost";
+        String database = "testdb";
+        String userName = "root";
+        String pwd = "Simon!23";
+
+        String connectionString = String.format("jdbc:mysql://%s/%s?user=%s&password=%s",
+                hostName, database, userName, pwd);
+
+        String insertSQL = "insert into message values(?,?);";
+
+        String updateSQL = "update message set text=? where id=?;";
+
+        String delSQL = "delete from message where id=?;";
+
+        String querySQL = "select * from message;";
+
+        Connection conn;
+
+        try {
+            Class.forName(className);
+            conn = DriverManager.getConnection(connectionString);
+
+            // insert data
+            PreparedStatement inserStatement = conn.prepareStatement(insertSQL);
+
+            inserStatement.setInt(1, 1);
+            inserStatement.setString(2, "Hello world!");
+
+            int numInsert = inserStatement.executeUpdate();
+            System.out.println(numInsert + " records inserted");
+
+            // select all data
+            PreparedStatement queryStatement = conn.prepareStatement(querySQL);
+            ResultSet result = queryStatement.executeQuery();
+
+            while (result.next()) {
+                System.out.println(result.getInt(1) + result.getString(2));
+            }
+
+            // update data
+            PreparedStatement updateStatement = conn.prepareStatement(updateSQL);
+
+            updateStatement.setString(1, "oven");
+            updateStatement.setInt(2, 1);
+
+            int numUpdate = updateStatement.executeUpdate();
+            System.out.println(numUpdate + " records updated");
+
+            // delete data
+            PreparedStatement delStatement = conn.prepareStatement(delSQL);
+
+            delStatement.setInt(1, 1);
+
+            int numDelete = delStatement.executeUpdate();
+            System.out.println(numDelete + " records deleted");
+
+            conn.close();
+
+        } catch (Exception e) {
+            System.out.println("Error:" + e.getMessage());
+        }
+    }
+}
+
 
 ```
 
