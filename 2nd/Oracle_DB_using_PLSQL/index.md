@@ -54,8 +54,16 @@
   - [Nested Loop](./loop_statement/nested_loop.md)
 
 - [Cursor](./cursor/cursor.md)
+
   - [Explicit Cursor](./cursor/explicit_cursor.md)
   - [Cursor For Update](./cursor/cursors_for_update.md)
+
+- [Record](./record/user_defined_record.md)
+
+- [Exception](./exception/exception.md)
+  - [Oracle Server Error](./exception/oracle_server_error.md)
+  - [User-defined Exception](./exception/user_defined_exception.md)
+  - [Scope of Exception](./exception/scope_of_exception.md)
 
 ---
 
