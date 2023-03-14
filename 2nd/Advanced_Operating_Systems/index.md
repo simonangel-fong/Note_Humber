@@ -13,7 +13,9 @@
 
 ## Catalog
 
-- 
+- [SAN and NAS Storage](./storage.md)
+- [File Sharing Protocols](./file_sharing_protocol.md)
+- [Cloud Computing](./cloud_computing.md)
 
 ---
 
