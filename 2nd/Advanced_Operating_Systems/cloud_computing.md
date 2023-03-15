@@ -8,6 +8,7 @@
   - [Types of cloud computing](#types-of-cloud-computing)
   - [Types of cloud services: IaaS, PaaS, serverless, and SaaS](#types-of-cloud-services-iaas-paas-serverless-and-saas)
   - [Uses of cloud computing](#uses-of-cloud-computing)
+  - [术语](#术语)
 
 Reference: https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing#:~:text=Simply%20put%2C%20cloud%20computing%20is,resources%2C%20and%20economies%20of%20scale.
 
@@ -108,6 +109,49 @@ Reference: https://azure.microsoft.com/en-us/resources/cloud-computing-dictionar
 
   - **Deliver software on demand**
     Also known as software as a service (SaaS), on-demand software lets you offer the latest software versions and updates around to customers—anytime they need, anywhere they are.
+
+---
+
+## 术语
+
+reference: https://www.zendesk.com/blog/what-is-paas/
+
+- `SaaS (Software as a Service)`
+
+  - SaaS (Software as a Service) <u>providers</u> sell **access to application software and databases**.
+  - SaaS <u>customers</u> are **end users** who typically access the software **through a web browser or client program**.
+  - SaaS <u>customers</u> **don’t see the underlying infrastructure or platform** it’s built on, because SaaS providers take care of all the necessary hardware and coding.
+
+  - Example:
+    - Gmail
+    - Microsoft Office 365
+    - Client relationship management systems, or CRMs
+
+- `IaaS (Infrastructure as a Service)`
+
+  - IaaS (Infrastructure as a Service) <u>providers</u> sell **access to virtualized resources, including servers, networks, and storage**.
+  - Enterprise customers typically purchase these compute resources as needed, which is more cost-effective than buying hardware outright.
+  - IaaS <u>customers</u> must **manage the applications, runtime, middleware, operating systems, and data they access**.
+  - The IaaS <u>providers</u>, meanwhile, **manage the servers, hard drives, networking, virtualization, and storage**.
+
+  - Example:
+    - Amazon Web Services
+    - Microsoft Azure
+    - and Google Compute Engine
+
+- `PaaS (Platform as a Service)`
+
+  - PaaS (Platform as a Service) <u>providers</u> sell **access to everything a customer would need to develop an app**.
+  - PaaS <u>providers</u> **manage runtime, middleware, and operating systems**.
+  - PaaS <u>customers</u> still get to **manage data and applications**—in contrast to the SaaS model, where customers don’t have to manage anything.
+  - So in terms of the cloud continuum, PaaS fits snugly between IaaS and SaaS.
+  - PaaS enables customers **to develop, test, and launch an app** without having to maintain the necessary software or invest in any new infrastructure.
+  - <u>Software developers</u> use cloud PaaS technology to basically “rent” all of the tools they need **to build an app**.
+
+  - Example:
+    - AWS Elastic Beanstalk
+    - Google App Engine
+    - Adobe Commerce
 
 ---
 

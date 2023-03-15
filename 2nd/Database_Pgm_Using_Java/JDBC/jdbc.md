@@ -5,12 +5,14 @@
 - [Java JDBC](#java-jdbc)
   - [SQL](#sql)
   - [JDBC](#jdbc)
+  - [Java JDBC (Sun) Packages](#java-jdbc-sun-packages)
   - [Process](#process)
     - [Step 1 Register the driver class](#step-1-register-the-driver-class)
     - [Step 2 Create the connection object](#step-2-create-the-connection-object)
     - [Step 3 Create the Statement object](#step-3-create-the-statement-object)
     - [Step 4 Execute the query](#step-4-execute-the-query)
     - [Step 5 Close the connection object](#step-5-close-the-connection-object)
+  - [Template](#template)
   - [Prepared Statement](#prepared-statement)
   - [Example: MySQL](#example-mysql)
   - [Example: Oracle](#example-oracle)
@@ -27,6 +29,14 @@
 | 连接字符串 | `jdbc:oracle:thin:@host_url:port:grokSID` | `jdbc:mysql://host_name/database_name?user=user_name&password=password` | `jdbc:odbc:dataSource` |
 
 ---
+
+- Access: `sun.jdbc.odbc.JdbcOdbcDriver` (Already in JDK )
+- iSeries DB2: `com.ibm.as400.access.AS400JDBCDriver` ( from Website)
+
+- Note:
+  - The JDBC-ODBC driver for MS Access is bundled in JDK
+  - MySQL driver class is in `mysql-connector-java-5.1.xx-bin.jar`
+  - Oracle driver class is in `ojdbc7.jar`
 
 ## SQL
 
@@ -49,6 +59,9 @@
   - Using the `JDBC` API, applications written in the Java programming language can **execute** SQL statements, **retrieve** results, **present** data in a user-friendly interface, and **propagate changes** back to the database.
   - The `JDBC` API can also be used to interact with **multiple** data sources.
 
+- `JDBC` is the standard API for **database-independent connectivity** between Java programming language and a wide range of databases-SQL databases and other tabular data sources, such as spreadsheets or flat files.
+  - JDBC is the **trademark name** instead of an acronym.
+
 ![JDBC01](./pic/jdbc01.png)
 
 - `JDBC` drivers are database specific and are normally provided by the database vendors.
@@ -59,6 +72,20 @@
 ![JDBC02](./pic/jdbc02.png)
 
 - Four key interfaces are needed to develop any database application using Java: `Driver`, `Connection`, `Statement`, and `ResultSet`.
+
+---
+
+## Java JDBC (Sun) Packages
+
+- **`java.sql`**
+
+  - This package contains the **core JDBC API** to access and process the data stored in a database, typically a relational database using the java.
+  - Different drivers can be installed dynamically for the access of various databases, using a framework which in-built in this JDBC API.
+
+- **`javax.sql`**
+  - This package contains JDBC APIs for accessing the server side data sources from JDBC clients.
+  - It is the **essential part for Java EE**, providing the facilities such as connection pooling, distributed transactions and row sets for the enterprise applications.
+  - An interface by name `DataSource` is provided in this API as an alternative to `DriverManager` to establish the connection.
 
 ---
 
@@ -88,11 +115,17 @@
   - The `JDBC-ODBC` driver for Access is bundled in JDK.
 
 ```java
+// Approach 1 – Class.forName() :
 // Oracle
 Class.forName("oracle.jdbc.driver.OracleDriver");
+Class.forName("oracle.jdbc.driver.OracleDriver").newInstance();
 
 // MySQL
 Class.forName("com.mysql.cj.jdbc.Driver");
+
+// Approach 2 – DriverManager.registerDriver() :
+Driver myDriver = new com.ibm.as400.access.AS400JDBCDriver();
+DriverManager.registerDriver( myDriver );
 
 ```
 
@@ -109,8 +142,29 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 
 - ConnectString:
   - MySQL: `jdbc:mysql://host_name/database_name?user=user_name&password=password`
-  - Oracle: `jdbc:oracle:thin:@host_url:port:grokSID`
+  - Oracle: `jdbc:oracle:thin:@host_url:port:grokSID`/database
   - ODBC: `jdbc:odbc:dataSource`
+  - iSeries: `jdbc:as400://zeus.senecac.on.ca/Bookstore`
+
+```java
+// 3 parameters:
+String url = "jdbc:oracle:thin:@zenit.humber.on.ca:1521:mydatabase;";
+conn = DriverManager.getConnection(String url, String username,String password) ;
+
+// 1 parameter:
+String url ="jdbc:oracle:thin:scott/tiger@zenit.humber.on.ca:1521:"
+mydatabase;conn = DriverManager.getConnection(String url);
+
+
+// 2 parameters:
+java.util.Properties;
+
+Properties info = new Properties() ;
+info.put("user", "scott") ;
+info.put("password", "tiger") ;
+connection = DriverManager.getConnection(String url, info);
+
+```
 
 ---
 
@@ -161,7 +215,64 @@ while(rs.next()){
 
 ```java
 
-con.close();
+if (resultSet != null) {
+resultSet.close();
+}
+if (statement != null) {
+statement.close();
+}
+if (connection != null) {
+connection.close();
+}
+
+```
+
+---
+
+## Template
+
+```java
+
+import java.sql.*;
+
+public class T {
+
+    public static void main(String[] args) {
+
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
+
+        String urlString = "";
+        try {
+            // Load Driver
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            // Connect To Thin By Using Property Object.
+            connection = DriverManager.getConnection(urlString, "scott", "tiger");
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("select sysdate from dual");
+            while (resultSet.next()) {
+                System.out.println("date = '' + resultSet.getDate(1));");
+            }
+        } catch (ClassNotFoundException cnfex) {
+            System.err.println("Failed to load JDBC/ODBC driver.");
+        } catch (SQLException e) {
+            System.out.println("The error is: " + e.getMessage());
+        } finally {
+            try {
+                if (resultSet != null)
+                    resultSet.close();
+                if (statement != null)
+                    statement.close();
+                if (connection != null)
+                    connection.close();
+            } catch (SQLException e) {
+                System.out.println("Exception caught in finally block");
+                System.out.println("Exception: " + e.getMessage());
+            }
+        } // Finally
+    } // Execute
+} // Class
 
 ```
 
