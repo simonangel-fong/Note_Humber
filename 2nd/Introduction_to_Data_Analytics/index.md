@@ -41,6 +41,10 @@
   - [Method](./python/method.md)
 
 - [Pandas](./pandas/index.md)
+
+- Machine Learning
+  - [Example](./machine_learning/example.md)
+
 ---
 
 [Top](#introduction_to_data_analytics)
