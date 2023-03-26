@@ -67,8 +67,12 @@
   - [Scope of Exception](./exception/scope_of_exception.md)
 
 - [Subprogram](./subprogram/subprogram.md)
+
   - [Procedure](./subprogram/procedure.md)
   - [Function](./subprogram/function.md)
+  - [Data Dictionary](./subprogram/data_dict.md)
+  - [Object Privilege](./subprogram/object_privilege.md)
+  - [Autonomous Transaction](./subprogram/autonomous_transaction.md)
 
 ---
 

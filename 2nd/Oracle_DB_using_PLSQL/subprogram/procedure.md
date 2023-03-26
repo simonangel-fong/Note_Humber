@@ -4,9 +4,12 @@
 
 - [PLSQL Procedure](#plsql-procedure)
   - [Procedure](#procedure)
-  - [Create a Procedure](#create-a-procedure)
-  - [Invoking Procedures](#invoking-procedures)
-    - [Invokes another procedure within one procedure](#invokes-another-procedure-within-one-procedure)
+    - [Create a Procedure](#create-a-procedure)
+    - [View Source Code of Procedure](#view-source-code-of-procedure)
+    - [List Procedures](#list-procedures)
+    - [Drop Procedure](#drop-procedure)
+    - [Invoking Procedures](#invoking-procedures)
+      - [Invokes another procedure within one procedure](#invokes-another-procedure-within-one-procedure)
     - [Nested subprogram](#nested-subprogram)
   - [Parameters](#parameters)
   - [Parameter Modes](#parameter-modes)
@@ -26,7 +29,7 @@
 
 ---
 
-## Create a Procedure
+### Create a Procedure
 
 ```sql
 CREATE [OR REPLACE] PROCEDURE procedure_name
@@ -58,7 +61,104 @@ END [procedure_name];
 
 ---
 
-## Invoking Procedures
+### View Source Code of Procedure
+
+- use `USER_SOURCE` table
+
+```sql
+-- get source code of a procedure
+SELECT text
+FROM user_source
+WHERE type = upper('procedure')
+  AND name = upper('ADD_DEPT')
+ORDER BY line;
+
+```
+
+---
+
+### List Procedures
+
+- 使用`user_procedures`的 data dict:
+
+  ```sql
+  -- user_procedures:只包括valid
+  SELECT object_name
+    , object_type
+    , authid
+  FROM user_procedures
+  WHERE object_type = upper('PROCEDURE')
+  ORDER BY object_name;
+
+  ```
+
+- 使用`user_objects`的 data dict:
+
+  ```sql
+  -- user_objects: 包括invalid
+  SELECT object_name
+    , object_type
+    , TIMESTAMP
+    , status
+  FROM user_objects
+  WHERE object_type = upper('procedure')
+  ORDER BY object_name;
+
+  ```
+
+- 使用`user_source`:
+
+  ```sql
+  -- return number of procedure, include invalid
+  SELECT COUNT(DISTINCT name)
+  FROM user_source
+  WHERE type = upper('procedure');
+  ```
+
+- 使用`all_procedures`的 data dict:
+
+  ```sql
+  -- all_procedures:
+  -- 返回sys 的存储过程
+  SELECT owner
+    , COUNT(*)
+  FROM all_procedures
+  WHERE owner = upper('sys')
+  GROUP BY owner;
+
+  SELECT object_name
+    , owner
+    , object_type
+    , authid
+  FROM all_procedures
+  WHERE owner = upper('sys')
+      AND object_type=upper('procedure');
+
+
+  -- all_procedures:
+  -- 返回user 的存储过程, 只包括valid
+  SELECT object_name
+    , owner
+    , object_type
+    , authid
+  FROM all_procedures
+  WHERE owner = upper('n01555914')
+      AND object_type=upper('procedure');
+
+  ```
+
+---
+
+### Drop Procedure
+
+```sql
+DROP PROCEDURE procedure_name;
+
+```
+
+---
+
+### Invoking Procedures
 
 1. An anonymous block
 
@@ -77,7 +177,7 @@ END;
 
 ```
 
-### Invokes another procedure within one procedure
+#### Invokes another procedure within one procedure
 
 - When one procedure invokes another procedure, we would normally create them separately, but we can create them together as a single procedure if we like.可以在当一个存储过程中创建.
 - 被调用的存储过程先行创建
@@ -139,17 +239,17 @@ END mainproc;
   - The formal and actual parameters should be of **compatible data types**.
     - If necessary, before assigning the value, PL/SQL converts the data type of the actual parameter value to that of the formal parameter.先转换, 后传递
 
-```sql
-a_emp_id := 100;
-raise_sal(a_emp_id, 2000);
--- a_emp_id is actual parameter, 100 is the argument
--- 2000 is both actual parameter and argument
+  ```sql
+  a_emp_id := 100;
+  raise_sal(a_emp_id, 2000);
+  -- a_emp_id is actual parameter, 100 is the argument
+  -- 2000 is both actual parameter and argument
 
-raise_sal(a_emp_id, v_raise + 100);
--- a_emp_id: actual parameter, variable
--- v_raise + 100: actual parameter, expression
--- no argument
-```
+  raise_sal(a_emp_id, v_raise + 100);
+  -- a_emp_id: actual parameter, variable
+  -- v_raise + 100: actual parameter, expression
+  -- no argument
+  ```
 
 - **Arguments**
 

@@ -5,6 +5,11 @@
 - [Subprogram](#subprogram)
   - [Differences Between Anonymous Blocks and Subprograms](#differences-between-anonymous-blocks-and-subprograms)
   - [Procedures and Functions](#procedures-and-functions)
+    - [Similarities](#similarities)
+    - [Differences](#differences)
+  - [Handling Exception in Function and Procedure](#handling-exception-in-function-and-procedure)
+    - [Handled Exceptions](#handled-exceptions)
+    - [Exceptions Not Handled](#exceptions-not-handled)
 
 ---
 
@@ -80,32 +85,76 @@ END; --Mandatory
 
 ## Procedures and Functions
 
-- Similarities
+| Procedures                                                         | Functions                                      |
+| ------------------------------------------------------------------ | ---------------------------------------------- |
+| Execute as a PL/SQL statement                                      | Invoked as part of an **expression**           |
+| Do not contain **RETURN clause** in the header                     | Must contain a **RETURN clause** in the header |
+| **May return** values (if any) in output parameters (not required) | **Must return** a single value                 |
+| May contain a RETURN statement without a value                     | **Must** contain at least one RETURN statement |
 
-  - named PL/SQL blocks
-  - PL/SQL subprograms
-  - Have block structures similar to anonymous blocks
-    - Optional parameters
-    - Optional declarative section
-    - Mandatory executable section
-    - Optional section to handle exceptions
-  - Procedures and functions can both return data as OUT and IN OUT parameters.
+---
 
-- Differences
+### Similarities
 
-  - **return**
+- PL/SQL subprograms
+  Both are named PL/SQL blocks
 
-    - A function **MUST return a value** using the `RETURN` statement.
-    - A procedure can only return a value using an `OUT` or an `IN OUT` parameter.
+- Parameter:
 
-  - **control**
+  - Both can have zero or more `IN` parameters that can be passed from the calling environment.
+  - Both return data as `OUT` and `IN OUT` parameters.(技术上, 函数都可以使用 out 或 in out 参数)
 
-    - The return statement in a function **returns control** to the calling program and **returns the results** of the function.
-    - The return statement within a procedure is **optional**. It returns control to the calling program <u>before all of the procedure's code has been executed.</u> 储存过程可以使用 return, return 之后的代码不会执行.
+- Block structure:
 
-  - **Call**
-    - Functions can be called from `SQL`, procedures cannot.
-    - Functions are considered **expressions**, procedures are not.
+  - Optional parameters
+  - Optional declarative section
+  - Mandatory executable section
+  - Optional section to handle exceptions
+
+---
+
+### Differences
+
+- **return**
+
+  - A function **MUST return a value** using the `RETURN` statement.
+  - A procedure can only return a value using an `OUT` or an `IN OUT` parameter.
+
+- **control**
+
+  - The return statement in a function **returns control** to the calling program and **returns the results** of the function.
+  - The return statement within a procedure is **optional**. It returns control to the calling program <u>before all of the procedure's code has been executed.</u> 储存过程可以使用 return, return 之后的代码不会执行.
+
+- **Call**
+  - Functions can be called from `SQL`, procedures cannot.
+  - Functions are considered **expressions**, procedures are not.
+
+---
+
+## Handling Exception in Function and Procedure
+
+### Handled Exceptions
+
+- When an exception occurs and **is handled** in a called procedure or function, the following code flow takes place:
+  - 1. The exception is raised.
+  - 2. Control is transferred to the **exception handler of the block** that raised the exception.
+  - 3. The exception code is executed and **the block is terminated**.
+  - 4. Control **returns** to the calling program.
+  - 5. The calling program/block **continues to execute**.
+
+---
+
+### Exceptions Not Handled
+
+- If the exception section does **not provide a handler** for the raised exception, then it is not handled. The following code flow occurs:
+
+  - 1. The exception is raised.
+  - 2. Control is transferred to the **exception handler of the block** that raised the exception.
+  - 3. Since no exception handler exists, the **block terminates** and any DML operations performed **within the block** that raised the exception are **rolled back**.
+  - 4. Control returns to the calling program and the **exception propagates to the exception section** of the calling program.
+  - 5. If the exception is not handled by the calling program, the **calling program terminates** and any DML operations performed **prior to** the occurrence of the unhandled exception are **rolled back**.
+
+- 即一般没有 handle, 则会回滚, 包括子程序中的和主程序中的.
 
 ---
 
