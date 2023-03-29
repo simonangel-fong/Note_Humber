@@ -25,6 +25,9 @@
   - [Statement](./JDBC/statement.md)
   - [Execution](./JDBC/execution.md)
   - [ResultSet](./JDBC/resultset.md)
+  - [Metadata](./JDBC/metadata.md)
+  - [Batch](./JDBC/batch.md)
+  - [Datatype](./JDBC/datatype.md)
 
 ---
 
