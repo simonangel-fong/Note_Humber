@@ -1,8 +1,10 @@
-# Java JDBC
+# JDBC Build Connection
 
 [back](../index.md)
 
-- [Java JDBC](#java-jdbc)
+- [JDBC Build Connection](#jdbc-build-connection)
+  - [速查:](#速查)
+  - [Template](#template)
   - [SQL](#sql)
   - [JDBC](#jdbc)
   - [Java JDBC (Sun) Packages](#java-jdbc-sun-packages)
@@ -12,21 +14,19 @@
     - [Step 3 Create the Statement object](#step-3-create-the-statement-object)
     - [Step 4 Execute the query](#step-4-execute-the-query)
     - [Step 5 Close the connection object](#step-5-close-the-connection-object)
-  - [Template](#template)
-  - [Prepared Statement](#prepared-statement)
   - [Example: MySQL](#example-mysql)
   - [Example: Oracle](#example-oracle)
   - [Example: PreparedStatement](#example-preparedstatement)
 
 ---
 
-- 速查:
+## 速查:
 
-|            | oracle                                    | mysql                                                                   | ODBC                   |
-| ---------- | ----------------------------------------- | ----------------------------------------------------------------------- | ---------------------- |
-| port 端口  | 1521                                      | 3306                                                                    |                        |
-| 驱动名     | `oracle.jdbc.driver.OracleDriver`         | `com.mysql.cj.jdbc.Driver`                                              |                        |
-| 连接字符串 | `jdbc:oracle:thin:@host_url:port:grokSID` | `jdbc:mysql://host_name/database_name?user=user_name&password=password` | `jdbc:odbc:dataSource` |
+|           | oracle                                    | mysql                                                                   | ODBC                   |
+| --------- | ----------------------------------------- | ----------------------------------------------------------------------- | ---------------------- |
+| port 端口 | 1521                                      | 3306                                                                    |                        |
+| 驱动名    | `oracle.jdbc.driver.OracleDriver`         | `com.mysql.cj.jdbc.Driver`                                              |                        |
+| url       | `jdbc:oracle:thin:@host_url:port:grokSID` | `jdbc:mysql://host_name/database_name?user=user_name&password=password` | `jdbc:odbc:dataSource` |
 
 ---
 
@@ -37,6 +37,57 @@
   - The JDBC-ODBC driver for MS Access is bundled in JDK
   - MySQL driver class is in `mysql-connector-java-5.1.xx-bin.jar`
   - Oracle driver class is in `ojdbc7.jar`
+
+---
+
+## Template
+
+```java
+
+import java.sql.*;
+
+public class T {
+
+    public static void main(String[] args) {
+
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
+
+        String urlString = "";
+        try {
+            // Load Driver
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            // Connect To Thin By Using Property Object.
+            connection = DriverManager.getConnection(urlString, "scott", "tiger");
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("select sysdate from dual");
+            while (resultSet.next()) {
+                System.out.println("date = '' + resultSet.getDate(1));");
+            }
+        } catch (ClassNotFoundException cnfex) {
+            System.err.println("Failed to load JDBC/ODBC driver.");
+        } catch (SQLException e) {
+            System.out.println("The error is: " + e.getMessage());
+        } finally {
+            try {
+                if (resultSet != null)
+                    resultSet.close();
+                if (statement != null)
+                    statement.close();
+                if (connection != null)
+                    connection.close();
+            } catch (SQLException e) {
+                System.out.println("Exception caught in finally block");
+                System.out.println("Exception: " + e.getMessage());
+            }
+        } // Finally
+    } // Execute
+} // Class
+
+```
+
+---
 
 ## SQL
 
@@ -135,10 +186,11 @@ DriverManager.registerDriver( myDriver );
 
 - The `getConnection()` method of `DriverManager` class is used to establish connection with the database.
 
-| Constructor                                                        | Description |
-| ------------------------------------------------------------------ | ----------- |
-| `Connection getConnection(String url)`                             |             |
-| `Connection getConnection(String url,String name,String password)` |             |
+| Constructor                                                        | Description                                                             |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| `Connection getConnection(String url)`                             | url: a database                                                         |
+| `Connection getConnection(String url,String name,String password)` | url: a database url, user: the database user, password: user's password |
+| `Connection getConnection(String url, Properties info)`            | url: a database url, info - a list of arbitrary string tag/value pairs  |
 
 - ConnectString:
   - MySQL: `jdbc:mysql://host_name/database_name?user=user_name&password=password`
@@ -147,10 +199,6 @@ DriverManager.registerDriver( myDriver );
   - iSeries: `jdbc:as400://zeus.senecac.on.ca/Bookstore`
 
 ```java
-// 3 parameters:
-String url = "jdbc:oracle:thin:@zenit.humber.on.ca:1521:mydatabase;";
-conn = DriverManager.getConnection(String url, String username,String password) ;
-
 // 1 parameter:
 String url ="jdbc:oracle:thin:scott/tiger@zenit.humber.on.ca:1521:"
 mydatabase;conn = DriverManager.getConnection(String url);
@@ -164,6 +212,10 @@ info.put("user", "scott") ;
 info.put("password", "tiger") ;
 connection = DriverManager.getConnection(String url, info);
 
+
+// 3 parameters:
+String url = "jdbc:oracle:thin:@zenit.humber.on.ca:1521:mydatabase;";
+conn = DriverManager.getConnection(String url, String username,String password) ;
 ```
 
 ---
@@ -216,78 +268,14 @@ while(rs.next()){
 ```java
 
 if (resultSet != null) {
-resultSet.close();
+  resultSet.close();
 }
 if (statement != null) {
-statement.close();
+  statement.close();
 }
 if (connection != null) {
-connection.close();
+  connection.close();
 }
-
-```
-
----
-
-## Template
-
-```java
-
-import java.sql.*;
-
-public class T {
-
-    public static void main(String[] args) {
-
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
-
-        String urlString = "";
-        try {
-            // Load Driver
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            // Connect To Thin By Using Property Object.
-            connection = DriverManager.getConnection(urlString, "scott", "tiger");
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery("select sysdate from dual");
-            while (resultSet.next()) {
-                System.out.println("date = '' + resultSet.getDate(1));");
-            }
-        } catch (ClassNotFoundException cnfex) {
-            System.err.println("Failed to load JDBC/ODBC driver.");
-        } catch (SQLException e) {
-            System.out.println("The error is: " + e.getMessage());
-        } finally {
-            try {
-                if (resultSet != null)
-                    resultSet.close();
-                if (statement != null)
-                    statement.close();
-                if (connection != null)
-                    connection.close();
-            } catch (SQLException e) {
-                System.out.println("Exception caught in finally block");
-                System.out.println("Exception: " + e.getMessage());
-            }
-        } // Finally
-    } // Execute
-} // Class
-
-```
-
----
-
-## Prepared Statement
-
-The `Prepared` Statement interface is designed to execute **dynamic SQL statements** and **SQL-stored procedures** with parameters.
-
-- These SQL statements and stored procedures are **precompiled** for efficient use when repeatedly executed.
-
-```java
-
-PreparedStatement pstmt = connection.prepareStatement(
-    "INSERT INTO users (first_name, last_name, email) + VALUES (?, ?, ?)");
 
 ```
 
@@ -389,8 +377,8 @@ public class MysqlPreparedStatementDemo {
         String className = "com.mysql.cj.jdbc.Driver";
         String hostName = "localhost";
         String database = "testdb";
-        String userName = "root";
-        String pwd = "Simon!23";
+        String userName = "";
+        String pwd = "";
 
         String connectionString = String.format("jdbc:mysql://%s/%s?user=%s&password=%s",
                 hostName, database, userName, pwd);
@@ -457,3 +445,7 @@ public class MysqlPreparedStatementDemo {
 ---
 
 [TOP](#java-jdbc)
+
+---
+
+[TOP](#jdbc-build-connection)

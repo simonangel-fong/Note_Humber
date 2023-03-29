@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const xml_url = "cards.xml";
+      //   // promise
+      //   const xmlReq = (url, method = "GET") =>
+      //     new Promise((resolve, reject) => {
+      //       const xhttpReq = new XMLHttpRequest();
+      //       xhttpReq.onreadystatechange = function () {
+      //         if (this.readyState == 4 && this.status == 200) {
+      //           resolve(this.responseXML);
+      //         }
+      //       };
+      //       xhttpReq.open(method, url);
+      //       xhttpReq.send();
+      //     });
+      //   console.log("Promise");
+      //   //   xmlReq(xml_url).then((data) => console.log(data));
+
+      //   // async
+      //   console.log("Async");
+      //   const main_async = async () => {
+      //     const xml_ele = await xmlReq("cards.xml");
+      //     console.log(xml_ele);
+      //   };
+
+      //   //   main_async(xml_url);
+
+      //   //   fetch
+      //   console.log("Fetch");
+      //   fetch(xml_url)
+      //     .then((response) => response.text())
+      //     .then((str) => new DOMParser().parseFromString(str, "text/xml"))
+      //     .then((xml) => console.log(xml));
+
+      // promise
+      const JSON_URL = "books.json";
+
+      console.log("Json:Fecth promise");
+
+      fetch(JSON_URL)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw Error(response.statusText);
+          }
+        })
+        .then((json_data) => console.log("Json promise:", json_data))
+        .catch((err) => console.log("Error", err));
+
+      // async
+      console.log("Json:Fecth async");
+
+      const main_fetch_async = async (url) => {
+        const json_data = await fetch(url).then((response) => response.json());
+        console.log("Json Async:", json_data);
+      };
+      main_fetch_async(JSON_URL);
+    </script>
+  </body>
+</html>

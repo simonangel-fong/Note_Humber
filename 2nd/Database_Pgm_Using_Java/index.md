@@ -19,7 +19,12 @@
 - [Exception](./exception/exception.md)
   - [Exception Handling Model](./exception/exception_handling_model.md)
 - [File I/O](./IO/file_io.md)
-- [JDBC](./JDBC/jdbc.md)
+- JDBC
+  - [Build SQL Connection](./JDBC/build_connection.md)
+  - [Connection](./JDBC/connection.md)
+  - [Statement](./JDBC/statement.md)
+  - [Execution](./JDBC/execution.md)
+  - [ResultSet](./JDBC/resultset.md)
 
 ---
 

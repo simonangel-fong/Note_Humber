@@ -19,8 +19,14 @@ Github： https://github.com/OleksiiKachan/xml-and-js
 - [HTML DOM](./html_dom.md)
 - [XML](./xml.md)
 - JavaScript
+
   - [JSON](./js/json.md)
-  - [Array Function](./js/array_function.md)
+
+- Asynchronous Function
+  - [Call Back](./js/callback.md)
+  - [Promise](./js/promise.md)
+  - [Async](./js/async.md)
+  - [Fetch](./js/fetch.md)
 
 ---
 
