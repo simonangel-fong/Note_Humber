@@ -77,8 +77,8 @@
 - [Package](./package/package.md)
 
   - [Overloading Subprograms](./package/overloading.md)
-  - [Bodiless Packages](./package/overloading.md)
-  - [Parameter in Package](./package/)
+  - [Package State](./package/package_state.md)
+  - [Oracle-supplied Package](./package/oracle_supplied_package.md)
 
 ---
 
