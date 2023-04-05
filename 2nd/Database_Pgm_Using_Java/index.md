@@ -20,6 +20,7 @@
   - [Exception Handling Model](./exception/exception_handling_model.md)
 - [File I/O](./IO/file_io.md)
 - JDBC
+
   - [Build SQL Connection](./JDBC/build_connection.md)
   - [Connection](./JDBC/connection.md)
   - [Statement](./JDBC/statement.md)
@@ -28,6 +29,10 @@
   - [Metadata](./JDBC/metadata.md)
   - [Batch](./JDBC/batch.md)
   - [Datatype](./JDBC/datatype.md)
+
+- [Thread](./thread/thread.md)
+  - [Thread Pool](./thread/thread_pool.md)
+  - [Synchronization](./thread/synchronization.md)
 
 ---
 
