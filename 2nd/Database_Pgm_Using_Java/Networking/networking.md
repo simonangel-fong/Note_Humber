@@ -170,6 +170,8 @@ Socket socket = new Socket("Humbercollege.ca", 8000);
 
 - Multithreading enables a server to handle multiple independent clients
 
+![multiple_clients](./pic/networking_multithreading.png)
+
 ### Example:
 
 ```java
