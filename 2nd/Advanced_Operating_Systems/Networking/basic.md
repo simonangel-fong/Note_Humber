@@ -3,6 +3,8 @@
 [Back](../index.md)
 
 - [Networking - Basic](#networking---basic)
+  - [Computer Networking](#computer-networking)
+    - [CLASSIFICATION OF AREA BY THEIR GEOGRAPHY](#classification-of-area-by-their-geography)
   - [IP](#ip)
   - [Public IP Address](#public-ip-address)
   - [Private IP Address](#private-ip-address)
@@ -10,13 +12,59 @@
 
 ---
 
-## IP
+## Computer Networking
 
-- Network:
+- A `computer network` is defined as the interconnection of two or more computers.
+
+  - It is done to enable the computers to communicate and share available resources.
+
+- `Network`:
 
   - Computers connected to each other to exchange information.
 
-- IP
+- COMPONENTS OF COMPUTER NETWORK
+  - Two or more computers
+  - Cables as links between the computers
+  - A network interfacing card(NIC) on each computer
+  - Switches
+  - Software called operating system(OS)
+
+### CLASSIFICATION OF AREA BY THEIR GEOGRAPHY
+
+- LOCAL AREA NETWORK(LAN)
+
+  - LAN is a network which is designed to operate over a small physical area such as an office, factory or a group of buildings.
+  - LAN’s are easy to design and troubleshoot
+  - Exchange of information and sharing of resourcesbecomes easy because of LAN.
+  - In LAN all machines are connected to a singlecable.
+  - Different types of topologies such as star, tree,bus, ring, etc Can be used
+  - It is usually a privately owned network.
+
+- WIDE AREA NETWORK(WAN)
+
+  - When network spans over a large distance or when the computers to be connected to each other are at widely separated locations a local area network cannot be used. A wide area network(WAN) is installed.
+  - The communication between different users of WAN is established using leased telephone lines, satellite links and similar channels.
+  - It is cheaper and more efficient to use the phone network for the link.
+  - Most WAN networks are used to transfer large blocks of data between its users.
+
+- METROPOLITAN AREA NETWORK(MAN)
+
+- It is in between LAN & WAN technology that covers the entire city.
+- It uses similar technology as LAN.
+- It can be a single network such as cable TV network, or a measure of connecting a number of LAN’s o a large network so that resources can be shared LAN to LAN as well as device to device.
+
+![class](./pic/network_class.png)
+
+---
+
+## IP
+
+- `IP`: `Internet Protocol`
+
+  - a set of rules that determine how data is moved over the internet.
+  - defines how to address and route each packet to make sure it reaches the right destination.
+
+- `IP address`:
 
   - An `IP address` is a numeric address.
   - An `IP address` is an **identifier** of a computer or device on a network.

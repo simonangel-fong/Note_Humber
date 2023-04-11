@@ -1,8 +1,8 @@
-# File Sharing Protocol
+# Storage - File Sharing Protocol
 
-[Back](./index.md)
+[Back](../index.md)
 
-- [File Sharing Protocol](#file-sharing-protocol)
+- [Storage - File Sharing Protocol](#storage---file-sharing-protocol)
   - [NFS: Network File System](#nfs-network-file-system)
   - [SMB: Server Message Block](#smb-server-message-block)
   - [NFS vs SMB Comparison](#nfs-vs-smb-comparison)
@@ -87,4 +87,4 @@
 
 ---
 
-[top](#file-sharing-protocol)
+[TOP](#storage---file-sharing-protocol)

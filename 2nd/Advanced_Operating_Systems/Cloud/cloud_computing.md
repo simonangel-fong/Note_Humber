@@ -1,6 +1,6 @@
 # Cloud Computing
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Cloud Computing](#cloud-computing)
   - [What is cloud computing?](#what-is-cloud-computing)

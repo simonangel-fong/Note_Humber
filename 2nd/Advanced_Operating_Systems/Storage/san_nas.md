@@ -1,17 +1,25 @@
-# Storage
+# Storage -SAN & NAS
 
-[Back](./index.md)
+[Back](../index.md)
 
-- [Storage](#storage)
+- [Storage -SAN \& NAS](#storage--san--nas)
   - [SAN: Storage Area Network](#san-storage-area-network)
   - [NAS: Network-Attached Storage](#nas-network-attached-storage)
   - [Overview](#overview)
+  - [NAS](#nas)
+  - [SAN](#san)
 
 ---
 
 ## SAN: Storage Area Network
 
 - Reference: https://www.liquidweb.com/blog/san-vs-nas/
+
+- `SAN`:
+
+  - a network of storage devices that can be accessed by multiple servers or computers, providing a shared pool of storage space.
+  - Each computer on the network can access the storage on the SAN as though they were local disks connected directly to the computer.
+  - SAN uses SCSI and SATA protocols.
 
 - `SAN` (`storage area network`) is a high-performance, high-speed **network of storage, servers, and devices** that allows access to consolidated, block-level storage.
 
@@ -58,6 +66,11 @@
 
 ## NAS: Network-Attached Storage
 
+- `NAS`:
+
+  - storage devices that are linked to a network and provide file access services to computer systems. These devices generally include an engine that executes the file services and one or more devices on which data is stored.
+  - NAS uses file access protocols such as NFS or CIFS.
+
 - `Network-attached storage (NAS)` is a **network-based storage** solution. NAS storage is a method of managing storage centrally and sharing that storage with multiple servers.
 
   ![NAS](./pic/NAS.png)
@@ -103,4 +116,68 @@
 
 ---
 
-[Top](#storage)
+新版本:
+
+## NAS
+
+- `NAS`
+
+  - a centralized storage device to store data on a network.
+  - specialize in storing data and do nothing else.
+
+- Performance
+
+  - recognized as a shared network drive
+  - might affected by bottlenecks in a LAN
+
+- Typically, a NAX is a box that will have multiple hard drives in a RAID configuraiont for redundancy and have a network interface card attaching to a switch or router.
+
+  - Data can be accessed over a network. Once it is connected, devices in the network can access as a shared drive.
+
+- Cost:
+  - NAS is less expensive than SAN.
+- User:
+
+  - used in homes
+  - used in small to medium-sized businesses
+
+- Fault tolerance
+  - has a single point of failure.
+    - if a component fail, such as power supply failure on the nas, all of the other devices will not able to access its data.
+
+---
+
+## SAN
+
+- `SAN`:
+
+  - a special high-speed network that stores and provides access to large amount of data.
+
+- Performance
+
+  - When a server accesses the data on a SAN, it accesses the data as if it was a local hard drive.
+  - high-speed network
+    - all devices are connected to each other using fiber channel
+    - not affected by network traffic
+
+- Fault tolerance
+
+  - Basically, a dedicted network that is used for data storage and this network consists of multiple disk arrays, switches, and servers.
+  - Data is shared amond serveral disk arrays. If a switech, disk array, server goes down, the data can be accessed.
+  - Because it has more than one of these devices, a SAN is fault tolerant.
+
+- highly scalable
+
+  - adding more storage space can be done without an interruption on the network.
+
+- Cost
+
+  - a standard san use fiber channel to achieve high-speed, so it is expensive.
+  - some san use iSCSI(internet Small Computer System Interface), a cheapter alternative to fiber channel
+
+- User
+  - mainly usesd by large companies and large organizations due to the high cost
+
+---
+
+[Top](#storage--san--nas)
