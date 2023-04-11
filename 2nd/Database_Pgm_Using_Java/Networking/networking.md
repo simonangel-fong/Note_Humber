@@ -24,7 +24,7 @@
   - A kind of sepecial server that translate host names into IP addresses.
   - translate this domain name into a numeric IP address and then sends the request using the IP address.
 
-- IP (nternet Protocol):
+- IP (Internet Protocol):
 
   - An Internet Protocol (IP) address **uniquely identifies** the computer on the Internet.
   - An IP address consists of **four dotted decimal numbers** between 0 and 255, such as 205.207.147.230
