@@ -80,6 +80,11 @@
   - [Package State](./package/package_state.md)
   - [Oracle-supplied Package](./package/oracle_supplied_package.md)
 
+- [Dependency](./dependency/dependency.md)
+
+  - [Local Depandency](./dependency/local_dependency.md)
+  - [Remote Depandency](./dependency/remote_dependency.md)
+
 ---
 
 [Top](#oracle-db-using-plsql)
