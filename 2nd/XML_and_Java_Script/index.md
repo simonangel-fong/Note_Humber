@@ -15,18 +15,32 @@ Github： https://github.com/OleksiiKachan/xml-and-js
 
 ## Catalog
 
+- [Cheapshett](./js/cheapsheet.md)
+
 - [Git](./Git/index.md)
 - [HTML DOM](./html_dom.md)
 - [XML](./xml.md)
+
 - JavaScript
 
   - [JSON](./js/json.md)
 
-- Asynchronous Function
-  - [Call Back](./js/callback.md)
-  - [Promise](./js/promise.md)
-  - [Async](./js/async.md)
-  - [Fetch](./js/fetch.md)
+  - Function
+
+    - [Arrow Function](./js/function/arrow_function.md)
+
+  - Array
+
+    - [Array Method](./js/array/array_method.md)
+
+  - Asynchronous Function
+
+    - [Call Back](./js/async/callback.md)
+    - [Promise](./js/async/promise.md)
+    - [Async/await](./js/async/async.md)
+    - [Fetch](./js/async/fetch.md)
+
+  - [API](./js/api/api.md)
 
 ---
 

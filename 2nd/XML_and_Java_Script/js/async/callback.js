@@ -9,7 +9,7 @@ const cbFunc = (data) => {
 
 setTimeout(cbFunc, 1000, "SetTimeout"); // SetTimeout;
 
-setTimeout(cbFunc, 1000, "SetTimeout", "Hi"); // SetTimeout; "Hi" will not pass
+// setTimeout(cbFunc, 1000, "SetTimeout", "Hi"); // SetTimeout; "Hi" will not pass
 
 // Call Back Function
 
@@ -19,18 +19,15 @@ const perSecond = (cb, str) => {
 
 perSecond(cbFunc, "perSecond");
 
-list = ["apple", "banana", "cherry"];
+// list = ["apple", "banana", "cherry"];
 
-const logEach = (arr, cb) => {
-  for (var i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    cb(element);
-  }
-};
+// const logEach = (arr, cb) => {
+//   arr.map((row)=>{cb(row)});
+// };
 
-logEach(list, (data) => {
-  console.log(data);
-});
+// logEach(list, (data) => {
+//   console.log(data);
+// });
 
 /*
 apple

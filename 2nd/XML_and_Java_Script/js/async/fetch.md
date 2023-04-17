@@ -1,6 +1,6 @@
 # JS Fetch
 
-[Back](../index.md)
+[Back](../../index.md)
 
 - [JS Fetch](#js-fetch)
   - [HTTP Structure](#http-structure)

@@ -1,6 +1,6 @@
 # JavaScript Asynchronous Function
 
-[Back](../index.md)
+[Back](../../index.md)
 
 - [JavaScript Asynchronous Function](#javascript-asynchronous-function)
   - [Asynchronous](#asynchronous)
@@ -39,14 +39,14 @@
   ```js
   list = ["apple", "banana", "cherry"];
 
+  list = ["apple", "banana", "cherry"];
+
   const logEach = (arr, cb) => {
-    for (var i = 0; i < arr.length; i++) {
-      const element = arr[i];
-      cb(element);
-    }
+    arr.map((row) => {
+      cb(row);
+    });
   };
 
-  //using a anonymous
   logEach(list, (data) => {
     console.log(data);
   });

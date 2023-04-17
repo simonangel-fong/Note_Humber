@@ -1,12 +1,14 @@
 # JS Promise
 
-[Back](../index.md)
+[Back](../../index.md)
 
 - [JS Promise](#js-promise)
   - [Promise](#promise)
   - [Chaining](#chaining)
   - [Parallel Promises: all()](#parallel-promises-all)
   - [Mixed Promises](#mixed-promises)
+
+---
 
 ## Promise
 

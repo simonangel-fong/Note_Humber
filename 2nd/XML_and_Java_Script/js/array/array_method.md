@@ -1,82 +1,13 @@
-# Array Function
+# JS - Array methods
 
-[Back](../index.md)
+[Back](../../index.md)
 
-- [Array Function](#array-function)
-  - [Arrow functions](#arrow-functions)
-  - [High-Order Function](#high-order-function)
+- [JS - Array methods](#js---array-methods)
   - [Array methods](#array-methods)
     - [`.map()`](#map)
     - [`.filter()`](#filter)
     - [`.reduce()`](#reduce)
     - [Chaining](#chaining)
-
----
-
-## Arrow functions
-
-- uses an arrow => to separate the parameter(s) from the body.
-
-```js
-const add = (firstParam, secondParam) => {
-  return firstParam + secondParam;
-};
-
-console.log(add(2, 4)); //6
-
-//Arrow functions with a single parameter do not require () around the parameter list.
-// without the return keyword
-const double = (intParam) => intParam * 2;
-
-console.log(double(4)); //8
-
-// without parameter
-const fn = () => console.log("important function");
-
-fn(); //important function
-console.log(fn); //[Function: fn]
-```
-
----
-
-## High-Order Function
-
-- High-Order Function: Function that excepts other functions as arguments
-
-```js
-// arg is a function that pass to hof function as a parameter
-const hof = (arg) => {
-  arg();
-  return `I just invoked ${arg.name} as a callback function!`;
-};
-const argFunc = () => {
-  console.log("I'm being invoked by the higher-order function!");
-};
-console.log(hof(argFunc));
-// I'm being invoked by the higher-order function!
-// I just invoked argFunc as a callback function!
-
-console.log(
-  //an anomynous function is passed as parameter
-  hof(() => {
-    for (let i = 0; i <= 10; i++) {
-      console.log(i);
-    }
-  })
-);
-// 0
-// 1
-// 2
-// 3
-// 4
-// 5
-// 6
-// 7
-// 8
-// 9
-// 10
-// I just invoked  as a callback function!
-```
 
 ---
 
@@ -89,11 +20,17 @@ console.log(
 - Has one argument – callback function to run on each value of the array that **maps** <u>the value of original array</u> **into** <u>some value for the new returning array</u>
 
 ```js
-const numbers = [1, 2, 3];
-const bigNumbers = numbers.map((number) => {
-  return number * 10;
+const tenFold = (i) => i * 10;
+
+const arr = [1, 2, 3, 4, 5];
+
+const mapTest01 = arr.map((row) => tenFold(row));
+const mapTest02 = arr.map((row) => {
+  const double = row * 2;
+  return tenFold(double);
 });
-console.log(bigNumbers); //[ 10, 20, 30 ]
+console.log(mapTest01); //[ 10, 20, 30, 40, 50 ]
+console.log(mapTest02); //[ 20, 40, 60, 80, 100 ]
 ```
 
 - Example:提取一列数据
@@ -116,8 +53,10 @@ console.log(officers_Ids); //[ 20, 24, 56, 88 ]
 const officersIds = officers.map((officer) => {
   return officer.id;
 });
-
 console.log(officersIds); //[ 20, 24, 56, 88 ]
+
+const officersIdList = officers.map(({ id: idnumb }) => idnumb); //
+console.log(officersIdList); //[ 20, 24, 56, 88 ]
 ```
 
 ---
@@ -330,6 +269,15 @@ const totalJediScore = personnel
   .reduce((acc, score) => acc + score, 0);
 
 console.log(totalJediScore); //420
+
+
+const totalShootScore = personnel
+  .filter(({ isForceUser: isUser }) => isUser)
+  .map(({ shootingScore: shoot, pilotingScore: pilot }) => shoot + pilot)
+  .reduce((acc, score) => acc + score, 0);
+
+console.log(totalShootScore);//420
+
 ```
 
 ---

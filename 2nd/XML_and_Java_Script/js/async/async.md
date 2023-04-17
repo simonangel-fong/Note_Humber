@@ -1,6 +1,6 @@
 # JS Async
 
-[Back](../index.md)
+[Back](../../index.md)
 
 - [JS Async](#js-async)
   - [async/await](#asyncawait)
