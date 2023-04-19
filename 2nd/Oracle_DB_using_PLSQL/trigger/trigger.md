@@ -15,6 +15,8 @@
 - `Trigger`:
 
   - Programs to execute a specific action whenever a specific event occurs in an application or in the database.
+  - allow specified actions to be performed automatically within the database, without having to write extra application code.
+  - increase the power of the database, and the power of your application.
 
 - `Application Trigger`:
 
@@ -40,10 +42,10 @@
 
   - Data event:
     - `DML` operations on a `table`
-    - `DML` operations on a view, with an `INSTEAD OF` trigger
+    - `DML` operations on a `view`, with an `INSTEAD OF` trigger
     - `DDL` statements, such as `CREATE` and `ALTER`
   - System event:
-    - a user logs on or the DBA shuts down the database
+    - a user **logs on** or the DBA **shuts down** the database
 
 - Types of Triggers
 

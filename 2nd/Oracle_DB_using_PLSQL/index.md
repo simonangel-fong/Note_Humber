@@ -80,6 +80,13 @@
   - [Package State](./package/package_state.md)
   - [Oracle-supplied Package](./package/oracle_supplied_package.md)
 
+- [Native Dynamic SQL](./nds/native_dynamic_sqlL.md)
+- [Performance](./performance/performance.md)
+
+- [Trigger](./trigger/trigger.md)
+
+  - [DML Trigger](./trigger/dml_trigger.md)
+
 - [Dependency](./dependency/dependency.md)
 
   - [Local Depandency](./dependency/local_dependency.md)
