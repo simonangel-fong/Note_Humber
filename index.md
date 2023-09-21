@@ -23,6 +23,8 @@
 
 - 3rd Semester
 
-| ID       | Course                                                  |     |
-| -------- | ------------------------------------------------------- | --- |
-| ITC-5302 | [Project Management](./3rd/Project_Management/index.md) |     |
+| ID       | Course                                                                           |     |
+| -------- | -------------------------------------------------------------------------------- | --- |
+| ITC-5302 | [Project Management](./3rd/Project_Management/index.md)                          |     |
+| ITE-5323 | [Oracle Data Warehouse Fundamentals](./3rd/Data_Warehouse_Fundamentals/index.md) |     |
+| ITE-5324 | [Big Data](./3rd/Big_Data/index.md)                                              |     |
