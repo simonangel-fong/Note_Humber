@@ -5,10 +5,15 @@
 - [Warehouse - Intro](#warehouse---intro)
   - [Data Warehouse](#data-warehouse)
   - [SQL Recap](#sql-recap)
+<<<<<<< HEAD
   - [Software](#software)
   - [Terminology](#terminology)
   - [SQL\*Plus Commands](#sqlplus-commands)
   - [Evolution of Information Mangement and Data Warehousing](#evolution-of-information-mangement-and-data-warehousing)
+=======
+  - [Terminology](#terminology)
+  - [SQL\*Plus Commands](#sqlplus-commands)
+>>>>>>> bd3eeba51206af16ce7ddf6ca963d953dc998e52
 
 ---
 
@@ -55,6 +60,7 @@
 
 ---
 
+<<<<<<< HEAD
 ## Software
 
 - `Oracle SQL*Plus`:
@@ -67,6 +73,8 @@
 
 ---
 
+=======
+>>>>>>> bd3eeba51206af16ce7ddf6ca963d953dc998e52
 ## Terminology
 
 - People who are main figures in the data warehouse 业界大神
@@ -133,6 +141,7 @@
 
 ---
 
+<<<<<<< HEAD
 ## Evolution of Information Mangement and Data Warehousing
 
 - Executive Information System (EIS) >> Decision Support System (DSS) >> Data Extract Processing
@@ -211,4 +220,6 @@
 
 ---
 
+=======
+>>>>>>> bd3eeba51206af16ce7ddf6ca963d953dc998e52
 [TOP](#warehouse---intro)
