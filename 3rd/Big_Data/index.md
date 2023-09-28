@@ -17,11 +17,8 @@
 - [Intro](./intro.md)
 - [Hadoop - HDFS](./haddop.md)
   - [HDFS Command](./hdfs_command.md)
+- [Hadoop- MapReduce](./mapreduce.md)
 
 ---
 
-<<<<<<< HEAD
 [Top](#big-data)
-=======
-[Top](#project-management)
->>>>>>> bd3eeba51206af16ce7ddf6ca963d953dc998e52

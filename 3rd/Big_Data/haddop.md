@@ -22,12 +22,12 @@
 ## Hadoop
 
 - `hadoop`
-  - An Open-Source framework
-  - Parallel computation framework
-  - Written in Java
+  - An **Open-Source** framework
+  - **Parallel** computation framework
+  - Written in **Java**
   - Redundant, Fault-tolerant data **storage**
-  - Falls under the umbrella of infrastructure for distributed computing
-  - Process enormous data in distributed file systems
+  - Falls under the umbrella of infrastructure for **distributed computing**
+  - Process enormous data in **distributed file systems**
 
 ---
 
@@ -37,13 +37,13 @@
 
 - Storage
   - `HDFS`:
-    - Hadoop Distributed File System
+    - Hadoop **Distributed File System**
 - Computation
   - `YARN`:
     - Yet Another Resource Negotiator
   - `MapReduce`
-    - Distributed Programming Framework
-    - a computing model that decomposes large data manipulation jobs into individual tasks that can be executed in parallel across a cluster of servers
+    - Distributed **Programming** Framework
+    - a computing model that decomposes large data manipulation **jobs into individual tasks** that can be executed in parallel across a cluster of servers
 - `HBase`: Column DB
 - `PIG`: Data Flow
 - `HIVE`: SQL
@@ -53,8 +53,8 @@
 
 ### Data Locality
 
-- Hadoop is a data storage and processing platform based on central concept “Data Locality”
-- Data locality
+- Hadoop is a **data storage** and **processing** platform based on central concept “Data Locality”
+- `Data locality`
   - refers to the processing of data **where it resides**
   - It is not ideal or even possible to move large volumes of data required for processing across the network at compute time.
 - Hadoop enables large datasets locally
@@ -89,7 +89,7 @@
 - `HDFS`
 
   - a **filesystem** designed for storing very large files with **streaming data** access pattern, **running on clusters** on commodity hardware
-  - It is the primary **input data source** and target for data processing operations
+  - It is the primary **input data source** and target for **data processing** operations
 
 - **Very large files**:
   - hundreds of megabytes, gigabytes, or terabytes in size
@@ -110,9 +110,10 @@
 
 - When a file is added to HDFS, it is **split into blocks**
 
-  - 64M by default,
+  - **64M** by default,
   - Can be configured to 128M, 256M, 1G, etc.
-  - **Should not be very small** - Map tasks depends on number of blocks
+  - **Should not be very small**
+  - Map tasks depends on number of blocks
 
 - Why blocks?
 
@@ -168,14 +169,14 @@
   - **Name**(“blk_xxxxx”) of the individual **blocks**
   - **Locations** of the **blocks**
 
-- Metadata is stored on disk and read into memory when the NameNode daemon starts up
+- **Metadata** is stored on disk and **read into memory** when the` NameNode daemon` starts up
 - Changes/Edits to the files are written to the **logs**
 
 ---
 
 ### DataNode (slave)
 
-- Actual files/data are **chunked into blocks and stored** on the data nodes
+- Actual files/data are **chunked into blocks** and **stored on the data nodes**
 - Each block is replicated to different nodes for redundancy
 - The DataNode daemon **controls access** to the blocks and **communicates** with the NameNode
 
@@ -193,9 +194,14 @@
 ## File Write and Read
 
 - Data centers are typically organized into racks of multiple machines
+
   - Closest Network Distance in Hadoop
 
+- **Write file**: Block -> replication -> node
+
 ![write](./pic/file_write.png)
+
+- **Read file**: Closest
 
 ![read](./pic/file_read.png)
 
