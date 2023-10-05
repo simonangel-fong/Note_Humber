@@ -1,6 +1,6 @@
 # Machine Learning - Numpy
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Machine Learning - Numpy](#machine-learning---numpy)
   - [Create array](#create-array)

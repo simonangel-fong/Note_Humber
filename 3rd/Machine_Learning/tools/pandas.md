@@ -1,6 +1,6 @@
 # Machine Learning - Pandas
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Machine Learning - Pandas](#machine-learning---pandas)
   - [Create array](#create-array)

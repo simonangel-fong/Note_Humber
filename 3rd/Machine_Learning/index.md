@@ -11,16 +11,18 @@
 
 ## Catalog
 
-- Python
-- [Numpy](./numpy.md)
-- [Pandas](./pandas.md)
-- [Matplotlib](./matplotlib.md)
+- Tools: Python packages
+
+  - [Numpy](./tools/numpy.md)
+  - [Pandas](./tools/pandas.md)
+  - [Matplotlib](./tools/matplotlib.md)
 
 - Unsupervised Machine Learning Algorithm
+
   - [K-Mean Clustering](./unsupervised/k-mean.md)
   - [Hierarchical Clustering](./unsupervised/hierarchical.md)
   - [DBSCAN](./unsupervised/dbscan.md)
 
 ---
 
-[Top](#project-management)
+[Top](#machine-learning)
