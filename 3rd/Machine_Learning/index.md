@@ -16,6 +16,11 @@
 - [Pandas](./pandas.md)
 - [Matplotlib](./matplotlib.md)
 
+- Unsupervised Machine Learning Algorithm
+  - [K-Mean Clustering](./unsupervised/k-mean.md)
+  - [Hierarchical Clustering](./unsupervised/hierarchical.md)
+  - [DBSCAN](./unsupervised/dbscan.md)
+
 ---
 
 [Top](#project-management)
