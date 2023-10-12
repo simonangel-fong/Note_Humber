@@ -1,6 +1,6 @@
 # Big Data - HDFS Command
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Big Data - HDFS Command](#big-data---hdfs-command)
   - [HDFS Command](#hdfs-command)

@@ -14,10 +14,19 @@
 
 ## Catalog
 
-- [Intro](./intro.md)
-- [Hadoop - HDFS](./haddop.md)
-  - [HDFS Command](./hdfs_command.md)
-- [Hadoop- MapReduce](./mapreduce.md)
+- [Intro](./intro/intro.md)
+
+- Storage
+  - [Hadoop - HDFS](./hadoop/hadoop.md)
+  - [HDFS Command](./hadoop/hdfs_command.md)
+
+- Programming model
+  - [MapReduce](./hadoop/mapreduce.md)
+
+- Database
+  - [Hive](./hive/hive.md)
+  - [HiveQL](./hive/hiveql.md)
+
 
 ---
 

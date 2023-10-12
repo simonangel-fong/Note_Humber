@@ -1,6 +1,6 @@
 # Big Data - Introduction to Big Data
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Big Data - Introduction to Big Data](#big-data---introduction-to-big-data)
   - [Data](#data)

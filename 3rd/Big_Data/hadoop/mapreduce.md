@@ -1,17 +1,17 @@
 # Hadoop - MapReduce
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Hadoop - MapReduce](#hadoop---mapreduce)
   - [MapReduce](#mapreduce)
-  - [Map Phase](#map-phase)
-  - [Combiner Phase](#combiner-phase)
-  - [Shuffle \& Sort Phase](#shuffle--sort-phase)
-  - [Reduce Phase](#reduce-phase)
-    - [MapReduce – With Single Reducer](#mapreduce--with-single-reducer)
-    - [MapReduce – With Multiple Reducers](#mapreduce--with-multiple-reducers)
-  - [Summary](#summary)
-  - [Data Access - Hadoop](#data-access---hadoop)
+    - [Map Phase](#map-phase)
+    - [Combiner Phase](#combiner-phase)
+    - [Shuffle \& Sort Phase](#shuffle--sort-phase)
+    - [Reduce Phase](#reduce-phase)
+    - [Summary](#summary)
+  - [MapReduce – With Single Reducer](#mapreduce--with-single-reducer)
+  - [MapReduce – With Multiple Reducers](#mapreduce--with-multiple-reducers)
+  - [Data Access](#data-access)
   - [MapReduce Execution](#mapreduce-execution)
     - [Job Tracker: Name Node, Master](#job-tracker-name-node-master)
     - [Task Tracker: Data Node, Slave](#task-tracker-data-node-slave)
@@ -48,7 +48,7 @@
 
 ---
 
-## Map Phase
+### Map Phase
 
 - Hadoop creates **one map task** for each **split/block**
 
@@ -65,7 +65,7 @@
 
 ---
 
-## Combiner Phase
+### Combiner Phase
 
 - Same as the Reducer
 - Occurs on the **same node as the Map Process**
@@ -78,7 +78,7 @@
 
 ---
 
-## Shuffle & Sort Phase
+### Shuffle & Sort Phase
 
 - Makes sure that all the values associated with the **same intermediate key** are sent to the **same reducer**
 - **Performed automatically**;
@@ -90,7 +90,7 @@
 
 ---
 
-## Reduce Phase
+### Reduce Phase
 
 - Reducer **receives the key** and associated **list of values** and then does the **reduce operations**
 
@@ -103,19 +103,7 @@
 
 ---
 
-### MapReduce – With Single Reducer
-
-![single reducer](./pic/single_reducer.png)
-
----
-
-### MapReduce – With Multiple Reducers
-
-![multiple reducers](./pic/multiple_reducers.png)
-
----
-
-## Summary
+### Summary
 
 - **Automatic parallelization** and **distribution**
   - It makes M/R programming much easier
@@ -128,7 +116,19 @@
 
 ---
 
-## Data Access - Hadoop
+## MapReduce – With Single Reducer
+
+![single reducer](./pic/single_reducer.png)
+
+---
+
+## MapReduce – With Multiple Reducers
+
+![multiple reducers](./pic/multiple_reducers.png)
+
+---
+
+## Data Access
 
 - `Data Locality`
   - Hadoop tries to process data on the **same machine** that stores it

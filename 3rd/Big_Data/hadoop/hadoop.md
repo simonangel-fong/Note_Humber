@@ -1,6 +1,6 @@
 # Big Data - Hadoop
 
-[Back](./index.md)
+[Back](../index.md)
 
 - [Big Data - Hadoop](#big-data---hadoop)
   - [Hadoop](#hadoop)
