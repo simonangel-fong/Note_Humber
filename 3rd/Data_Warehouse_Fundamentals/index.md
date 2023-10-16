@@ -20,7 +20,6 @@
   - [Tablespace](./storage/storage.md)
 
 - [Partitioning](./partitioning/partitioning.md)
-- 
 
 
 ---

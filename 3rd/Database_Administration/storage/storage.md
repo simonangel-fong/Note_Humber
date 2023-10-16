@@ -28,9 +28,11 @@
     - The current **log sequence number**
     - **Checkpoint** information
 
-  - `Data files`:
+  - `Data files`: `.dbf`
 
     - They contain the **user or application data** of the database, as well as **metadata** and the **data dictionary**.
+    - A `tbspace` cannot exist without data file
+      - Must have at least one data file.
 
   - `Online redo log files`:
 

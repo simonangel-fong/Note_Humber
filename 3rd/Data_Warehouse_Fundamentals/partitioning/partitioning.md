@@ -26,6 +26,12 @@
 - Oracle provides a comprehensive range of partitioning schemes to address every business requirement.
 - Moreover, since it is entirely transparent in SQL statements, partitioning can be **used with any application**, from packaged _OLTP applications_ to _data warehouses_.
 
+- Note inclass:
+  - Max range: 64k for a tb
+  - Partition are created in different tbsp.
+  - Partitions are created **when a tb is created**, so it only is affected by **ddl**, not dml.
+  - Once created, when data come, they will be placed in the specific **partition automatically**.
+
 ---
 
 ### BENEFITS OF ORACLE PARTITIONING
@@ -211,6 +217,10 @@ SELECT car_model, sale_price FROM car_amounts_part PARTITION(part_name);
 ---
 
 ## Example: Explain Plans
+
+- Note inclass:
+  - Explain plan: common for fine tune as dba.
+  - EXPLAIN PLAN command - This displays an execution plan for a SQL statement without actually executing the statement.
 
 ```sql
 # show how the query was executed

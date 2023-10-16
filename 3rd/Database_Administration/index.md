@@ -21,6 +21,7 @@
 - [Database Instance](./architecture/instance.md)
 
   - [Memory Structure](./architecture/memory_structure.md)
+  - [Storage Structure](./storage/storage.md)
   - [Background Processes](./process/process.md)
 
 - [Cloud](./cloud/cloud.md)

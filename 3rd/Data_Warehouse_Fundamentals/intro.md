@@ -80,13 +80,25 @@
   - featured by **a large number of short on-line transactions** (`INSERT`, `UPDATE`, and `DELETE`).
   - The primary significance of OLTP operations is put on very rapid query processing, maintaining record integrity in multi-access environments, and effectiveness consistent by the number of transactions per second.
   - In the OLTP database, there is an accurate and current record, and **schema** used to save transactional database is the **entity model (usually 3NF)**.
+  - Note inclass:
+    - a type of data processing that consists of executing a number of **transactions occurring concurrently**
+    - Manipulate data
+      - DML: insert update delete
+    - DBA: all about transactions
 
 - `OLAP (On-line Analytical Processing)`
+
   - represented by **a relatively low volume of transactions.**
   - Queries are very difficult and **involve aggregations**.
   - For OLAP operations, response time is an effectiveness measure.
   - OLAP applications are generally used by **Data Mining** techniques.
   - In OLAP database there is **aggregated**, **historical** information, stored in **multi-dimensional schemas** (generally star schema).
+
+  - Note inclass:
+    - software technology you can use to analyze business data from different points of view.
+    - Business **insight**
+    - No transaction, just **query** data
+    - **Historical data**, analyze on different **dimensions**
 
 | Criteria             | OLAP                                                                                    | OLTP                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -100,7 +112,7 @@
 
 - `ETL(Extraction, Transformation and Loading)`
 
-  - the process of combining data from multiple sources into a large, central repository called a data warehouse.
+  - the process of combining data **from multiple sources into a** large, central repository called a **data warehouse**.
 
 - `database`
 
@@ -147,11 +159,11 @@
 
   - a.k.a. `Management Information System (MIS)`
   - reports developed by MIS developers.
-  - disadvantage: take a long time to generate report
+  - disadvantage: take a **long time** to generate report
 
 - `Decision Support System (DSS)`
 
-  - Users have direct access to the operational data.
+  - Users have **direct access** to the operational data.
   - supports additional ad hoc querying for flexible reporting.
   - Challenges with analyzing data from operational systems.
     - Operational Systems
@@ -182,6 +194,11 @@
     - uniform data, no disparity.
     - No time-period conflict.
     - No drill-down restrictions.
+  - Note inclass:
+    - **data marts**:
+      - data are separated based on business logic
+      - **Subset** of the warehouse
+      - A subset of a Data Warehouse focused on a specific business area or department
 
 ---
 

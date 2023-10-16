@@ -22,9 +22,21 @@
 ## Tablespaces
 
 - Tablespaces can be
+
   - Bigfile / smallfile
   - **System managed** extents or **user managed** extents
   - Automatic segment space management
+
+- Note inclass:
+  - A oracle concept. Not in sql server
+  - A **logical container**
+  - A storage for **objects**.
+    - Table are stored in table space
+  - **Logical** structure
+  - The largest
+  - Each tablespace is mapped to a **data file**.
+  - A `tbspace` cannot exist without data file
+    - Must have at least one data file.
 
 ---
 
@@ -36,6 +48,13 @@
   - **physically** in `data files` that correspond to the tablespaces.
 
 - The **logical storage** management is **independent** of the **physical storage** of the data files.
+
+- Note inclass:
+  - Bigfile:
+    - for big data
+    - Only one data file is allowed, <128TB
+    - For dumping data only, not for production.
+    - Too big affecting performance
 
 ---
 
@@ -55,6 +74,20 @@
 
 - The `SYSTEM` and `SYSAUX` tablespaces should **not** be used for **application data.**
 
+- Note incalss
+  - `System`
+    - Data dict generate tbspace
+    - Always no 1 tbsp
+  - `Sysaux`
+    - auxiliary
+  - `Undo`:
+    - rollback
+  - `Users`
+    - The only tbspace where Can create object
+    - Auto extend
+  - `Temp`
+    - Searching and sorting
+
 ---
 
 ## Syntax
@@ -65,6 +98,7 @@
 
 ```sql
 SELECT * FROM v$tablespace;
+SELECT * FROM dba_tablespaces;
 ```
 
 ---
@@ -74,13 +108,11 @@ SELECT * FROM v$tablespace;
 ```sql
 # list all datafile
 SELECT name, create_time, status, enable FROM v$datafile;
-
-# list all tempfile
-SELECT * FROM v$tempfile;
-
 # list all datafile with tbsp
 SELECT * FROM dba_data_files;
 
+# list all tempfile
+SELECT * FROM v$tempfile;
 # list all tempfile with tbsp
 SELECT * FROM dba_temp_files;
 ```
@@ -90,7 +122,7 @@ SELECT * FROM dba_temp_files;
 ### Create Tablespace
 
 ```sql
-CREATE TABLESPACE  tbsp_name
+CREATE TABLESPACE tbsp_name
 DATAFILE '/home/oracle/app/oracle/oradata/orcl/tbsp_name01.dbf'
 SIZE 20m;
 

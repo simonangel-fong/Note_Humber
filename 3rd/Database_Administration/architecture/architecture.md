@@ -106,6 +106,7 @@
     - such as tables and indexes
   - `Segments` are collections of `extents`.
     - Each `segment` contains one or more `extents`.
+    - Standard 128 k
 
 - `extent`
 
@@ -117,9 +118,10 @@
   - `Data blocks` are mapped to **disk blocks**.
   - the smallest unit of I/O in the database.
   - At the finest level of granularity, an Oracle database’s **data is stored in `data blocks`**.
-  - One `data bloc`k corresponds to a specific number of bytes of **physical space** on the disk.
+  - One `data block` corresponds to a specific number of bytes of **physical space** on the disk.
   - A `data block` size is specified for each tablespace when it is created.
   - A `database` uses and allocates **free database space** in Oracle data blocks.
+  - Each row has unique **row id**.
 
 - The **size of the data block** can be set at the time of database creation.
 

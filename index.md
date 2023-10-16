@@ -29,3 +29,4 @@
 | ITE-5310 | [Machine Learning](./3rd/Machine_Learning/index.md)                              |     |
 | ITE-5323 | [Oracle Data Warehouse Fundamentals](./3rd/Data_Warehouse_Fundamentals/index.md) |     |
 | ITE-5324 | [Big Data](./3rd/Big_Data/index.md)                                              |     |
+| ITE-5320 | [DBA](./3rd/Database_Administration/index.md)                                    |     |
