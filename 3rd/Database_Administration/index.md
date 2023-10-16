@@ -14,7 +14,21 @@
 
 ## Catalog
 
-- [Architectural Components](./architect/component.md)
+- [Intro](./intro/intro.md)
+
+- [Architecture Overview](./architecture/architecture.md)
+
+- [Database Instance](./architecture/instance.md)
+
+  - [Memory Structure](./architecture/memory_structure.md)
+  - [Background Processes](./process/process.md)
+
+- [Cloud](./cloud/cloud.md)
+
+- [Container Database](./container_db/container_db.md)
+
+- [Network](./network/network.md)
+
 - [Access to an Oracle Database](./access/access.md)
 
 ---

@@ -9,11 +9,19 @@
 
 - URL for this course:
   https://fast-vcloud.humber.ca/tenant/ITE-5323-OGA/
+
 ---
 
 ## Catalog
 
 - [Intro](./intro.md)
+
+- Storage
+  - [Tablespace](./storage/storage.md)
+
+- [Partitioning](./partitioning/partitioning.md)
+- 
+
 
 ---
 

@@ -17,7 +17,7 @@
 - Data Warehouse
   - primarily an **analytical tool**
   - a database designed for querying, reporting, and analysis
-  - contains historical data derived from transactional data
+  - contains **historical data** derived from transactional data
   - **separate** _analysis workload_ from _transactional workload_
 
 ---

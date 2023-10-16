@@ -22,7 +22,7 @@
   - connect client applications to **database instances**, _not databases_.
 
 - `User session`
-  - a logical **entity that represents the state** of the current user login to the database instance.
+  - a **logical entity** that represents **the state of the current user login** to the database instance.
   - lasts from the time the user is authenticated by database instance until the time the user disconnects or exits the client application.
 
 ---
@@ -38,6 +38,7 @@ sqlplus / as sysdba
 # slash "/" here identify to connect to the OS.
 # sysdba: the role as whom the current user acts
 #           the owner of the databse with the highest previlige.
+# the current operating system user must be a member of the privileged OSDBA group
 
 # A safe way to log in using a paricular user name and pwd
 sqlplus # then sql prompt will show up for user name and pwd.

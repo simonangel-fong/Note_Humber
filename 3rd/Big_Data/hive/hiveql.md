@@ -218,6 +218,10 @@ SELECT * FROM names_text;
   - If we use a **traditional approach**, we have to go through the entire data. This leads to **performance degradation**.
   - In such a case, we can adopt the better approach i.e., partitioning in Hive and divide the data among the different datasets based on particular columns.
 
+- disadvantage of using too many partitions in Hive tables:
+
+  - It slows down the namenode
+
 - 课件:
 
 - Adding partition:
