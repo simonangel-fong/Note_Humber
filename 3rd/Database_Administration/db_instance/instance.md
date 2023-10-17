@@ -4,6 +4,7 @@
 
 - [DBA - Database Instance](#dba---database-instance)
   - [Database Instance](#database-instance)
+    - [Connecting](#connecting)
   - [Instance and Database Startup](#instance-and-database-startup)
     - [Phase: No mount](#phase-no-mount)
     - [Phase: Mounted](#phase-mounted)
@@ -32,6 +33,45 @@
   - Client is connected to the database with the `SYSDBA` **privilege**.
 
 - The `listener` creates a **dedicated server**, which can start the database instance. listener 是中介.
+
+---
+
+- A database instance **cannot be shared**.
+
+  - Each database instance is associated with **only one database**.
+
+    - If there are **multiple databases** on the same server, then there is **a separate and distinct database instance for each** database. Instance 专属一个 db.
+    - An `Oracle Real Applications Cluster (RAC)` database usually has **multiple instances** on separate servers **for the same shared database**. RAC:共享 DB 可以对多个 instance.
+
+![instance_diagram](./pic/instance_diagram.png)
+
+- In this model, the same database is associated with each RAC instance, which meets the requirement that, at most, only one database is associated with an instance.
+- 以上都遵循不共享 instance 原则.
+  - local: 一对一
+  - clustered: db 共享, instance 专属.
+
+---
+
+### Connecting
+
+![instance_connection](./pic/instance_connection.png)
+
+- `Connection`:
+
+  - a **communication pathway** between a `user process` and an Oracle `Database instance`.
+  - A communication pathway is established by **using** available _interprocess communication mechanisms_ (on a computer that runs both the user process and Oracle Database) or _network software_ (when different computers run the database application and Oracle Database and communicate through a network).
+
+- `Session`:
+
+  - **Specific connection** of a user to an instance through a user process
+  - A session represents **the state of a current user login to the database instance**.
+
+    - For example, when a user starts SQL\*Plus, the user must provide a valid username and password, and then a session is established for that user.
+
+  - A session **lasts** from the time _a user connects_ until _the user disconnects or exits_ the database application.
+
+  - **Multiple sessions** can be created and exist **concurrently** for a single Oracle database user by **using the same username**.
+    - For example, a user with the username/password of HR/HR can connect to the same Oracle Database instance several times.
 
 ---
 
@@ -73,15 +113,15 @@
 
 - The stages are as follows:
 
-  - **Searches** for a `server parameter file` in a platform-specific default location and, if not found, for a **text initialization parameter file** (specifying `STARTUP` with the `SPFILE` or `PFILE` parameters **overrides** the default behavior)
+  - **Searches** for a `server parameter file(SPFILE)` in a platform-specific default location and, if not found, for a `text initialization parameter file(PFILE)` (specifying `STARTUP` with the `SPFILE` or `PFILE` parameters **overrides** the default behavior)
   - **Reads** the parameter file to determine the **values of initialization parameters**
   - **Allocates** the `SGA` based on the initialization parameter settings
   - Starts the **Oracle background processes**
   - **Opens** the _alert log_ and _trace files_ and **writes** all _explicit parameter settings_ to the alert log in valid parameter syntax
 
-- At this stage, **no database** is associated with the instance.
+- At this stage, **no database is associated** with the instance.
 
-- Scenarios that require a NOMOUNT state include:
+- **Scenarios** that require a `NOMOUNT` state include:
   - **database creation**
   - certain **backup** and **recovery** operations.
 
@@ -93,15 +133,20 @@
 
 - To mount the database,
 
+  - the Oracle software associates the database (`CDB`) with the previously started database instance
   - the instance obtains the **names** of the `database control files` specified in the `CONTROL_FILES` **initialization parameter** and opens the files.
   - Oracle Database **reads** the `control files` to find:
     - the **names** of the `data files`
     - the `online redo log files` that it will attempt to access when opening the database.
+  - No checks, however, are performed to **verify the existence** of the `data files` and `online redo log files` at this time.
 
-- In a mounted database, the **database is closed** and **accessible only** to database administrators.
+- In a mounted database, the **database is closed** and **accessible only** to `database administrators`.
 
   - Administrators can keep the database closed while completing **specific maintenance operations**.
+    - such as _renaming_ data files and performing full database _recoveries_.
   - However, the database is **not available for normal operations**.
+
+---
 
 - If Oracle Database allows multiple instances to **mount the same database concurrently**, then the `CLUSTER_DATABASE` **initialization parameter setting** can make the database available to multiple instances. Database behavior depends on the setting:
   - If `CLUSTER_DATABASE` is `false` (default) for the **first instance** that mounts a database, then only this instance can mount the database.
@@ -112,6 +157,7 @@
 
 ### Phase: Open
 
+- **Default**
 - Usually, a database administrator opens the database to make it **available for general use**.
 
   - Opening a mounted database makes it **available** for normal database operation.
@@ -124,9 +170,11 @@
   - **Acquires** an `undo tablespace`
 
     - If multiple undo tablespaces exists, then the `UNDO_TABLESPACE` initialization parameter designates the undo tablespace to use.
-      - If this parameter is not set, then the **first** available undo tablespace is chosen.
+    - If this parameter is not set, then the **first** available undo tablespace is chosen.
 
   - **Opens** the `online redo log files`
+
+- `PDBs` are not, by default, started when you open the database.
 
 ---
 
@@ -205,7 +253,7 @@ The possible SHUTDOWN statements are:
   - However, a subsequent open of this database may take substantially **longer** because instance **recovery** must be performed to make the data files consistent.
 
     - Because `SHUTDOWN ABORT` does **not checkpoint** the open data files, **instance recovery is necessary** before the database can reopen.
-    - The other shutdown modes do not require instance recovery before the database can reopen.
+    - The **other** shutdown modes **do not require instance recovery** before the database can reopen.
 
   - In a PDB, issuing `SHUTDOWN ABORT` is equivalent to issuing `SHUTDOWN IMMEDIATE` at the CDB level.
 
@@ -248,6 +296,8 @@ The possible SHUTDOWN statements are:
 - At this stage, the database is closed and **inaccessible** for normal operations.
 - The `control files` **remain open** after a database is closed.
 
+![instance_shutdown_mode_diagram01](./pic/instance_shutdown_mode_diagram01.png)
+
 ---
 
 #### Abnormal Shutdown
@@ -256,6 +306,12 @@ The possible SHUTDOWN statements are:
 
 - In an abnormal shutdown, Oracle Database **does not write data** in the buffers of the SGA to the `data files` and `redo log files`.
 - The subsequent reopening of the database **requires instance recovery**, which Oracle Database performs automatically.
+
+![instance_shutdown_mode_diagram02](./pic/instance_shutdown_mode_diagram02.png)
+
+- The database becomes **inconsistent** when you perform an `ABORT` shutdown, whereas it stays **consistent** during the other shutdown modes.
+
+- Also note that you **need to recover** the database instance after you perform an `ABORT` shutdown; whereas with the other shutdown modes, you don't need to do so.
 
 ---
 

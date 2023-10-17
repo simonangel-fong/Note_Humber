@@ -18,15 +18,16 @@
 
 - [Architecture Overview](./architecture/architecture.md)
 
-- [Database Instance](./architecture/instance.md)
-
   - [Memory Structure](./architecture/memory_structure.md)
   - [Storage Structure](./storage/storage.md)
   - [Background Processes](./process/process.md)
 
+- [Database Instance](./db_instance/instance.md)
+
 - [Cloud](./cloud/cloud.md)
 
-- [Container Database](./container_db/container_db.md)
+- Multitenant architecture
+  - [Container Database](./container_db/container_db.md)
 
 - [Network](./network/network.md)
 
