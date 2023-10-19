@@ -27,6 +27,7 @@
   - [Hive](./hive/hive.md)
   - [HiveQL](./hive/hiveql.md)
 
+- [Spark](./spark/spark.md)
 
 ---
 
