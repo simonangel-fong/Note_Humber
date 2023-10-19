@@ -22,6 +22,21 @@
   - [K-Mean Clustering](./unsupervised/k-mean.md)
   - [Hierarchical Clustering](./unsupervised/hierarchical.md)
   - [DBSCAN](./unsupervised/dbscan.md)
+  - [PCA](./pca/pca.md)
+
+- Supervised Machine Learning Algorithm
+
+  - [Regression](./regression//regression.md)
+    - Linear Regression
+      - [Simple Linear Regression](./linear_regression/simple_linear.md)
+      - [Multiple Linear Regression](./linear_regression/multiple_linear.md)
+      - [Polynomial Linear Regression](./linear_regression/polynomial_linear.md)
+
+- Error handling
+  - [Cost Function](./cost_func/cost_func.md)
+  - [Cross Validation](./cross_validation/cross_validation.md)
+  - [Bias and Variance](./error/bias_variance.md)
+  - [Underfitting and Overfitting](./fitting/fitting.md)
 
 ---
 
