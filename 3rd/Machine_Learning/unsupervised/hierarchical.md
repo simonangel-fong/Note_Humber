@@ -3,6 +3,7 @@
 [Back](../index.md)
 
 - [Unsupervised - Hierarchical Clustering Algorithm](#unsupervised---hierarchical-clustering-algorithm)
+  - [Hierarchical cluster analysis](#hierarchical-cluster-analysis)
   - [Agglomerative Hierarchical clustering algorithm](#agglomerative-hierarchical-clustering-algorithm)
     - [Steps](#steps)
     - [Linkage: Measure for the distance between two clusters](#linkage-measure-for-the-distance-between-two-clusters)
@@ -11,6 +12,8 @@
   - [Evaluation: Silhouette Score](#evaluation-silhouette-score)
 
 ---
+
+## Hierarchical cluster analysis
 
 - `hierarchical cluster analysis` / `HCA`
 

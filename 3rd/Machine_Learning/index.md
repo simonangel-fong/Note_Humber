@@ -46,4 +46,26 @@
 
 ---
 
+## Summary
+
+- Unsuper
+
+| Cluserting   | pre-k | Method      | Valid                    |
+| ------------ | ----- | ----------- | ------------------------ |
+| k-mean       | Y     | Elbow(WCSS) | CH Index(high)           |
+| Hierarchical | N     | Dendrogram  | Silhouette Score[-1,0,1] |
+| DBSCAN       | Y     | r+min       | Both                     |
+
+- Data process
+  - Normal
+  - Standard
+  - PCA
+
+- Regeression
+  - validate: error, rmse(low), r^2(1)
+
+cost function / Least Square Method
+
+---
+
 [Top](#machine-learning)

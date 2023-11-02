@@ -37,7 +37,7 @@
 - **Benefit**
   - train the model with the data K times.
   - learn the all features in the data.
-  - Reduced Overfitting
+  - Reduced **Overfitting**
   - **reduce the impact** of variability that may arise from a single **train-test split**.
 
 ---
