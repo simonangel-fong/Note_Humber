@@ -34,6 +34,12 @@
   - Now, **evaluate** model performance using the `validation set`.
     - If the model performs well with the `validation set`, perform the further step, else check for the issues.
 
+- **Benefit**
+  - train the model with the data K times.
+  - learn the all features in the data.
+  - Reduced Overfitting
+  - **reduce the impact** of variability that may arise from a single **train-test split**.
+
 ---
 
 ## Methods used for Cross-Validation

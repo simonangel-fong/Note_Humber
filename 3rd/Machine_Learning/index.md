@@ -17,6 +17,8 @@
   - [Pandas](./tools/pandas.md)
   - [Matplotlib](./tools/matplotlib.md)
 
+- [Data Processing](./data_processing/data_processing.md)
+
 - Unsupervised Machine Learning Algorithm
 
   - [K-Mean Clustering](./unsupervised/k-mean.md)
@@ -27,16 +29,20 @@
 - Supervised Machine Learning Algorithm
 
   - [Regression](./regression//regression.md)
-    - Linear Regression
-      - [Simple Linear Regression](./linear_regression/simple_linear.md)
-      - [Multiple Linear Regression](./linear_regression/multiple_linear.md)
-      - [Polynomial Linear Regression](./linear_regression/polynomial_linear.md)
+
+    - [Simple Linear Regression](./linear_regression/simple_linear.md)
+    - [Multiple Linear Regression](./linear_regression/multiple_linear.md)
+    - [Polynomial Linear Regression](./linear_regression/polynomial_linear.md)
+
+  - [Classification](./classification/classification.md)
+    - [Logistic Regression](./logistic_regression/logistic_regression.md)
 
 - Error handling
   - [Cost Function](./cost_func/cost_func.md)
   - [Cross Validation](./cross_validation/cross_validation.md)
   - [Bias and Variance](./error/bias_variance.md)
   - [Underfitting and Overfitting](./fitting/fitting.md)
+  - [Confusion Matrix](./confusion_matrix/confusion_matrix.md)
 
 ---
 
