@@ -7,7 +7,6 @@
     - [Assumptions for Logistic Regression:](#assumptions-for-logistic-regression)
     - [Logistic Function (Sigmoid Function)](#logistic-function-sigmoid-function)
     - [Type of Logistic Regression:](#type-of-logistic-regression)
-  - [Model Evaluation -](#model-evaluation--)
   - [Python Implementation](#python-implementation)
     - [Data Pre-processing step](#data-pre-processing-step)
     - [Fitting Logistic Regression to the Training set](#fitting-logistic-regression-to-the-training-set)
@@ -38,7 +37,7 @@
 - Logistic Regression can be used to classify the observations **using different types of data** and can easily **determine the most effective variables** used for the classification.
 
 - Note: Logistic regression **uses the concept of predictive modeling as regression**; therefore, it is called logistic regression, but is used to classify samples;
-- Therefore, it falls under the **classification** algorithm.
+  - Therefore, it falls under the **classification** algorithm.
 
 ---
 
@@ -77,15 +76,13 @@
 - On the basis of the categories, Logistic Regression can be classified into three types:
 
   - `Binomial`:
-    - In binomial Logistic regression, there can be only **two possible types** of the dependent variables, such as 0 or 1, Pass or Fail, etc.
+    - In binomial Logistic regression, there can be only **two possible types** of the _dependent variables_, such as 0 or 1, Pass or Fail, etc.
   - `Multinomial`:
-    - In multinomial Logistic regression, there can be **3 or more possible unordered types** of the dependent variable, such as "cat", "dogs", or "sheep"
+    - In multinomial Logistic regression, there can be **3 or more possible unordered types** of the _dependent variable_, such as "cat", "dogs", or "sheep"
   - `Ordinal`:
-    - In ordinal Logistic regression, there can be **3 or more possible ordered types** of dependent variables, such as "low", "Medium", or "High".
+    - In ordinal Logistic regression, there can be **3 or more possible ordered types** of *dependent variable*s, such as "low", "Medium", or "High".
 
 ---
-
-## Model Evaluation -
 
 ## Python Implementation
 
@@ -120,6 +117,8 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 ```
 
+---
+
 ### Fitting Logistic Regression to the Training set
 
 ```py
@@ -128,12 +127,16 @@ classifier = LogisticRegression(random_state=0)
 classifier.fit(X_train, y_train)
 ```
 
+---
+
 ### Predicting the test result
 
 ```py
 y_pred = classifier.predict(X_test)
 print(np.concatenate((y_pred.reshape(len(y_pred), 1), y_test.reshape(len(y_test), 1)), 1))
 ```
+
+---
 
 ### Test accuracy of the result(Creation of Confusion matrix)
 
@@ -143,6 +146,8 @@ cm = confusion_matrix(y_test, y_pred)
 print(cm)
 accuracy_score(y_test, y_pred)
 ```
+
+---
 
 ### Visualizing the training set result.
 

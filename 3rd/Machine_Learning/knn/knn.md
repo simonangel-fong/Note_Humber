@@ -1,9 +1,9 @@
-# # ML - Logistic Regression
+# ML - K-Nearest Neighbour
 
 [Back](../index.md)
 
-- [# ML - Logistic Regression](#-ml---logistic-regression)
-  - [`K-Nearest Neighbour`](#k-nearest-neighbour)
+- [ML - K-Nearest Neighbour](#ml---k-nearest-neighbour)
+  - [K-Nearest Neighbour](#k-nearest-neighbour)
     - [Steps](#steps)
   - [Advantages \& Disadvantages](#advantages--disadvantages)
   - [The value of K](#the-value-of-k)
@@ -18,12 +18,12 @@
 
 ---
 
-## `K-Nearest Neighbour`
+## K-Nearest Neighbour
 
 - `K-Nearest Neighbour(K-NN)`
 
   - **assumes** the similarity between the **new case/data** and **available cases**
-  - classifies a new data point based on the similarity,
+  - classifies a new data point **based on the similarity**,
 
     - put the new case into the category that is **most similar** to the available categories.
 
@@ -37,7 +37,7 @@
 
 - `lazy learner algorithm`
 
-  - a type of machine learning algorithm that **doesn't process** `training data` **until** it needs to make a **prediction**.
+  - a type of machine learning algorithm that **doesn't process** `training data` **until** it needs to **make a prediction**.
   - Instead of building models during training, `lazy learning algorithms` **wait until** they **encounter a new query**.
     - it does not learn from the training set **immediately** instead it **stores** the dataset
   - at the time of classification, it **performs** an action on the dataset.
@@ -49,9 +49,6 @@
 ---
 
 ### Steps
-
-Step-5: Assign the new data points to that category for which the number of the neighbor is maximum.
-Step-6: Our model is ready.
 
 - **Step-1:** Select the **number K of the neighbors**
   - Firstly, we will choose the number of neighbors, so we will choose the k=5.
@@ -263,4 +260,4 @@ plt.show()
 
 ---
 
-[TOP](#ml---logistic-regression)
+[TOP](#ml---k-nearest-neighbour)
