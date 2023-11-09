@@ -36,6 +36,7 @@
 
   - [Classification](./classification/classification.md)
     - [Logistic Regression](./logistic_regression/logistic_regression.md)
+    - [K-Nearest Neighbor(KNN)](./knn/knn.md)
 
 - Error handling
   - [Cost Function](./cost_func/cost_func.md)

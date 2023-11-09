@@ -17,17 +17,21 @@
 - [Intro](./intro/intro.md)
 
 - Storage
+
   - [Hadoop - HDFS](./hadoop/hadoop.md)
   - [HDFS Command](./hadoop/hdfs_command.md)
 
 - Programming model
+
   - [MapReduce](./hadoop/mapreduce.md)
 
 - Database
+
   - [Hive](./hive/hive.md)
   - [HiveQL](./hive/hiveql.md)
 
 - [Spark](./spark/spark.md)
+  - [Zeppelin](./spark/zeppelin.md)
 
 ---
 

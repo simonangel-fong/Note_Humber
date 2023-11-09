@@ -13,6 +13,7 @@
     - [Spark Streaming](#spark-streaming)
       - [Example: Streaming](#example-streaming)
     - [Spark MLlib](#spark-mllib)
+      - [Machine Learning – `MLlib`](#machine-learning--mllib)
     - [Spark GraphX](#spark-graphx)
   - [Resilient Distributed Datasets(RDD)](#resilient-distributed-datasetsrdd)
     - [ways to create RDDs:](#ways-to-create-rdds)
@@ -212,6 +213,15 @@ val counts = wordsMap.reduceByKey(_+_)
 
 - All these methods are designed to scale out across a cluster
 - It is nine times faster than the disk-based implementation used by Apache Mahout.
+
+---
+
+#### Machine Learning – `MLlib`
+
+- MLlib is Spark’s `machine learning (ML)` library. Its goal is to make practical machine learning scalable and easy.
+- It consists of common learning algorithms and utilities, including classification, regression, clustering, collaborative filtering, dimensionality reduction
+- Spark excels at iterative computation, enabling MLlib to **run fast**. At the same time, we care about algorithmic performance: MLlib contains highquality algorithms that leverage iteration, and can yield better results MapReduce.
+- Supposedly, running times or up to 100x faster than Hadoop MapReduce
 
 ---
 
