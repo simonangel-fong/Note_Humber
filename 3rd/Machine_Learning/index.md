@@ -35,8 +35,16 @@
     - [Polynomial Linear Regression](./linear_regression/polynomial_linear.md)
 
   - [Classification](./classification/classification.md)
-    - [Logistic Regression](./logistic_regression/logistic_regression.md)
-    - [K-Nearest Neighbor(KNN)](./knn/knn.md)
+
+    - Linear Classification
+
+      - [Logistic Regression](./logistic_regression/logistic_regression.md)
+      - [K-Nearest Neighbor(KNN)](./knn/knn.md)
+      - [Naive Baye](./naive_baye/naive_baye.md)
+
+    - Non-Linear Classification
+      - [Decision Tree](./decision_tree/decision_tree.md)
+      - [Random Forest](./random_forest/random_forest.md)
 
 - Error handling
   - [Cost Function](./cost_func/cost_func.md)
@@ -58,6 +66,7 @@
 | DBSCAN       | Y     | r+min       | Both                     |
 
 - Data process
+
   - Normal
   - Standard
   - PCA

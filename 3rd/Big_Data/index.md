@@ -33,6 +33,13 @@
 - [Spark](./spark/spark.md)
   - [Zeppelin](./spark/zeppelin.md)
 
+- [HBase](./hbase/hbase.md)
+
+- [Integration:`Hive` + `HBase`](./hbase/hive_hbase.md)
+
+- [Pig](./pig/pig.md)
+  - [Pig Command](./pig/pig_command.md)
+
 ---
 
 [Top](#big-data)
