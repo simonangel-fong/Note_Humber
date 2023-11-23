@@ -8,7 +8,7 @@
     - [Steps](#steps)
     - [Assumptions for Random Forest](#assumptions-for-random-forest)
   - [Hyper Parameters](#hyper-parameters)
-    - [Estimators](#estimators)
+    - [Number of Estimators: # of trees](#number-of-estimators--of-trees)
     - [Number of Features](#number-of-features)
     - [Bootstrap Sampling](#bootstrap-sampling)
     - [Out of Bag Error(OOB)](#out-of-bag-erroroob)
@@ -93,7 +93,7 @@
 
 ---
 
-### Estimators
+### Number of Estimators: # of trees
 
 - **more** the number of estimators, more is the **chance of contribution** of every sample of features.
 
@@ -112,7 +112,7 @@
   - **duplicating** the results, which **cannot avoid**.
 
 - 总结:
-  - 最优: 画图
+  - 最优: 画图 `err = 1 - accuracy_score(preds,y_test)`
   - overfit: 勿担心
   - 增加, 提高精度,但同时不可避免地重复.
 
@@ -162,7 +162,10 @@
     - Underfitting/not learning patterns when `OOB error` < `test error`
 
 - `Out of bag score` = `1-OOB error`
+
   - 越接近 OOB number, OOB error 越小, 证明当前 tree 有越好的准确性.
+
+- OOB Score 越大, 准确性越好, 同时可能 overfitting
 
 ---
 

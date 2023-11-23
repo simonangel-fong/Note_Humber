@@ -100,6 +100,18 @@
 
 ---
 
+- Example:
+
+![dt_example.png](./pic/dt_example.png)
+
+- feature to split
+- asm(gini/entropy)
+  - leaf:0
+- sample to split
+- value: array after split
+
+---
+
 ## Decision Tree algorithm
 
 - Step-1: Begin the tree with the `root node`, says S, which contains the complete dataset.
@@ -141,6 +153,8 @@
   - a metric to **measure the impurity** in a given attribute.
   - It specifies **randomness** in data.
 
+低 entropy, 高 information gain
+
 ---
 
 #### Gini Index
@@ -149,6 +163,8 @@
   - a measure of **impurity or purity** used while creating a decision tree in the CART(Classification and Regression Tree) algorithm.
 - An attribute with the **low** Gini index should be **preferred** as compared to the high Gini index.
 - It only creates **binary splits**
+
+低 Gini index
 
 ---
 

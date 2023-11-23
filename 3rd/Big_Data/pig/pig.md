@@ -6,6 +6,7 @@
   - [Apache Pig](#apache-pig)
     - [Features of Apache Pig](#features-of-apache-pig)
     - [Advantages of Apache Pig](#advantages-of-apache-pig)
+    - [Pig Philosophy](#pig-philosophy)
     - [Differences between Apache MapReduce and PIG](#differences-between-apache-mapreduce-and-pig)
   - [Run Modes](#run-modes)
     - [Local Mode](#local-mode)
@@ -17,8 +18,9 @@
     - [Data Types](#data-types)
   - [Example](#example)
   - [UDF (User Defined Functions)](#udf-user-defined-functions)
-  - [Relational Operators](#relational-operators)
-    - [`LOAD` Operator](#load-operator)
+  - [Relations](#relations)
+    - [Relational Operators](#relational-operators)
+      - [`LOAD` Operator](#load-operator)
     - [`CROSS` Operator](#cross-operator)
     - [`DISTINCT` Operator](#distinct-operator)
     - [`FILTER` Operator](#filter-operator)
@@ -36,10 +38,23 @@
 - `Pig`
 
   - a high-level **data flow platform for executing Map Reduce programs** of Hadoop.
+  - An **engine** that executes `Pig Latin` locally or on a Hadoop cluster
+
+- **A domain specific language:**
+  - **Dataflow** programming
+  - **No control flow** (i.e. no if/then statements)
+- A **scripting** language
+  - Ease of use, rapid data sampling, prototyping
+  - Command prompt (gruntshell)
+- Built on top of `MapReduce`
+  - **Transforms** operations into a sequence of MapReduce jobs
+
+---
 
 - `Pig Latin`
 
   - The language for Pig.
+  - a high level data processing language.
 
 - The `Pig scripts` get **internally converted** to `Map Reduce` jobs and get executed on data stored in HDFS. - `Pig` can also execute its job in `Apache Tez` or `Apache Spark`.
 
@@ -69,18 +84,71 @@
   - It can easily handle **structured** as well as **unstructured** data.
 
 - **In-built operators**
+
   - It contains various type of **operators** such as **sort**, **filter** and **joins**.
+
+- pig doesn’t execute **until** it sees a keyword such as `dump` or `store`
 
 ---
 
 ### Advantages of Apache Pig
 
 - **Less code**
+
   - The Pig consumes **less line of code** to perform any operation.
+
 - **Reusability**
-  - The Pig code is flexible enough to reuse again.
+
+  - The Pig code is **flexible** enough to reuse again.
+
 - **Nested data types**
   - The Pig provides a useful concept of nested data types like **tuple**, **bag**, and **map**.
+
+---
+
+- Faster **development**
+
+  - Fewer lines of **code**
+  - Don’t re-invent the wheel
+  - No M/R programming
+  - **Joins** in M/R are painful
+  - **Chaining** together M/R jobs is tedious
+
+- **Flexible**
+  - `Metadata` is optional (direct access to files)
+  - **Extensible** (UDFs ➔Piggybank, DataFu, etc.)
+
+---
+
+- Pig is good at
+
+  - Ad hoc **analysis**
+  - Data **warehousing**
+  - Building **reports**
+  - Processing **large** data sets
+  - Handling **structured** or **unstructured** data
+
+- not so great at
+  - **Iterative** algorithms
+  - **Graph** algorithms
+  - Algorithms that **“converge”** (because there’s no control flow to check **convergence**)
+
+---
+
+### Pig Philosophy
+
+- Pigs **eats** anything
+
+  - Pig can operate on **data** whether it has **metadata** or not.
+  - It can operate on data that is relational, nested, or unstructured. And it can easily be extended to operate on data beyond files, including key/value stores, databases, etc.
+
+- Pigs **live** anywhere
+
+  - Pig is intended to be a language for **parallel data processing**.
+  - It is not tied to one particular parallel framework (e.g., Pig on Spark, Pig on Storm)
+
+- Pigs are **domestic** animals
+  - Designed to be easily controlled and **modified** by users via `User-DefinedFunctions (UDF)` and Stream command, etc.
 
 ---
 
@@ -205,11 +273,11 @@ pig -x mapreduce
 
 - Complex Types
 
-| Type    | Description               | Example              |
-| ------- | ------------------------- | -------------------- |
-| `tuple` | an ordered set of fields. | `(15,12)`            |
-| `bag`   | a collection of tuples.   | `{(15,12), (12,15)}` |
-| `map`   | a set of key-value pairs. | `[open#apache]`      |
+| Type    | Description                            | Example              |
+| ------- | -------------------------------------- | -------------------- |
+| `tuple` | an ordered set of fields.(`TOTUPLE()`) | `(15,12)`            |
+| `bag`   | a collection of tuples.(`TOBAG()`)     | `{(15,12), (12,15)}` |
+| `map`   | a set of key-value pairs. (`TOMAP()`)  | `[open#apache]`      |
 
 ---
 
@@ -260,15 +328,29 @@ STORE result into 'home/sonoo/output';
 
 ---
 
-## Relational Operators
+## Relations
 
-### `LOAD` Operator
+- Pig’s **fundamental building blocks**
+- Similar to a **table**
+- Don’t confuse it with variables in other languages
+
+```sh
+a = LOAD '/user/root/pig/full_text.txt' AS (id:chararray, ts:chararray, location:chararray, lat:float, lon:float, tweet:chararray);
+```
+
+---
+
+### Relational Operators
+
+#### `LOAD` Operator
 
 - used to load the data from the file system.
 
 ```java
 LOAD 'file_name' [USING load function] [AS (SCHEMA)];
 ```
+
+- ie: `a = LOAD '/user/root/pig/full_text.txt' USING PigStorage('\t') AS (id:chararray, ts:chararray, location:chararray, lat:float, lon:float, tweet:chararray);`
 
 - Example
 
@@ -601,12 +683,12 @@ DUMP Y;
 
 ```java
 A = load '/pigexample/punion1.txt' using PigStorage(',') as (a1:int,a2:int);
-DUMP A;  
+DUMP A;
 
 B = LOAD '/pigexample/punion2.txt' USING PigStorage(',') AS (b1:int,b2:int,b3:int);
 DUMP B;
 
-Result = UNION A,B;  
+Result = UNION A,B;
 DUMP Result;
 // (5,6,7)
 // (8,9,10)
