@@ -30,3 +30,4 @@
 | ITE-5323 | [Oracle Data Warehouse Fundamentals](./3rd/Data_Warehouse_Fundamentals/index.md) |     |
 | ITE-5324 | [Big Data](./3rd/Big_Data/index.md)                                              |     |
 | ITE-5320 | [DBA](./3rd/Database_Administration/index.md)                                    |     |
+| ITE-5320 | [iOS](./3rd/iOS/index.md)                                    |     |
