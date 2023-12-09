@@ -6,5 +6,6 @@
   - [UISearchBar](./ui/searbar.md)
 
 - Networking
-  - [URLSession](./networking/urlsession.md)
+  - [CompletionHandler](./networking/completionhandler.md)
+  - [NotificationCenter](./networking/notificationcenter.md)
 
