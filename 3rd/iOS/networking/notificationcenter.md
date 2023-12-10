@@ -4,6 +4,10 @@
 
 - [iOS - NotificationCenter](#ios---notificationcenter)
   - [Example](#example)
+    - [Model: `AppModel`](#model-appmodel)
+    - [API: `APIManager`](#api-apimanager)
+    - [ViewController: `ViewController`](#viewcontroller-viewcontroller)
+    - [`Info`: enable http](#info-enable-http)
 
 ---
 
@@ -13,7 +17,9 @@
 
 ![notificationCenter_example](./pic/notificationCenter_example.png)
 
-- Model: `AppModel`
+---
+
+### Model: `AppModel`
 
 ```swift
 //
@@ -52,7 +58,9 @@ class AppModel{
 
 ```
 
-- API: `APIManager`
+---
+
+### API: `APIManager`
 
 ```swift
 //
@@ -115,7 +123,9 @@ class APIManager{
 
 ```
 
-- ViewController: `ViewController`
+---
+
+### ViewController: `ViewController`
 
 ```swift
 //
@@ -213,8 +223,9 @@ class ViewController: UIViewController {
 }
 ```
 
+---
 
-- `Info`: enable http
+### `Info`: enable http
 
 ```xml
 	<!-- </dict> -->
