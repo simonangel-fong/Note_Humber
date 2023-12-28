@@ -33,9 +33,9 @@
     - It refers to the **correctness** of a database
   - `Isolation`:
     - multiple transactions can **occur concurrently** without leading to the inconsistency of the database state.
-    - Transactions occur independently without interference.
+    - Transactions occur **independently** without interference.
   - `Durability`:
-    - once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs.
+    - once the transaction has completed execution, the updates and modifications to the database are stored in and **written to disk** and they **persist** even if a system failure occurs.
 
 ![ACID](./pic/ACID.jpg)
 
@@ -54,9 +54,9 @@
   - `Soft-State`:
     - the state of the database can change over time
   - `Eventual Consistency`:
-    - the system will eventually become consistent
+    - the system will **eventually** become consistent
     - the database should eventually converge to a consistent state
-    - contrast to the immediate consistency required by traditional `ACID`-compliant databases.
+    - contrast to the _immediate consistency_ required by traditional `ACID`-compliant databases.
 
 - Main **characteristics** of NoSQL databases include:
   - No strict **schema** requirements

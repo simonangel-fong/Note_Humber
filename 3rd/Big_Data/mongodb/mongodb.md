@@ -19,6 +19,10 @@
   - MongoDB stores data records as `BSON` documents
   - It contains **more data types** than `JSON`
 
+- `BSON`:
+
+  - binary encoded Javascript Object Notation (JSON)
+
 - `Document`:
 
   - `records` in a MongoDB database.
@@ -84,7 +88,7 @@ mongosh
 | `db.col_name.insertMany([])`              | Inserts multiple documents               |
 | `db.col_name.updateOne({},{$set:{}})`     | update the first document                |
 | `db.col_name.updateOne({},{upsert:true})` | insert the document if it is not found   |
-| `db.col_name.updateMany({})`              | update the many documents                |
+| `db.col_name.updateMany()`                | update the many documents                |
 | `db.col_name.deleteOne({})`               | delete the first document that matches   |
 | `db.col_name.deleteMany({})`              | delete all documents that match          |
 
@@ -101,7 +105,7 @@ mongosh
 | Operators | Description                                         |
 | --------- | --------------------------------------------------- |
 | `$eq`     | Values are **equal**                                |
-| `$ne`     | Values are **not equal **                           |
+| `$ne`     | Values are **not equal**                            |
 | `$gt`     | Value is **greater than** another value             |
 | `$gte`    | Value is **greater than or equal** to another value |
 | `$lt`     | Value is **less than** another value                |

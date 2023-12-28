@@ -20,7 +20,11 @@
   - [Tablespace](./storage/storage.md)
 
 - [Partitioning](./partitioning/partitioning.md)
+- [Characteristic](./characteristic/characteristic.md)
+- [Architectures](./architecture/architecture.md)
+- [Data mart](./data_mart/data_mart.md)
 
+- [Schema](./schema/schema.md)
 
 ---
 
